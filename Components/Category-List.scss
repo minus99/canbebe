@@ -1,0 +1,89 @@
+.page-category-list{ margin-bottom: 20px;
+    .page-title{ display: block; font-family: $fontSite2; font-size: 65px; line-height: 87px; text-align: center; color: $colorPink; padding-top: 7px; position: relative;
+        &:before {
+          content: "";
+          background: url(/images/frontend/effect/white-top.png);
+          background-size: cover;
+          position: absolute;
+          top: -19px;
+          left: 0;
+          right: 0;
+          height: 20px;
+        }
+        img.hood-side{ position: absolute;
+            &.item{
+                &-1{ top: -16%; left: 17.2%; width: 24px; }
+                &-2{ top: -13%; left: 29.4%; width: 36px; }
+                &-3{ top: -16%; right: 29.8%; width: 28px; }
+                &-4{ top: -9%; right: 17.3%; width: 29px; }
+            }
+        }
+    }
+
+    //Liste Grid
+    .icerikTemplateListeContainer{ display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 27.5px;
+        .icerikTemplateListeItem{ width: calc((100% / 3) - 33.3px); margin: 22.5px 0px; border-radius: 20px; box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.28); }
+        .icerikTemplateListeEtiket{ display: none; }
+    }
+
+    .prd-item{ margin: 25px 30px 25px; text-align: center;
+        .prd{
+            &-img{
+
+            }
+            &-title{ font-family: $fontSite; font-size: 20px; font-weight: 700; color: $colorPurple; margin-bottom: 14px; }
+            &-desc{ font-family: $fontSite; font-size: 15px; font-weight: 500; color: $colorDefault; }
+            &-btn-holder{
+                margin-top: 25px;
+                .prd-btn{
+                    .desktop{ display: block; }
+                    .mobile{ display: none; }
+                }
+            }
+        }
+    }
+
+    //Sayfalama
+    .urunPaging{
+        &.icerikListePagingUst,
+        &.icerikListePagingAlt{ display: none; }
+    }
+}
+
+
+
+
+@media screen and (max-width: $breakpointSM){
+    .page-category-list{
+        .page-title{ font-size: 35px; color: $colorPurple; padding-top: 0; line-height: 50px;
+            &:before {}
+            img.hood-side{ position: absolute; width: 13px;
+                &.item{
+                    &-1{ top: -24%; left: 5.3%; width: 15px; }
+                    &-2{ top: -30%; left: 16.6%; width: 16px; }
+                    &-3{ top: -18%; right: 14.4%; width: 13px; }
+                    &-4{ top: -16%; right: 3.8%; width: 13px; }
+                }
+            }
+        }
+
+        //Liste Grid
+        .icerikTemplateListeContainer{ margin-top: 15px; margin-left: 10px; margin-right: 10px;
+            .icerikTemplateListeItem{ width: calc((100% / 2) - 5px); margin: 10px 0; border-radius: 10px; }
+        }
+
+        .prd-item{ margin: 12px;
+            .prd{
+                &-img{  }
+                &-title{ font-size: 13px; }
+                &-desc{ font-size: 12px; }
+                &-btn-holder{
+                    .prd-btn{
+                        .desktop{ display: none; }
+                        .mobile{ display: block; }
+                    }
+                }
+            }
+        }
+    }
+}

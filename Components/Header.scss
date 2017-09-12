@@ -1,0 +1,156 @@
+$header-height: 70px;
+
+.main-header{ background-color: $colorPurpleDark; position: relative; z-index: 25;
+    &:before{ content: ""; display: inline-block; position: absolute; z-index: 1; height: 5px; background: rgba(0, 0, 0, 0.15); left: 0; right: 0; bottom: -5px; }
+
+    //Header Logo
+    /* V1
+    .logo{ width: 90px; height: $header-height;
+        .header-logo{ position: relative;
+            a{ position: absolute; top: 2px; z-index: 5; }
+        }
+    }*/
+    .logo{ width: 166px; height: $header-height;
+        > div { display: flex; height: 100%; }
+        .header-logo{ display: flex; align-items: center; height: 100%; //position: relative;
+            //a{ position: absolute; top: 2px; z-index: 5; }
+            a img{ display: inline-block; width: 100%; }
+            a img.mobile-logo{ display: none; }
+        }
+    }
+
+    //Header Menu
+    .menu{ max-width: calc(100% - 300px);
+        .header-menu{
+            ul.menuNav{ display: flex; flex-wrap: wrap; height: $header-height;
+                > li{ display: none; padding: 0 15px;
+                    &.dh-item{ display: flex; }
+                    > a{ display: flex; align-items: center; white-space: nowrap; font-family: $fontSite; font-weight: 700; font-size: 20px; color: $colorWhite; }
+                    .sub-wrapper{ display: none; position: absolute; background-color: $colorWhite; max-height: 265px; top: 70px; left: 0; right: 0;
+                        &:before{ content: ""; display: inline-block; height: 5px; position: absolute; left: 0; right: 0; z-index: 6; }
+                        &:after{ content: ""; display: inline-block; height: 20px; width: 100%; background-image: url(/images/frontend/effect/footer-top.png); transform: rotate(180deg); position: absolute; bottom: -19px; z-index: 5; }
+                    }
+                    // Sub Menu START
+                    .sub-menu{ display: flex; justify-content: space-between; padding-left: 13%;
+                        ul.subNav{ padding: 30px 0;
+                            li{
+                                a{ font-family: $fontSite; font-size: 15px; font-weight: 500; line-height: 2.13; color: $colorPurple; }
+                            }
+                        }
+                    }
+                    // Sub Menu END
+                    .banner-img{ width: 375px; }
+                    &.selected{ //box-shadow: inset 0 -4px 0 0 #e8663c;
+                        .sub-wrapper{ /*display: block;*/ }
+                    }
+                }
+            }
+            .social-media{ display: none; }
+        }
+    }
+
+    // Header Search and Login
+    .sealog{ width: 170px; }
+}
+
+
+@media screen and (max-width: $breakpointSM){
+    body{ padding-top: 60px; }
+    .main-header{ position: fixed; top:0; width: 100%; background: $colorWhite;
+        .header{ margin: 0 12px; }
+
+        .logo{ width: auto; flex: 1; height: 60px;
+            .header-logo-wrapper{ display: flex; height: 60px; align-items: center; width: 100%; }
+
+            // Mobil Menu Wrapper
+            .mbHeader{ display: inline-block;
+                //Mobile Menu Button
+                .mbMenu{ position: relative; width: 36px; height: 36px; display: flex; justify-content: center; align-items: center;
+                    &:before{ content: "\e903"; font-family: 'icomoon' !important; color: #71368d; font-size: 36px; position: absolute; left: 0; top: 0; }
+                    i{ position: relative; z-index: 1; color: #f9c803; font-size: 0;
+                        &:before{ font-size: 13px; }
+                    }
+                }
+            }
+
+            //logo
+            .header-logo{ position: initial; flex: 1; justify-content: center;
+                a{ //left: 50%; transform: translateX(-50%);
+                    img{ width: 102px; display: none;
+                      &.mobile-logo{ display: inline-block; }
+                    }
+
+                }
+            }
+        }
+        .header-menu-wrapper{ display: none; position: fixed; background-image: url(/images/frontend/mobile-menu-bg.png); background-size: cover; background-position-x: right; background-repeat: no-repeat; left: -100%; width: 85%; height: 100vh; z-index: 200; transition: all .4s cubic-bezier(.8, 0, .5, 1);
+            // Menu Close Button
+            .mbBack{ display: inline-block; color: $colorOrange; margin-top: 20px; margin-left: 20px;
+                i:before{ font-size: 20px; }
+            }
+        }
+
+        //Header Menu
+        .menu{ max-width: 100%;
+            .header-menu{ padding: 0px 40px 0px 30px; margin: 40px 0 65px; height: calc(100vh - 105px); overflow: auto;
+                ul.menuNav{ height: auto;
+                    > li{ display: none; width: 100%; padding: 0; margin: 15px 0; flex-wrap: wrap;
+                        &.mn-item{ display: flex; }
+                        > a{ color: $colorWhite; font-size: 15px; }
+                        &.sub-menu{
+                            > a { justify-content: space-between; width: 100%;
+                                &::after{ content: "+"; display: inline-block; font-size: 13px; color: $colorOrange; }
+                            }
+                        }
+                        .sub-wrapper{ display: none; position: static; background-color: none; max-height: auto;
+                            &:before, &:after{ content: none; }
+                        }
+                        // Sub Menu START
+                        .sub-menu{ padding-left: 0;
+                            ul.subNav{
+                                li{
+                                    a{ font-family: $fontSite; font-size: 15px; font-weight: 500; line-height: 2.13; color: $colorPurple; }
+                                }
+                            }
+                        }
+                        // Sub Menu END
+                        .banner-img{ width: 375px; }
+                        &.selected{ box-shadow: inset 0 0px 0 0 #e8663c;
+                            &.sub-menu > a::after{ content: "-"; }
+                            .sub-wrapper{ display: block; max-height: initial; background: none; width: 100%;
+                               .sub-menu-wrp{ width: 100%;
+                                   ul.subNav{ padding: 20px 0 0 13px; width: 100%;
+                                       li{ display: block;
+                                           a{ display: block; color: $colorWhite; line-height: 3.13; }
+                                       }
+                                   }
+                               }
+                               .banner-img{ display: none; }
+                            }
+                        }
+                    }
+                }
+                .social-media{ display: block; }
+            }
+        }
+
+        .sealog{ width: 36px; }
+    }
+}
+
+// Menu Animate
+// Opacty background
+/*
+.mobi-menu-ready,
+.main-menu-ready{
+    &::before{ content: ""; display: inline-block; background: rgba(0, 0, 0, 0.5); display: inline-block; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 20; }
+}
+*/
+
+.mobi-menu-ready{ overflow: hidden;
+    .header-menu-wrapper,
+    .header-menu-wrapper .mbBack{ display: inline-block; }
+}
+.mobi-menu-animate{
+    .header-menu-wrapper{ left:0; }
+}

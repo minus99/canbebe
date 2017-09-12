@@ -1,0 +1,184 @@
+.page-cover{ height: 385px; background-position: 65% center; background-size: cover; }
+
+
+//Neden Canbebe Sayfası
+.ncb-page-cover{ height: 350px; background-repeat: no-repeat; background-size: cover; font-family: $fontSite2; font-size: 65px; color: $colorPurple; }
+.ncb-content{ position: relative; padding: 35px 0 100px; background-color: $colorPurple; background-image: url('/images/frontend/page/neden-canbebe-content-bg.svg'); background-repeat: no-repeat; background-size: 98%; background-position: center;
+    &:last-child{ margin-bottom: 0; }
+    &:before{ content: ""; background: url(/images/frontend/effect/top-purple.png); background-size: cover; position: absolute; top: -19px; left: 0; right: 0; height: 20px; }
+    .ncb-item{ display: flex; justify-content: space-between; align-items: center; background: #fff; border-radius: 20px; padding: 30px; margin-bottom: 40px;
+        &:nth-child(odd){ direction: rtl; }
+        .media{ width: calc(50% - 30px); display: flex; align-items: center; position: relative;
+            .video-in-holder{ width: 100%; height: 100%; }
+        }
+        .text{  width: calc(50% - 30px); direction: ltr;
+            .title{ font-family: $fontSite2; font-size: 40px; line-height: 54px; color: $colorPurple; }
+            .desc{ font-family: $fontSite; font-size: 18px; font-weight: 500; line-height: 1.5; color: $colorDefault;
+                p{ margin-bottom: 20px; }
+                ul{
+                    li{  margin-bottom: 7px;
+                        &:before{ content: "• "; color: $colorPurple; }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Anneler ile Geleceğe sayfası
+.anneler-ile-gelecege{ background-color: $colorPink; background-image: url('/images/frontend/page/aig-content-bg.svg'); background-repeat: no-repeat; background-size: cover; background-position: center; padding-top: 60px; padding-bottom: 100px;
+    .page-content{
+        .title{ font-family: $fontSite2; font-size: 65px; color: $colorWhite; margin-bottom: 33px; }
+    }
+    .aig-content{ width: 64.17%; margin: 0 auto; }
+    .aig-banner{ text-align: center;
+        .aig-wrp{ text-align: center;
+            .desc{ margin-top: 40px; font-family: $fontSite; font-size: 20px; font-weight: 500; line-height: 1.2; color: $colorWhite; }
+        }
+    }
+    .activites-wrp{ margin-top: 30px;
+        ul{ background: $colorWhite; border-radius: 20px; overflow: auto;
+            li{ display: flex; justify-content: space-between; font-family: $fontSite; font-size: 20px; font-weight: bold; line-height: 3.15; padding: 0 30px; border-top: 1px solid $colorDefault;
+                .date{ width: 34%; color: #e8663c; }
+                .country{ width: 18%; color: #de5c7c; }
+                .city-hall{ width: 45%; color: #0bbcf0; }
+                &:nth-child(2){ border-top: none; }
+                &.thead{ background: $colorPurple; border-top: none;
+                    > div { color: $colorWhite !important; }
+                }
+            }
+        }
+        a.btn-more{ margin: 25px auto 0; background: $colorPurple; width: 163px; padding: 11px 16px; display: none;
+            i{ font-size: 12px;  }
+        }
+    }
+}
+.team-wrapper{ position: relative;
+    &:before{ content: ""; background: url(/images/frontend/effect/white-top.png); background-size: cover; position: absolute; top: -19px; left: 0; right: 0; height: 20px; }
+}
+.team-group-wrapper{ padding-bottom: 64px;
+    .team-title{ margin-bottom: 25px; padding-top: 47px; text-align: center;
+        span{ font-family: $fontSite2; font-size: 65px; line-height: 87px; color: $colorPurple; }
+    }
+    .team-list{ width: 75%; margin: 0 auto;
+        .team-member{ display: flex; margin-bottom: 40px;
+            &:last-child{ margin-bottom: 0; }
+            .member-img{ width: 20%; margin-right: 50px;
+                .member-info{ display: none; }
+            }
+            .member-info{ font-family: $fontSite; flex: 1; display: flex; flex-wrap: wrap; align-items: center;
+                > div { width: 100%; }
+                .member{
+                    &-degree{ font-size: 20px; font-weight: 500; color: $colorPurple; }
+                    &-name{ font-size: 30px; font-weight: 700; color: $colorPurple; }
+                    &-desc{ font-size: 18px; font-weight: 500; line-height: 1.33;  color: $colorDefault; }
+                }
+            }
+        }
+    }
+}
+
+//404
+.error-404{ width: 100%; height: 100vh; background-color: $colorPurple; background-image: url(/images/404-cloud.svg); background-repeat: no-repeat; background-position: 50% bottom; background-size: 100%; display: block; overflow: hidden;
+    .cont{ display: flex; flex-direction: column; justify-content: space-between; height: 72vh; padding: 20px 0px; }
+    .logo{ max-width: 202px; margin: 0 auto;
+        img{ width: 100%; }
+    }
+    .img-404{ max-width: 336px; margin: 0 auto;
+        img{ width: 100%; }
+    }
+    .desc{ text-align: center; font-family: $fontSite; color: $colorWhite;
+        > *{ display:  block; }
+        .text1{ font-size: 30px; font-weight: 900; letter-spacing: 0.3px; margin-bottom: 15px; }
+        .text2{ font-size: 19px; font-weight: 300; margin-bottom: 40px; }
+        .btn-go-home{ max-width: 265px; margin: 0 auto; border-radius: 20px; padding: 12px 20px; background-color: $colorOrange; font-size: 18px; font-weight: bold; text-align: left; color: $colorPurple; position: relative;
+            &:after{ content: "\e909"; display: inline-block; font-family: 'icomoon' !important; font-size: 13px; color: $colorPurple; position: absolute; top: 50%; transform: translateY(-50%); right: 18px; }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointSM){
+    .page-cover{ height: 200px; background-position: center center; }
+
+    //Neden Canbebe Sayfası
+    .ncb-page-cover{ height: 200px; background-position: center; font-size: 35px;
+       > div { justify-content: center; align-items: flex-end;
+          span{ margin-bottom: 25px; }
+       }
+    }
+    .ncb-content{
+        &:last-child{  }
+        &:before{  }
+        .ncb-item{ flex-wrap: wrap; padding: 10px;
+            &:nth-child(odd){  }
+            .media{ width: 100%; }
+            .text{ width: 100%; margin-top: 10px;
+                .title{ font-size: 25px; text-align: center; line-height: 1.2; }
+                .desc{ font-size: 15px; line-height: 1.6;
+                    p{ text-align: center; margin-top: 10px; margin-bottom: 10px;
+                        &.text-left{ text-align: left; }
+                    }
+                    ul{
+                        li{ margin-bottom: 0;
+                            &:before{  }
+                        }
+                    }
+                    a.btn-more{ margin: 27px auto 20px; }
+                }
+            }
+        }
+    }
+
+    //Annler ile geleceğe sayfası
+    .anneler-ile-gelecege{ padding-top: 23px; padding-bottom: 62px; background-image: none;
+        .page-content{
+            .title{ font-size: 30px; margin-bottom: 23px; }
+        }
+        .aig-content{ width: 100%; }
+        .aig-banner{
+            .aig-wrp{
+                .desc{ margin-top: 24px; font-size: 15px; line-height: 1.6; }
+            }
+        }
+        .activites-wrp{
+            ul{ border-radius: 0; background: none;
+                li{ border-radius: 10px; background: $colorWhite; border-top: 0; margin-bottom: 10px; flex-wrap: wrap; padding: 12px 15px; font-size: 15px; line-height: 1;
+                    .date{ width: 100%; margin-bottom: 5px; }
+                    .country{ width: 30%; }
+                    .city-hall{ width: 60%;}
+                    &.thead{ display: none; }
+                }
+            }
+            a.btn-more{ display: none; }
+        }
+    }
+    .team-group-wrapper{ padding-bottom: 20px;
+        .team-title{ padding-top: 13px; margin-bottom: 20px;
+            span{ font-size: 30px; line-height: 41px; }
+        }
+        .team-list{ width: 100%;
+            .team-member{ flex-wrap: wrap;
+                .member-img{ width: 100%; margin-bottom: 10px; margin-right: 0; display: flex;
+                    .img{ width: 80px; margin-right: 10px; }
+                    .member-info{ flex: 1; display: flex; flex-direction: column; justify-content: flex-end; font-family: $fontSite; color: $colorPurple;
+                        .member{
+                            &-degree{ font-size: 15px; font-weight: 500; line-height: 18px; }
+                            &-name{ font-size: 18px; font-weight: 700; line-height: 22px; }
+                        }
+                    }
+                }
+                > .member-info{ flex: none; width: 100%;
+                    > div { width: 100%;}
+                    .member{
+                        &-degree{ display: none; }
+                        &-name{ display: none; }
+                        &-desc{ font-size: 15px; line-height: 1.6; }
+                    }
+                }
+            }
+        }
+    }
+
+    //404
+    //.error-404{ margin-top: -60px; }
+}

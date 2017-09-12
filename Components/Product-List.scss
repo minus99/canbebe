@@ -1,0 +1,111 @@
+//PRODUCT MENU
+.product-menu-wrapper{ background: $colorPurple;
+    .prd-menu{ height: 60px; display: flex; justify-content: center; align-items: center;
+        li{ margin: 0 15px;
+            &:first-child{ margin-left: 0; }
+            &:last-child{ margin-right: 0; }
+            a{ font-family: $fontSite; font-size: 15px; font-weight: 500; line-height: 2.13; color: $colorWhite; }
+            &.active a{ color: $colorOrange; }
+        }
+    }
+}
+
+.page-product-list{
+    //Sayfalama
+    .urunPaging{
+        &.icerikListePagingUst,
+        &.icerikListePagingAlt{
+            display: none;
+        }
+    }
+}
+
+.product-list-item{
+    padding: 50px 0 70px;
+    background-color: #fff;
+    position: relative;
+    &:before{  content: ""; background: url(/images/frontend/effect/white-top.png); background-size: cover; position: absolute; top: -19px; left: 0; right: 0; height: 20px; }
+
+    .pli-wrapper{ display: flex; justify-content: space-around;
+        .prd-img{ text-align: center; width: calc(50% - 50px);
+            .prd-title{ display: none; font-family: VerveineCorp; font-size: 30px; color: #820096; margin-top: 8px; margin-bottom: 28px; }
+            .product-set{ background: none; padding: 40px 0 0;
+                &:before{ content: none; }
+                .prd-sets{ justify-content: center;
+                    li{ margin: 0 25px; max-width: 80px; }
+                }
+            }
+        }
+        .prd-info{ width: 50%; display: flex; flex-wrap: wrap; align-content: center;
+            .prd{
+                &-title{ font-family: VerveineCorp; font-size: 65px; color: #820096; }
+                &-desc{ font-family: Museo Sans; font-size: 15px; font-weight: 500; line-height: 1.67; color: #a9a9a9; margin-top: 15px; }
+                &-btn-holder{ margin-top: 30px;
+                    .prd-btn{ display: inline-block; width: 175px; position: relative; background-color: #0bbcf0; padding: 11px 30px 10px; font-family: Museo Sans; font-size: 15px; font-weight: 700; color: #ffffff; border-radius: 25px;
+                        &:after { content: "\e909"; display: inline-block; font-family: 'icomoon' !important; font-size: 11px; color: #6d328a; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); right: 18px; }
+                    }
+                }
+            }
+        }
+    }
+    // THEME
+    &.theme{
+        &-1{ background-color: #ffedf1;
+            &:before{ background: url(/images/frontend/effect/theme-1.png); }
+        }
+        &-2{ background-color: #faf5ff;
+            &:before{ background: url(/images/frontend/effect/theme-2.png); }
+        }
+        &-3{ background-color: #fff9e4;
+            &:before{ background: url(/images/frontend/effect/theme-3.png); }
+        }
+        &-4{ background-color: #f9fff0;
+            &:before{ background: url(/images/frontend/effect/theme-4.png); }
+        }
+        &-5{ background-color: #de5c7c;
+            &:before{ background: url(/images/frontend/effect/theme-5.png); }
+            .prd-info{
+                .prd{
+                    &-title{ color: $colorWhite; }
+                    &-desc{ color: $colorWhite; }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: $breakpointSM){
+    //PRODUCT MENU
+    .product-menu-wrapper{ display: none; }
+
+    .product-list-item{
+        padding: 10px 10px 50px;
+        &:before{  }
+
+        .pli-wrapper{ flex-wrap: wrap;
+            .prd-img{ text-align: center; width: 100%;
+                .prd-title{ display: block; text-align: center; }
+                .product-set{
+                    .prd-sets{ flex-wrap: nowrap; justify-content: space-around;
+                        li{ margin: 0px;
+                            img{ width: 60px; }
+                        }
+                    }
+                }
+            }
+            .prd-info{ width: 100%; justify-content: center; text-align: center;
+                .prd{
+                    &-title{ display: none; }
+                    &-desc{  }
+                    &-btn-holder{
+                        .prd-btn{
+                            &:after {  }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

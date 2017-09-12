@@ -1,0 +1,145 @@
+.pageMesajGonder{ background-color: $colorOrange; padding-top: 45px; padding-bottom: 80px; background-image: url(/images/frontend/page/contact-bebe.png); background-repeat: no-repeat; background-position: 2% 75%;
+    [id$="lbfHDR_BIZEULASIN"]{ display: block; text-align: center; font-family: $fontSite2; font-size: 65px; color: $colorPurple; }
+    .ems-form{ display: flex; justify-content: center; margin-top: 37px;
+        .ems-form-inner{ width: 815px; height: 210px; column-count: 2;
+            .ems-field { width: 100%; position: relative; margin-bottom: 15px;
+                .ems-form-label{ font-family: $fontSite; font-size: 15px; font-weight: 700; color: $colorWhite; position: absolute; top: 18px;  left: 23px; z-index: 1; transition: all .2s ease-in-out; pointer-events: none; }
+                .ems-form-obj input,
+                .ems-form-obj textarea{ width: 100% !important; height: 50px; padding-top: 10px; padding-left: 23px; padding-right: 23px; background: $colorInputBg; outline: 0; border: 0; border-radius: 10px; color: $colorWhite; }
+                .ems-form-obj textarea{ height: 115px; padding-top: 23px; resize: none; }
+                &.is-active{
+                  .ems-form-label{ font-size: 11px;top: 6px; left: 23px; }
+                }
+            }
+            .btn-field{ width: 100%; text-align: center;}
+        }
+        & + .ems-form{
+            margin-top: 0;
+            .ems-form-inner{ width: inherit; height: auto; column-count: initial;
+                .ems-field{ margin-bottom: 0; }
+            }
+            .btnMesajGonder{ font-family: $fontSite; font-size: 15px; font-weight: bold; color: $colorWhite; background: $colorPurple; width: 250px; display: inline-block; padding: 15px 0 14px; text-align: center; border-radius: 25px;
+                &:after{ content: "\e909"; font-family: 'icomoon' !important; display: inline-block; margin-left: 7px; font-size: 10px; color: #feca37; }
+            }
+        }
+    }
+}
+
+// İletişim Bilgileri
+.contact-wrapper{ background: $colorPurple; padding-top: 48px; padding-bottom: 93px; position: relative;
+    &:before{
+      content: "";
+      display: inline-block;
+      height: 20px;
+      width: 100%;
+      background-image: url(/images/frontend/effect/purple-top.png);
+      background-size: cover;
+      position: absolute;
+      top: -19px;
+      z-index: 5;
+    }
+    .contact-title{ font-family: $fontSite2; font-size: 65px; text-align: center; color: $colorWhite; margin-bottom: 30px; }
+    .contact-content{ display: flex; justify-content: space-between; }
+    .maps-wrapper{ flex: 1; margin-right: 80px; overflow: hidden; background: $colorWhite; border-radius: 20px;
+        .maps-carousel{ height: 430px;
+            .swiper-inner{ height: calc(100% - 60px);
+                li{ height: 100%;
+                    .iframe-holder{ height: 100%;
+                        iframe{ width: 100%; height: 100%; }
+                    }
+                }
+            }
+            .swiper-footer{ display: flex; height: 60px; justify-content: center; align-items: center;
+                > div { position: static; margin: 0 19px;}
+                .swiper-pagination-bullets{
+                   > span { width: 36px; height: 36px; opacity: 1; border-radius: initial; background: none; position: relative; margin: 0 5px;
+                      &:before{ content: "\e903"; font-family: 'icomoon' !important; font-size: 35px; color: $colorWhite; }
+                      small{ position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: $fontSite; font-size: 20px; font-weight: 700; color: $colorPurple; }
+                      &.swiper-pagination-bullet-active{
+                          &:before{ color: $colorPurple; }
+                          small{ color: $colorWhite; }
+                      }
+                   }
+                }
+            }
+        }
+    }
+    .contact-info-wrapper{ flex: 1; font-family: $fontSite; font-size: 18px; font-weight: 500; line-height: 1.33; color: $colorWhite;
+        ul{
+            margin-top: 12px;
+            li{ display:block; padding-bottom: 25px; border-bottom: 1px dashed $colorWhite; padding-bottom: 25px; padding-top: 25px;
+                span{ display: block; }
+                &:last-child{ border-bottom: 0; }
+                &.contact-lbl-phone{ padding-bottom: 40px; display: flex; align-items: center;
+                    > i{ font-size: 0; margin-right: 20px;
+                        &:before{ font-size: 52px; }
+                    }
+                    .text{
+                        .title{ font-family: $fontSite; font-size: 18px; font-weight: 300; line-height: 1.33; color: $colorWhite; display: block; margin-bottom: 9px;}
+                        .phone{ font-family: $fontSite; font-size: 35px; font-weight: bold; line-height: 0.69; color: $colorWhite; }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: $breakpointSM ){
+    .pageMesajGonder{ background: $colorOrange;
+        [id$="lbfHDR_BIZEULASIN"]{ font-size: 30px; }
+        .ems-form{
+            .ems-form-inner{ width: calc(100% - 40px); height: auto; column-count: initial;
+                .ems-field {
+                    .ems-form-label{ top: 13px; }
+                    .ems-form-obj input,
+                    .ems-form-obj textarea{ height: 40px;}
+                    .ems-form-obj textarea{ height: 90px; padding-top: 20px; }
+                }
+            }
+            & + .ems-form{ text-align: center;
+                .ems-form-inner{ width: inherit; height: auto; column-count: initial;
+                    .ems-field{ margin-bottom: 0; }
+                }
+                .btnMesajGonder{ width: calc(100% - 66px);
+                    &:after{ content: "\e909"; font-family: 'icomoon' !important; display: inline-block; margin-left: 7px; font-size: 10px; color: #feca37; }
+                }
+            }
+        }
+    }
+    .contact-wrapper{ /*background: $colorOrangeDark;*/ padding-top: 16px;
+        &:before{ background-image: url(/images/frontend/effect/top-orange-v2.png); }
+        .contact-title{ font-size: 30px; color: $colorWhite; margin-bottom: 23px; }
+        .contact-content{ display: block; }
+        .maps-wrapper{ margin: 0 10px;
+            .maps-carousel{ height: 300px;
+                .swiper-inner{
+                    li{
+                        .iframe-holder{
+                            iframe{  }
+                        }
+                    }
+                }
+                .swiper-footer{ justify-content: space-between;
+                    .swiper-button-prev, .swiper-button-next{ width: 30px; height: 30px; }
+                }
+            }
+        }
+        .contact-info-wrapper{ margin: 20px 20px 0; font-size: 15px;
+            ul{
+                li{
+                    span{  }
+                    & + li:not(.contact-lbl-phone){  }
+                    &.contact-lbl-phone{
+                        > i{ font-size: 0; margin-right: 20px;
+                            &:before{ font-size: 40px; }
+                        }
+                        .text{
+                            .title{ font-size: 15px; margin-bottom: 2px; }
+                            .phone{ font-size: 25px; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

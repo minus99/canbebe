@@ -1,21 +1,27 @@
 // General Definations
-//test 
-$baseHref: '//canbebe.proj-e.com/';
-//canlı $baseHref: '';
+//test $baseHref: '//canbebe.proj-e.com/';
+//canlı
+$baseHref: '';
 
 // Typography
 $fontDefault: "arial";
-$fontSite: "Gotham Rounded";
-$fontSite2: "Gotham";
+$fontSite: "Museo Sans";
+$fontSite2: "VerveineCorp";
 $fontSizeDefault: 12px;
 
 // Colors
-$colorDefault: #333;
-$colorRed: #ED1C24;
-$colorRedDark: #D01219;
+$colorDefault: #a9a9a9;
+$colorPurple: #6d328a;
+$colorPurpleDark: #5d277e;
+$colorPink: #de5c7c;
+$colorBlueLight: #0bbcf0;
+$colorOrange: #f9c803;
+$colorOrangeDark: #e8663c;
+$colorWhite: #fff;
+$colorInputBg: #e0b400;
 
 // Layout
-$siteContainerWidth: 1006px;
+$siteContainerWidth: 1200px;
 $siteContainerWidthFull: 1440px;
 $singleOuter: 15px;
 $singleOuterMobile: 20px;
@@ -31,27 +37,27 @@ $mobile-m:  375px + 1;
 $mobile-s:  320px + 1;
 
 //mixins
-    @mixin user-select($value) {
-    -webkit-user-select: $value;
-    -moz-user-select: $value;
-    -ms-user-select: $value;
-    user-select: $value;
-    }
-    //outer
-    @mixin outer-block {
-        display: block;
-        width: auto;
-    }
-    @mixin outer {
-        margin-left: $singleOuter;
-        margin-right: $singleOuter;
-    }
-    @mixin outer-mobile {
-        margin-left: $singleOuterMobile;
-        margin-right: $singleOuterMobile;
-    }
-    //clear-table-cell
-    @mixin clear-table-cell {
-        display: inline-block;
-        width: 100% !important;
-    }
+@mixin user-select($value) {
+-webkit-user-select: $value;
+-moz-user-select: $value;
+-ms-user-select: $value;
+user-select: $value;
+}
+//outer
+@mixin outer-block {
+    display: block;
+    width: auto;
+}
+@mixin outer {
+    margin-left: $singleOuter;
+    margin-right: $singleOuter;
+}
+@mixin outer-mobile {
+    margin-left: $singleOuterMobile;
+    margin-right: $singleOuterMobile;
+}
+//clear-table-cell
+@mixin clear-table-cell {
+    display: inline-block;
+    width: 100% !important;
+}

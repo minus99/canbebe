@@ -1,0 +1,91 @@
+.product-detail-info{ margin-top: 70px; margin-bottom: 110px; display: flex; justify-content: space-between; flex-wrap: wrap;
+    > div{ width: calc(50% - 25px); }
+    .prd-image{ padding-top: 20px; display: flex; justify-content: center; align-items: flex-end; }
+    .prd-info{
+        .prd-title{ font-family: $fontSite2; font-size: 65px; color: $colorPurple; line-height: 85px; margin-bottom: 10px; }
+        .prd-desc{ font-family: $fontSite; font-size: 15px; font-weight: 500; line-height: 1.67; color: $colorDefault; }
+        .prd-btn-holder{ margin-top: 30px;
+            .prd-btn{ width: 175px; }
+        }
+    }
+    .prd-video-holder{ width: 100%; display: flex; justify-content: center; margin-top: 50px;
+        .video-holder{
+            .video-text{ font-family: $fontSite; font-size: 18px; font-weight: 700; color: $colorPurple; margin-bottom: 10px; }
+            .video-wrp{ position: relative;
+                .btn-video{ position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 1; font-size: 40px; color: #f9c803; }
+            }
+        }
+    }
+}
+
+.product-set{ padding-top: 35px; padding-bottom: 75px; background: $colorPink; position: relative;
+    &:before{ content: ""; background: url(/images/frontend/effect/top-pink.png); background-size: cover; position: absolute; top: -19px; left: 0; right: 0; height: 20px; }
+    .title{ display: block; text-align: center; font-family: $fontSite2; font-size: 65px; line-height: 85px; color: $colorWhite; }
+    .prd-sets{ display: flex; flex-wrap: wrap; justify-content: flex-start;
+        li{ margin-top: 25px; margin-bottom: 25px;
+            .img{ display: block; text-align: center;
+                img{ width: 130px; }
+            }
+            .desc{ width: 230px; font-family: $fontSite; font-size: 14px; font-weight: 500; line-height: 1.43; color: $colorWhite; text-align: center; margin: 17px auto 0; }
+        }
+        &.grid-tree li { width: 33.3%; }
+        &.grid-four li { width: 25%; }
+    }
+
+    //THEME
+    &.bedenler{ background: $colorOrange;
+        &:before{ background: url(/images/frontend/effect/top-orange-pointed.png); }
+        .prd-sets{ justify-content: center; flex-wrap: nowrap;
+            li{ padding: 0 20px; }
+        }
+    }
+}
+
+
+@media screen and (max-width: $breakpointSM){
+
+    .product-detail-info{ margin-top: 30px; margin-bottom: 60px;
+        > div{ width: 100%; }
+        .prd-image{ padding: 0 30px; }
+        .prd-info{
+            .prd-title{ font-size: 30px; text-align: center; line-height: 40px; margin-top: 15px; }
+            .prd-desc{ text-align: center; }
+            .prd-btn-holder{ text-align: center;
+                .prd-btn{ padding: 11px 30px; }
+            }
+        }
+        .prd-video-holder{
+            .video-holder{
+                .video-text{ font-size: 15px; }
+                .video-wrp{
+                    .btn-video{  }
+                }
+            }
+        }
+    }
+
+    .product-set{
+        &:before{  }
+        .title{ font-size: 30px;  line-height: 40px; }
+        .prd-sets{
+            li{ width: 100%; margin-top: 15px; margin-bottom: 15px;
+                .img{  }
+                .desc{ font-size: 14px;}
+            }
+            &.grid-tree li { width: 100%; }
+            &.grid-four li { width: 100%; }
+        }
+
+        //THEME
+        &.bedenler{
+            &:before{  }
+            .title{ margin-bottom: 22.5px; }
+            .prd-sets{ flex-wrap: wrap;
+                li{ width: calc(25% - 15px); padding: 0; margin: 7.5px;
+                  .img{ display: block; }
+                }
+            }
+        }
+    }
+
+}
