@@ -23,7 +23,7 @@
         z-index: 1;
     }
     .title{ display: block; font-family: $fontSite2; font-size: 65px; color: $colorWhite; margin-bottom: 22px; }
-    .video-in-holder{ width: 725px; height: 410px; margin-bottom: 34px;}
+    .video-in-holder{ margin-bottom: 34px;}
 }
 
 
@@ -42,13 +42,7 @@
     .why-canbebe-wrp{
         padding: 15px 0 65px;
         .title{ font-size: 30px; margin-bottom: 26px; }
-        .video-in-holder{ margin-bottom: 25px; width: calc(100% - 40px); height: 100%;
-            .btn-video{
-                i{ font-size: 0;
-                    &:before{ font-size: 27px; }
-                }
-            }
-        }
+        .video-in-holder{ margin-bottom: 25px; }
     }
 
 }

@@ -3,7 +3,7 @@
 
 //Neden Canbebe Sayfası
 .ncb-page-cover{ height: 350px; background-repeat: no-repeat; background-size: cover; font-family: $fontSite2; font-size: 65px; color: $colorPurple; }
-.ncb-content{ position: relative; padding: 35px 0 100px; background-color: $colorPurple; background-image: url('/images/frontend/page/neden-canbebe-content-bg.svg'); background-repeat: no-repeat; background-size: 98%; background-position: center;
+.ncb-content{ position: relative; padding: 35px 10px 100px; background-color: $colorPurple; background-image: url('/images/frontend/page/neden-canbebe-content-bg.svg'); background-repeat: no-repeat; background-size: 98%; background-position: center;
     &:last-child{ margin-bottom: 0; }
     &:before{ content: ""; background: url(/images/frontend/effect/top-purple.png); background-size: cover; position: absolute; top: -19px; left: 0; right: 0; height: 20px; }
     .ncb-item{ display: flex; justify-content: space-between; align-items: center; background: #fff; border-radius: 20px; padding: 30px; margin-bottom: 40px;
