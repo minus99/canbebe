@@ -1,7 +1,14 @@
 .pageMesajGonder{ background-color: $colorOrange; padding-top: 45px; padding-bottom: 80px; background-image: url(/images/frontend/page/contact-bebe.png); background-repeat: no-repeat; background-position: 2% 75%;
     [id$="lbfHDR_BIZEULASIN"]{ display: block; text-align: center; font-family: $fontSite2; font-size: 65px; color: $colorPurple; }
     .ems-form{ display: flex; justify-content: center; margin-top: 37px;
-        .ems-form-inner{ width: 815px; height: 210px; column-count: 2;
+        .ems-form-inner{ width: 815px; //height: 210px; column-count: 2;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .ems-col{
+                width: calc(50% - 7.5px);
+                &.full-width{ width: 100%; }
+            }
             .ems-field { width: 100%; position: relative; margin-bottom: 15px;
                 .ems-form-label{ font-family: $fontSite; font-size: 15px; font-weight: 700; color: $colorWhite; position: absolute; top: 18px;  left: 23px; z-index: 1; transition: all .2s ease-in-out; pointer-events: none; }
                 .ems-form-obj input,
@@ -10,17 +17,27 @@
                 &.is-active{
                   .ems-form-label{ font-size: 11px;top: 6px; left: 23px; }
                 }
+                &.captcha{
+                    br{ display: none; }
+                    [id$="CaptchaImage1_divCaptcha"]{
+                        display: flex;
+                        #imgCaptcha{ order: 2; }
+                        [id$="txtUYE_KONTROLKODU"]{
+                            width: auto !important;
+                            flex: 1;
+                            margin-right: 15px;
+                        }
+                    }
+                    [id$="lbfUYE_KONTROLKODU"]{ font-family: $fontSite; font-size: 15px; font-weight: 700; color: $colorWhite; position: absolute; top: 18px;  left: 23px; z-index: 1; transition: all .2s ease-in-out; pointer-events: none; }
+                    &.is-active{
+                      [id$="lbfUYE_KONTROLKODU"]{ font-size: 11px;top: 6px; left: 23px; }
+                    }
+                }
+                .btnMesajGonder{ font-family: $fontSite; font-size: 15px; font-weight: bold; color: $colorWhite; background: $colorPurple; width: 250px; display: inline-block; padding: 15px 0 14px; text-align: center; border-radius: 25px;
+                    &:after{ content: "\e909"; font-family: 'icomoon' !important; display: inline-block; margin-left: 7px; font-size: 10px; color: #feca37; }
+                }
             }
             .btn-field{ width: 100%; text-align: center;}
-        }
-        & + .ems-form{
-            margin-top: 0;
-            .ems-form-inner{ width: inherit; height: auto; column-count: initial;
-                .ems-field{ margin-bottom: 0; }
-            }
-            .btnMesajGonder{ font-family: $fontSite; font-size: 15px; font-weight: bold; color: $colorWhite; background: $colorPurple; width: 250px; display: inline-block; padding: 15px 0 14px; text-align: center; border-radius: 25px;
-                &:after{ content: "\e909"; font-family: 'icomoon' !important; display: inline-block; margin-left: 7px; font-size: 10px; color: #feca37; }
-            }
         }
     }
 }
@@ -88,12 +105,27 @@
     .pageMesajGonder{ background: $colorOrange;
         [id$="lbfHDR_BIZEULASIN"]{ font-size: 30px; }
         .ems-form{
-            .ems-form-inner{ width: calc(100% - 40px); height: auto; column-count: initial;
+            .ems-form-inner{ width: calc(100% - 40px);
+              .ems-col{
+                  width: 100%;
+              }
                 .ems-field {
                     .ems-form-label{ top: 13px; }
                     .ems-form-obj input,
                     .ems-form-obj textarea{ height: 40px;}
                     .ems-form-obj textarea{ height: 90px; padding-top: 20px; }
+                    &.captcha{
+                        [id$="CaptchaImage1_divCaptcha"]{
+                            position: relative;
+                            margin-top: 65px;
+                            #imgCaptcha{
+                                order: initial;
+                                position: absolute;
+                                top: -65px;
+                            }
+                        }
+                        [id$="lbfUYE_KONTROLKODU"]{ top: 13px; }
+                    }
                 }
             }
             & + .ems-form{ text-align: center;
@@ -139,6 +171,88 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+//MESSAGE SCSS
+.ems-message-wrapper{
+    width: 100%;
+}
+.ems-message{
+    display: block;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    &.ems-massage-success{
+        background: #dff0d8;
+        border: 1px solid #d6e9c6;
+        color: #3c763d;
+    }
+    &.ems-massage-error{
+        background-color: #f2dede;
+        border-color: #ebccd1;
+        color: #a94442;
+    }
+    &-loading{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,.3);
+        z-index: 200;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .spinner {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            text-align: center;
+
+            -webkit-animation: sk-rotate 2.0s infinite linear;
+            animation: sk-rotate 2.0s infinite linear;
+        }
+
+        .dot1, .dot2 {
+            width: 60%;
+            height: 60%;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            background-color: $colorPurple;
+            border-radius: 100%;
+
+            -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+            animation: sk-bounce 2.0s infinite ease-in-out;
+        }
+
+        .dot2 {
+            top: auto;
+            bottom: 0;
+            -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s;
+        }
+
+        @-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+        @keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+        @-webkit-keyframes sk-bounce {
+            0%, 100% { -webkit-transform: scale(0.0) }
+            50% { -webkit-transform: scale(1.0) }
+        }
+
+        @keyframes sk-bounce {
+            0%, 100% {
+              transform: scale(0.0);
+              -webkit-transform: scale(0.0);
+            } 50% {
+              transform: scale(1.0);
+              -webkit-transform: scale(1.0);
             }
         }
     }

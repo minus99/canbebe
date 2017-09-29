@@ -77,7 +77,7 @@ $header-height: 70px;
 
             //logo
             .header-logo{ position: initial; flex: 1; justify-content: center;
-                a{ //left: 50%; transform: translateX(-50%);
+                a{ width: initial;
                     img{ width: 102px; display: none;
                       &.mobile-logo{ display: inline-block; }
                     }

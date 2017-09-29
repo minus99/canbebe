@@ -30,7 +30,7 @@
     .page-content{
         .title{ font-family: $fontSite2; font-size: 65px; color: $colorWhite; margin-bottom: 33px; }
     }
-    .aig-content{ width: 64.17%; margin: 0 auto; }
+    .aig-content{ width: 85%; margin: 0 auto; }
     .aig-banner{ text-align: center;
         .aig-wrp{ text-align: center;
             .desc{ margin-top: 40px; font-family: $fontSite; font-size: 20px; font-weight: 500; line-height: 1.2; color: $colorWhite; }
@@ -38,10 +38,11 @@
     }
     .activites-wrp{ margin-top: 30px;
         ul{ background: $colorWhite; border-radius: 20px; overflow: auto;
-            li{ display: flex; justify-content: space-between; font-family: $fontSite; font-size: 20px; font-weight: bold; line-height: 3.15; padding: 0 30px; border-top: 1px solid $colorDefault;
-                .date{ width: 34%; color: #e8663c; }
-                .country{ width: 18%; color: #de5c7c; }
-                .city-hall{ width: 45%; color: #0bbcf0; }
+            li{ display: flex; justify-content: space-between; align-content: flex-start; font-family: $fontSite; font-size: 18px; font-weight: bold; padding: 20px 30px; border-top: 1px solid $colorDefault;
+                .date{ width: 19%; color: #e8663c; }
+                .country{ width: 15%; color: #de5c7c; }
+                .city-hall{  width: 34%; color: #0bbcf0; }
+                .seminar-saloon{ width: 30%; }
                 &:nth-child(2){ border-top: none; }
                 &.thead{ background: $colorPurple; border-top: none;
                     > div { color: $colorWhite !important; }
@@ -97,6 +98,22 @@
     }
 }
 
+//POLİTİKALAR
+.page-politikalar{
+    .pol-wrp{ background-color: $colorPink; background-image: url(/images/frontend/page/aig-content-bg.svg); background-repeat: no-repeat; background-size: cover; background-position: center;
+        .plt-cont{ background: $colorWhite; }
+    }
+    & + .main-footer:before { content: none; }
+    .prm-temp-title{ font-family: $fontSite2; font-size: 65px; line-height: 87px; text-align: center; color: $colorPurpleDark; padding-top: 40px; }
+    .gnr-text-holder{ font-family: $fontSite; font-size: 20px; line-height: 32px; text-align: left; color: $colorDefaultDark; padding: 40px 40px 76px 40px;
+        .gnr-title{ font-weight: 900; }
+        .gnr-desc{ font-weight: 500; margin-bottom: 40px; }
+    }
+}
+
+
+
+
 @media screen and (max-width: $breakpointSM){
     .page-cover{ height: 200px; background-position: center center; }
 
@@ -143,9 +160,10 @@
         .activites-wrp{
             ul{ border-radius: 0; background: none;
                 li{ border-radius: 10px; background: $colorWhite; border-top: 0; margin-bottom: 10px; flex-wrap: wrap; padding: 12px 15px; font-size: 15px; line-height: 1;
-                    .date{ width: 100%; margin-bottom: 5px; }
-                    .country{ width: 30%; }
-                    .city-hall{ width: 60%;}
+                    .date{ width: 40%; margin-bottom: 10px; }
+                    .country{ width: 50%; }
+                    .city-hall{ width: 100%;}
+                    .seminar-saloon{ width: 100%; margin-top: 10px; }
                     &.thead{ display: none; }
                 }
             }
@@ -180,5 +198,19 @@
     }
 
     //404
-    //.error-404{ margin-top: -60px; }
+    .error-404{ margin-top: -60px; }
+
+    //POLİTİKALAR
+    .page-politikalar{
+        .pol-wrp{ background-image: none;
+            .plt-cont{ background: none; }
+        }
+        & + .main-footer:before { content: ""; }
+        .prm-temp-title{ font-size: 30px; line-height: 1; padding-top: 32px; }
+        .gnr-text-holder{ color: $colorWhite; padding: 28px 10px 58px 10px; font-size: 15px; line-height: 25px;
+            .gnr-title{  }
+            .gnr-desc{  }
+        }
+    }
+
 }
