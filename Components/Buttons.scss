@@ -29,7 +29,7 @@ $radius2:50px;
 @media screen and (max-width: $breakpointSM){
     .prd-btn-holder{
         .prd-btn{ width: 121px; padding: 6px 30px;
-            &:after{ font-size: 8px; right: 12px; }
+            &:after{ font-size: 8px; right: 12px; } 
         }
     }
 }
