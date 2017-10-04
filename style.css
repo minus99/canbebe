@@ -7920,18 +7920,6 @@ body[class*=jconfirm-no-scroll-] {
     transform: scale(1);
     -webkit-transform: scale(1); } }
 
-html.ms-ready .popular-prd-slider,
-html.ms-ready .ems-page-home .main-slider .swiper-inner {
-  height: 568px; }
-
-html.ms-ready .site-footer-inner .footer-map {
-  height: 667px; }
-
-html.ms-ready [id$="divCaptcha"] #imgCaptcha {
-  left: 2px;
-  top: 25px;
-  height: 36px; }
-
 .page-cover {
   height: 385px;
   background-position: 65% center;
@@ -8448,5 +8436,108 @@ html.ms-ready [id$="divCaptcha"] #imgCaptcha {
     padding: 28px 10px 58px 10px;
     font-size: 15px;
     line-height: 25px; } }
+
+.urunPaging {
+  margin: 30px 0;
+  background: #5d277e;
+  border-radius: 20px;
+  font-family: "Museo Sans";
+  font-size: 20px;
+  color: #fff; }
+  .urunPaging td[align="center"] {
+    width: 100% !important; }
+  .urunPaging .paging {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    line-height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center; }
+  .urunPaging span.paging {
+    background: url(/images/frontend/icon/oval-orange.svg) no-repeat center center; }
+  .urunPaging .paging[id$="lnkPrev"], .urunPaging .paging[id$="lnkNext"] {
+    font-size: 12px;
+    color: #f9c803; }
+  .urunPaging .paging[id$="lnkPrev"] {
+    margin-right: 75px; }
+  .urunPaging .paging[id$="lnkNext"] {
+    margin-left: 75px; }
+  .urunPaging.icerikListePagingUst, .urunPaging td[align="left"], .urunPaging td[align="right"] {
+    display: none !important; }
+
+.icerikKategoriListe {
+  background: orangered; }
+  .icerikKategoriListe > ul > li > a {
+    font-family: "Museo Sans";
+    font-size: 15px;
+    color: #6d328a;
+    font-weight: 700; }
+
+.page-blog .icerikTemplateListeContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px; }
+  .page-blog .icerikTemplateListeContainer .icerikTemplateListeEtiket {
+    display: none !important; }
+  .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem {
+    width: 25%; }
+    .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem:nth-child(1), .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem:nth-child(3), .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem:nth-child(13), .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem:nth-child(15) {
+      width: 50%; }
+
+.blog-logo {
+  padding: 85px 25px 45px;
+  font-family: "Museo Sans";
+  font-size: 40px;
+  color: #de5c7c;
+  font-weight: 700;
+  text-align: center; }
+  .blog-logo .o {
+    position: relative;
+    visibility: hidden; }
+    .blog-logo .o:before {
+      content: "";
+      background: url(/images/frontend/blog/letter-o.png) no-repeat center bottom;
+      position: absolute;
+      bottom: 8px;
+      z-index: 2;
+      width: 27px;
+      height: 96px;
+      visibility: visible; }
+
+.blog-post {
+  position: relative;
+  margin: 30px 10px; }
+  .blog-post .post-url {
+    display: block; }
+  .blog-post .post-cat {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 100%;
+    text-align: center;
+    background: #fff;
+    color: #000; }
+  .blog-post .post-img-thumb {
+    display: block;
+    border-radius: 3px; }
+  .blog-post .post-title {
+    font-family: "Museo Sans";
+    font-size: 20px;
+    color: #6d328a;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    padding: 12px 10px; }
 
 /*# sourceMappingURL=style.css.map */

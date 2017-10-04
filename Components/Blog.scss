@@ -1,0 +1,133 @@
+//sayfalama
+.urunPaging {
+    margin: 30px 0;
+    background: $colorPurpleDark;
+    border-radius: 20px;
+    font-family: $fontSite;
+    font-size: 20px;
+    color: #fff;
+    td[align="center"] {
+        width: 100% !important;
+    }
+    .paging {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 40px;
+        line-height: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+    }
+    span.paging {
+        background: url(/images/frontend/icon/oval-orange.svg) no-repeat center center;
+    }
+    .paging[id$="lnkPrev"], .paging[id$="lnkNext"] {
+        font-size: 12px;
+        color: $colorOrange;
+    }
+    .paging[id$="lnkPrev"] {
+        margin-right: 75px;
+    }
+    .paging[id$="lnkNext"] {
+        margin-left: 75px;
+    }
+
+    &.icerikListePagingUst, td[align="left"], td[align="right"] {
+        display: none !important;
+    }
+}
+
+//blog kategoriler
+.icerikKategoriListe {
+    background: orangered;
+    > ul {
+        > li {
+            > a {
+                font-family: $fontSite;
+                font-size: 15px;
+                color: $colorPurple;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+//blog
+.page-blog {
+    .icerikTemplateListeContainer {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
+        .icerikTemplateListeEtiket {
+            display: none !important;
+        }
+        .icerikTemplateListeItem {
+            width: 25%;
+            &:nth-child(1),
+            &:nth-child(3),
+            &:nth-child(13),
+            &:nth-child(15) {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.blog-logo {
+    padding: 85px 25px 45px;
+    font-family: $fontSite;
+    font-size: 40px;
+    color: $colorPink;
+    font-weight: 700;
+    text-align: center;
+    .o {
+        position: relative;
+        visibility: hidden;
+        &:before {
+            content: "";
+            background: url(/images/frontend/blog/letter-o.png) no-repeat center bottom;
+            position: absolute;
+            bottom: 8px;
+            z-index: 2;
+            width: 27px;
+            height: 96px;
+            visibility: visible;
+        }
+    }
+}
+
+//blog liste
+.blog-post {
+    position: relative;
+    margin: 30px 10px;
+    .post-url {
+        display: block;
+    }
+    .post-cat {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 100%;
+        text-align: center;
+        background: #fff;
+        color: #000;
+    }
+    .post-img-thumb {
+        display: block;
+        border-radius: 3px;
+    }
+    .post-title {
+        font-family: $fontSite;
+        font-size: 20px;
+        color: $colorPurple;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+        padding: 12px 10px;
+    }
+}
