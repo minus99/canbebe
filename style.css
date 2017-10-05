@@ -8468,12 +8468,31 @@ body[class*=jconfirm-no-scroll-] {
     display: none !important; }
 
 .icerikKategoriListe {
-  background: orangered; }
-  .icerikKategoriListe > ul > li > a {
-    font-family: "Museo Sans";
-    font-size: 15px;
-    color: #6d328a;
-    font-weight: 700; }
+  margin: 5px 0 25px; }
+  .icerikKategoriListe > ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .icerikKategoriListe > ul > li {
+      margin: 0 5px; }
+      .icerikKategoriListe > ul > li > b {
+        display: none !important; }
+      .icerikKategoriListe > ul > li > a {
+        display: block;
+        padding: 10px;
+        font-family: "Museo Sans";
+        font-size: 15px;
+        color: #6d328a;
+        font-weight: 700; }
+        .icerikKategoriListe > ul > li > a .icerikCount {
+          display: none !important; }
+  .icerikKategoriListe .headerIcerikKategoriListe, .icerikKategoriListe .headerIcerikKategoriListeSgtAd {
+    display: none !important; }
 
 .page-blog .icerikTemplateListeContainer {
   display: -webkit-box;
@@ -8485,15 +8504,15 @@ body[class*=jconfirm-no-scroll-] {
   flex-wrap: wrap;
   margin-left: -10px;
   margin-right: -10px; }
+  .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem {
+    width: calc(100% / 4); }
+    .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem:nth-child(1), .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem:nth-child(3), .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem:nth-child(13), .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem:nth-child(15) {
+      width: calc(100% / 2); }
   .page-blog .icerikTemplateListeContainer .icerikTemplateListeEtiket {
     display: none !important; }
-  .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem {
-    width: 25%; }
-    .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem:nth-child(1), .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem:nth-child(3), .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem:nth-child(13), .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem:nth-child(15) {
-      width: 50%; }
 
 .blog-logo {
-  padding: 85px 25px 45px;
+  padding: 85px 25px 25px;
   font-family: "Museo Sans";
   font-size: 40px;
   color: #de5c7c;
@@ -8528,9 +8547,9 @@ body[class*=jconfirm-no-scroll-] {
     text-align: center;
     background: #fff;
     color: #000; }
-  .blog-post .post-img-thumb {
+  .blog-post .post-img {
     display: block;
-    border-radius: 3px; }
+    border-radius: 10px; }
   .blog-post .post-title {
     font-family: "Museo Sans";
     font-size: 20px;
@@ -8539,5 +8558,64 @@ body[class*=jconfirm-no-scroll-] {
     line-height: 1.2;
     margin: 0;
     padding: 12px 10px; }
+
+.blog-post-detail .row-holder-1 {
+  position: relative; }
+  .blog-post-detail .row-holder-1 .row-1 {
+    text-align: center; }
+  .blog-post-detail .row-holder-1 .row-2 {
+    position: absolute;
+    bottom: 50px;
+    max-width: 600px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    text-align: center; }
+
+.blog-post-detail .post-img {
+  width: 100%; }
+
+.blog-post-detail .post-cat {
+  display: inline-block;
+  font-family: "Museo Sans";
+  font-size: 15px;
+  color: #6d328a;
+  font-weight: 700;
+  text-align: center;
+  padding: 8px 25px;
+  background: #f9c803;
+  border-radius: 20px; }
+
+.blog-post-detail .post-title {
+  font-family: "Museo Sans";
+  font-size: 40px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 0px 1px 1px #000;
+  margin: 0; }
+
+.blog-post-content {
+  font-family: "Museo Sans";
+  font-size: 18px;
+  color: #464646;
+  font-weight: 500;
+  line-height: 1.6; }
+  .blog-post-content .quote {
+    position: relative;
+    padding: 10px 20px; }
+    .blog-post-content .quote:before {
+      content: "";
+      border-left: 5px solid #949494;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%; }
+  .blog-post-content ul.list-type-1 > li > .title {
+    font-weight: 700;
+    margin-bottom: 5px; }
+  .blog-post-content ul.list-type-1 > li > .desc {
+    margin-top: 5px; }
 
 /*# sourceMappingURL=style.css.map */
