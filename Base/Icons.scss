@@ -12,6 +12,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-vimeo:before {
+  content: "\e908";
+}
+.icon-twitter:before {
+  content: "\e90f";
+}
 .icon-pause:before {
   content: "\e90d";
 }
@@ -49,8 +55,11 @@
   content: "\e907";
 }
 .icon-phone:before {
-  content: "\e908";
+  content: "\e909";
 }
 .icon-tri-right:before {
-  content: "\e909";
+  content: "\e90e";
+}
+.icon-tri-left:before {
+  content: "\e910";
 }
