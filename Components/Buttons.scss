@@ -26,6 +26,61 @@ $radius2:50px;
     }
 }
 
+.btn {
+    $btn-font-size: 18px;
+    $btn-icon-size: $btn-font-size - 5px;
+    $btn-icon-gap: 10px;
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-family: $fontSite;
+    font-size: $btn-font-size;
+    color: $colorPurple;
+    font-weight: 700;
+    line-height: 1.2;
+    background: $colorOrange;
+    border-radius: 25px;
+    padding: 11px 25px;
+    
+    @at-root {
+        [class*="btn-cursor"] {
+            &:before,
+            &:after {
+                font-size: $btn-icon-size;
+            }
+            &:before {
+                margin-right: $btn-icon-gap;
+            }
+            &:after {
+                margin-left: $btn-icon-gap;
+            }
+        }
+    }
+    &-cursor {
+        &-right {
+            &:after {
+                @extend [class^="icon-"];
+                @extend .icon-tri-right:before;
+            }
+        }
+        &-left {
+            &:before {
+                @extend [class^="icon-"];
+                @extend .icon-tri-left:before;
+            }
+        }
+    }
+    &-login {
+        $btn-font-size: 15px;
+        $btn-icon-size: $btn-font-size - 5px;
+        font-size: $btn-font-size;
+        &:after {
+            font-size: $btn-icon-size;
+        }
+    }
+}
+
 @media screen and (max-width: $breakpointSM){
     .prd-btn-holder{
         .prd-btn{ width: 121px; padding: 6px 30px;

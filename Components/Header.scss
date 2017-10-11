@@ -1,5 +1,20 @@
 $header-height: 70px;
 
+@at-root {
+    //logoff
+    .ems-logoff {
+        .mod-mini-login .sub.login {
+            display: none !important;
+        }
+    }
+    //login
+    .ems-login {
+        .mod-mini-login .sub.logoff {
+            display: none !important;
+        }
+    }
+}
+
 .main-header{ background-color: $colorPurpleDark; position: relative; z-index: 25;
     &:before{ content: ""; display: inline-block; position: absolute; z-index: 1; height: 5px; background: rgba(0, 0, 0, 0.15); left: 0; right: 0; bottom: -5px; }
 
@@ -52,7 +67,33 @@ $header-height: 70px;
     }
 
     // Header Search and Login
-    .sealog{ width: 170px; }
+    .sealog{
+        position: relative;
+    }
+    
+    //mini login
+    .mod-mini-login {
+        .sub {
+            position: relative;
+            &.logoff {
+                .btn-login {
+                    margin: 15px 0;
+                }
+                .ems-form {
+                    display: none;
+                }
+            }
+
+            &.login {
+                background: red;
+            }
+        }
+
+        .mod-mini-login-header,
+        .mod-mini-login-footer {
+            display: none !important;
+        }
+    }
 }
 
 

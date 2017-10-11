@@ -185,7 +185,7 @@ textarea {
   font-weight: normal;
   font-style: normal; }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], .btn-cursor-right:after, .btn-cursor-left:before, [class*=" icon-"] {
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -241,10 +241,10 @@ textarea {
 .icon-phone:before {
   content: "\e909"; }
 
-.icon-tri-right:before {
+.icon-tri-right:before, .btn-cursor-right:after {
   content: "\e90e"; }
 
-.icon-tri-left:before {
+.icon-tri-left:before, .btn-cursor-left:before {
   content: "\e910"; }
 
 /*!
@@ -6229,6 +6229,35 @@ body[class*=jconfirm-no-scroll-] {
     transform: translateY(-50%);
     right: 18px; }
 
+.btn {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Museo Sans";
+  font-size: 18px;
+  color: #6d328a;
+  font-weight: 700;
+  line-height: 1.2;
+  background: #f9c803;
+  border-radius: 25px;
+  padding: 11px 25px; }
+  [class*="btn-cursor"]:before, [class*="btn-cursor"]:after {
+    font-size: 13px; }
+  [class*="btn-cursor"]:before {
+    margin-right: 10px; }
+  [class*="btn-cursor"]:after {
+    margin-left: 10px; }
+  .btn-login {
+    font-size: 15px; }
+    .btn-login:after {
+      font-size: 10px; }
+
 @media screen and (max-width: 960px) {
   .prd-btn-holder .prd-btn {
     width: 121px;
@@ -6236,6 +6265,12 @@ body[class*=jconfirm-no-scroll-] {
     .prd-btn-holder .prd-btn:after {
       font-size: 8px;
       right: 12px; } }
+
+.ems-logoff .mod-mini-login .sub.login {
+  display: none !important; }
+
+.ems-login .mod-mini-login .sub.logoff {
+  display: none !important; }
 
 .main-header {
   background-color: #5d277e;
@@ -6372,7 +6407,18 @@ body[class*=jconfirm-no-scroll-] {
     .main-header .menu .header-menu .social-media {
       display: none; }
   .main-header .sealog {
-    width: 170px; }
+    position: relative; }
+  .main-header .mod-mini-login .sub {
+    position: relative; }
+    .main-header .mod-mini-login .sub.logoff .btn-login {
+      margin: 15px 0; }
+    .main-header .mod-mini-login .sub.logoff .ems-form {
+      display: none; }
+    .main-header .mod-mini-login .sub.login {
+      background: red; }
+  .main-header .mod-mini-login .mod-mini-login-header,
+  .main-header .mod-mini-login .mod-mini-login-footer {
+    display: none !important; }
 
 @media screen and (max-width: 960px) {
   body {
@@ -8450,6 +8496,9 @@ body[class*=jconfirm-no-scroll-] {
     font-size: 15px;
     line-height: 25px; } }
 
+.ems-page-member-login {
+  position: relative; }
+
 .urunPaging {
   margin: 30px 0;
   background: #5d277e;
@@ -8662,7 +8711,7 @@ body[class*=jconfirm-no-scroll-] {
 
 .post-share {
   position: absolute;
-  left: 0;
+  left: 20px;
   top: 0; }
   .post-share .title {
     font-family: "Museo Sans";
@@ -8688,18 +8737,25 @@ body[class*=jconfirm-no-scroll-] {
       margin-right: 2px; }
     .urunPaging .paging[id$="lnkPrev"], .urunPaging .paging[id$="lnkNext"] {
       display: none; }
+  .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem {
+    width: calc(100% / 2); }
   .blog-post-detail .row-2 {
     position: static;
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
     max-width: none; }
+  .blog-post-detail .row-3.ems-container {
+    margin-left: 0;
+    margin-right: 0;
+    width: auto; }
   .blog-post-detail .post-title {
     font-size: 23px;
     color: #6d328a;
     text-shadow: none; }
-  .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem {
-    width: calc(100% / 2); }
+  .post-content .post-slider .swiper-button-prev,
+  .post-content .post-slider .swiper-button-next {
+    display: none; }
   .post-share {
     position: static;
     max-width: 600px;
@@ -8708,10 +8764,7 @@ body[class*=jconfirm-no-scroll-] {
       display: inline-block;
       width: 40px;
       margin-top: 0;
-      margin-right: 30px; }
-  .post-content .post-slider .swiper-button-prev,
-  .post-content .post-slider .swiper-button-next {
-    display: none; } }
+      margin-right: 30px; } }
 
 @media screen and (max-width: 480px) {
   .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem {
@@ -8719,6 +8772,15 @@ body[class*=jconfirm-no-scroll-] {
   .blog-post {
     margin: 20px 35px; }
     .blog-post .post-title {
-      font-size: 18px; } }
+      font-size: 18px; }
+  .blog-post-detail .row-2 {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .post-content > *:not(.full) {
+    margin-left: 20px;
+    margin-right: 20px; }
+  .post-share {
+    margin-left: 20px;
+    margin-right: 20px; } }
 
 /*# sourceMappingURL=style.css.map */
