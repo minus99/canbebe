@@ -3,6 +3,9 @@ $hover: #333;
 $facebook: #0bbcf0;
 $facebook-hover: #0bbcf0;
 
+$facebook-dark: #304b92;
+$facebook-dark-hover: #304b92;
+
 $youtube: #4385f5;
 $youtube-hover: #e8663c;
 
@@ -20,6 +23,10 @@ $text: #fff;
 $cursor-width: 5px;
 $radius2:50px;
 
+$btn-font-size: 18px;
+$btn-icon-size: 13px;
+$btn-icon-gap: 10px;
+
 .prd-btn-holder{
     .prd-btn{ display: inline-block; background-color: $colorBlueLight; font-family: $fontSite; font-size: 15px; font-weight: 700; color: $colorWhite; text-align: left; padding: 13px 50px 13px 30px; border-radius: 25px; position: relative;
         &:after{ content: "\e909"; display: inline-block; font-family: 'icomoon' !important; font-size: 13px; color: $colorPurple; position: absolute; top: 50%; transform: translateY(-50%); right: 18px; }
@@ -27,13 +34,10 @@ $radius2:50px;
 }
 
 .btn {
-    $btn-font-size: 18px;
-    $btn-icon-size: $btn-font-size - 5px;
-    $btn-icon-gap: 10px;
-
     position: relative;
     display: inline-flex;
     align-items: center;
+    justify-content: space-between;
     font-family: $fontSite;
     font-size: $btn-font-size;
     color: $colorPurple;
@@ -71,15 +75,66 @@ $radius2:50px;
             }
         }
     }
-    &-login {
-        $btn-font-size: 15px;
-        $btn-icon-size: $btn-font-size - 5px;
-        font-size: $btn-font-size;
-        &:after {
-            font-size: $btn-icon-size;
-        }
+}
+
+//emos default buttons
+a.btnDefault, .lnkDefault:not(.lnkSifremiUnuttum) {
+    @extend .btn;
+    @extend [class*="btn-cursor"];
+    @extend .btn-cursor-right;
+}
+//table obj., display:inline fixed
+.urunDetay_btnSepeteAt > table, .urunListe_favoriEkle > table, .urunDetay_btnStokHaberci > table, .ems-cart-coupon > table, .pageLogin_btnFacebookLogin > table, .pageLogin_btnGoogleLogin > table, .pageLogin_btnUyeSifreGonder > table {
+    display: table !important;
+}
+
+//custom buttons
+.btn-login {
+    $btn-font-size: 15px;
+    $btn-icon-size: 10px;
+    font-size: $btn-font-size;
+    &:after {
+        font-size: $btn-icon-size;
     }
 }
+a.btnFacebookLogin {
+    $btn-font-size: 15px;
+    $btn-icon-size: 10px;
+    font-size: $btn-font-size;
+    color: $colorWhite;
+    background: $facebook-dark;
+    &:after {
+        font-size: $btn-icon-size;
+    }
+    i {
+        margin-right: 20px;
+        font-size: 17px;
+        vertical-align: -2px;
+    }
+}
+a.btnMesajGonder {
+    $btn-font-size: 15px;
+    $btn-icon-size: 10px;
+    font-size: $btn-font-size;
+    background: $colorPurple;
+    color: $colorWhite;
+    &:after {
+        font-size: $btn-icon-size;
+        color: $colorOrange;
+    }
+}
+#lnkSifremiUnuttum {
+    font-family: $fontSite;
+    font-size: 13px;
+    color: $colorDefault;
+    font-weight: bold;
+    text-decoration: underline;
+}
+a.btnLogin {
+    display: flex;
+    justify-content: center;
+}
+
 
 @media screen and (max-width: $breakpointSM){
     .prd-btn-holder{

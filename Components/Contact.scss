@@ -1,45 +1,5 @@
 .pageMesajGonder{ background-color: $colorOrange; padding-top: 45px; padding-bottom: 80px; background-image: url(/images/frontend/page/contact-bebe.png); background-repeat: no-repeat; background-position: 2% 75%;
     [id$="lbfHDR_BIZEULASIN"]{ display: block; text-align: center; font-family: $fontSite2; font-size: 65px; color: $colorPurple; }
-    .ems-form{ display: flex; justify-content: center; margin-top: 37px;
-        .ems-form-inner{ width: 815px; //height: 210px; column-count: 2;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            .ems-col{
-                width: calc(50% - 7.5px);
-                &.full-width{ width: 100%; }
-            }
-            .ems-field { width: 100%; position: relative; margin-bottom: 15px;
-                .ems-form-label{ font-family: $fontSite; font-size: 15px; font-weight: 700; color: $colorWhite; position: absolute; top: 18px;  left: 23px; z-index: 1; transition: all .2s ease-in-out; pointer-events: none; }
-                .ems-form-obj input,
-                .ems-form-obj textarea{ width: 100% !important; height: 50px; padding-top: 10px; padding-left: 23px; padding-right: 23px; background: $colorInputBg; outline: 0; border: 0; border-radius: 10px; color: $colorWhite; }
-                .ems-form-obj textarea{ height: 115px; padding-top: 23px; resize: none; }
-                &.is-active{
-                  .ems-form-label{ font-size: 11px;top: 6px; left: 23px; }
-                }
-                &.captcha{
-                    br{ display: none; }
-                    [id$="CaptchaImage1_divCaptcha"]{
-                        display: flex;
-                        #imgCaptcha{ order: 2; }
-                        [id$="txtUYE_KONTROLKODU"]{
-                            width: auto !important;
-                            flex: 1;
-                            margin-right: 15px;
-                        }
-                    }
-                    [id$="lbfUYE_KONTROLKODU"]{ font-family: $fontSite; font-size: 15px; font-weight: 700; color: $colorWhite; position: absolute; top: 18px;  left: 23px; z-index: 1; transition: all .2s ease-in-out; pointer-events: none; }
-                    &.is-active{
-                      [id$="lbfUYE_KONTROLKODU"]{ font-size: 11px;top: 6px; left: 23px; }
-                    }
-                }
-                .btnMesajGonder{ font-family: $fontSite; font-size: 15px; font-weight: bold; color: $colorWhite; background: $colorPurple; width: 250px; display: inline-block; padding: 15px 0 14px; text-align: center; border-radius: 25px;
-                    &:after{ content: "\e909"; font-family: 'icomoon' !important; display: inline-block; margin-left: 7px; font-size: 10px; color: #feca37; }
-                }
-            }
-            .btn-field{ width: 100%; text-align: center;}
-        }
-    }
 }
 
 // İletişim Bilgileri

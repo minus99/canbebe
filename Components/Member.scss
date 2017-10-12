@@ -1,3 +1,40 @@
 .ems-page-member-login {
     position: relative;
+    background: url(/images/frontend/bg-login-438667.jpg) no-repeat right top;
+    background-size: cover;
+    .ems-login, .ems-signup {
+        background: #fff;
+        padding: 50px;
+        border-left: 3px solid rgba(0,0,0,.5)
+    }
+    .page-title-2 {
+        font-family: $fontSite;
+        font-size: 15px;
+        font-weight: 700;
+        color: $colorDefaultDark;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+    .ems-form {
+        .ems-form-inner {
+            width: 350px;
+        }
+    }
+    .or {
+        text-align: center;
+    }
+    .mwk {
+        max-width: 270px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .btn-login-page {
+        font-family: $fontSite;
+        font-size: 15px;
+        color: $colorDefaultDark;
+        text-align: center;
+        > a {
+            text-decoration: underline;
+        }
+    }
 }

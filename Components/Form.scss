@@ -1,0 +1,63 @@
+.ems-form{ display: flex; justify-content: center; margin-top: 37px;
+    .ems-form-inner{ width: 815px; //height: 210px; column-count: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .ems-col{
+            width: calc(50% - 7.5px);
+            &.full-width{ width: 100%; }
+        }
+        .ems-field { width: 100%; position: relative; margin-bottom: 15px;
+            .ems-form-label{ font-family: $fontSite; font-size: 15px; font-weight: 700; color: $colorWhite; position: absolute; top: 18px;  left: 23px; z-index: 1; transition: all .2s ease-in-out; pointer-events: none; }
+            .ems-form-obj input:not([type='checkbox']):not([type='radio']),
+            .ems-form-obj textarea{ width: 100% !important; height: 50px; padding-top: 10px; padding-left: 23px; padding-right: 23px; background: $colorInputBg; outline: 0; border: 0; border-radius: 10px; color: $colorWhite; }
+            .ems-form-obj textarea{ height: 115px; padding-top: 23px; resize: none; }
+            &.is-active{
+              .ems-form-label{ font-size: 11px;top: 6px; left: 23px; }
+            }
+            &.captcha{
+                br{ display: none; }
+                [id$="CaptchaImage1_divCaptcha"]{
+                    display: flex;
+                    #imgCaptcha{ order: 2; }
+                    [id$="txtUYE_KONTROLKODU"]{
+                        width: auto !important;
+                        flex: 1;
+                        margin-right: 15px;
+                    }
+                }
+                [id$="lbfUYE_KONTROLKODU"]{ font-family: $fontSite; font-size: 15px; font-weight: 700; color: $colorWhite; position: absolute; top: 18px;  left: 23px; z-index: 1; transition: all .2s ease-in-out; pointer-events: none; }
+                &.is-active{
+                  [id$="lbfUYE_KONTROLKODU"]{ font-size: 11px;top: 6px; left: 23px; }
+                }
+            }
+            &.mb0 {
+                margin-bottom: 0;
+            }
+        }
+        .btn-field{ width: 100%; text-align: center;}
+    }
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    box-shadow: 0 0 0 1000px #bababa inset;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px;
+}
+[id$="BENIHATIRLA_FL"] {
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+      
+input:disabled, input:read-only {
+    background: #bababa;
+}
