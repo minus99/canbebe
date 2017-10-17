@@ -121,7 +121,13 @@
     position: relative;
     margin: 30px 10px;
     .post-url {
-        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        font-size: 0;
     }
     .post-cat {
         position: absolute;
@@ -137,16 +143,33 @@
     }
     .post-img {
         display: block;
+        width: 100%;
         border-radius: 10px;
     }
     .post-title {
+        position: relative;
         font-family: $fontSite;
         font-size: 20px;
         color: $colorPurple;
         font-weight: 700;
         line-height: 1.2;
         margin: 0;
-        padding: 12px 10px;
+        padding: 12px 70px 12px 10px;
+    }
+    .btn-like {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        z-index: 2;
+        transform: translateY(-50%);
+        padding: 10px;
+        font-size: 22px;
+        color: $colorDefault;
+        transition: color .2s cubic-bezier(0.42, 0, 1, 0.18);
+        cursor: pointer;
+        &:hover, &.selected {
+            color: $colorPink;
+        }
     }
 }
 

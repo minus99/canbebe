@@ -8596,9 +8596,6 @@ input:disabled, input:read-only {
     font-size: 15px;
     line-height: 25px; } }
 
-body {
-  background: red; }
-
 .ems-page-member-login {
   position: relative;
   background: url(/images/frontend/bg-login-438667.jpg) no-repeat right top;
@@ -8729,7 +8726,13 @@ body {
   position: relative;
   margin: 30px 10px; }
   .blog-post .post-url {
-    display: block; }
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    font-size: 0; }
   .blog-post .post-cat {
     position: absolute;
     left: 10px;
@@ -8743,15 +8746,34 @@ body {
     color: #000; }
   .blog-post .post-img {
     display: block;
+    width: 100%;
     border-radius: 10px; }
   .blog-post .post-title {
+    position: relative;
     font-family: "Museo Sans";
     font-size: 20px;
     color: #6d328a;
     font-weight: 700;
     line-height: 1.2;
     margin: 0;
-    padding: 12px 10px; }
+    padding: 12px 70px 12px 10px; }
+  .blog-post .btn-like {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    z-index: 2;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 22px;
+    color: #a9a9a9;
+    -webkit-transition: color 0.2s cubic-bezier(0.42, 0, 1, 0.18);
+    -o-transition: color 0.2s cubic-bezier(0.42, 0, 1, 0.18);
+    transition: color 0.2s cubic-bezier(0.42, 0, 1, 0.18);
+    cursor: pointer; }
+    .blog-post .btn-like:hover, .blog-post .btn-like.selected {
+      color: #de5c7c; }
 
 .blog-post-detail .row-holder-1 {
   position: relative; }
