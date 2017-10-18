@@ -6350,6 +6350,14 @@ a.btnLogin {
   -ms-flex-pack: center;
   justify-content: center; }
 
+a.btnUyeBilgi {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 210px;
+  margin: 20px auto 0; }
+
 @media screen and (max-width: 960px) {
   .prd-btn-holder .prd-btn {
     width: 121px;
@@ -6393,7 +6401,7 @@ a.btnLogin {
         font-family: "Museo Sans";
         font-size: 15px;
         font-weight: 700;
-        color: #fff;
+        color: #424242;
         position: absolute;
         top: 18px;
         left: 23px;
@@ -6403,21 +6411,27 @@ a.btnLogin {
         transition: all .2s ease-in-out;
         pointer-events: none; }
       .ems-form .ems-form-inner .ems-field .ems-form-obj input:not([type='checkbox']):not([type='radio']),
-      .ems-form .ems-form-inner .ems-field .ems-form-obj textarea {
+      .ems-form .ems-form-inner .ems-field .ems-form-obj textarea,
+      .ems-form .ems-form-inner .ems-field .ems-form-obj select {
         width: 100% !important;
         height: 50px;
         padding-top: 10px;
         padding-left: 23px;
         padding-right: 23px;
-        background: #e0b400;
+        background: #eaeaea;
         outline: 0;
         border: 0;
         border-radius: 10px;
-        color: #fff; }
+        color: #424242; }
       .ems-form .ems-form-inner .ems-field .ems-form-obj textarea {
         height: 115px;
         padding-top: 23px;
         resize: none; }
+      .ems-form .ems-form-inner .ems-field .ems-form-obj input[id$="CEPTELEFONALAN"] {
+        width: 20% !important;
+        margin-right: 2%; }
+      .ems-form .ems-form-inner .ems-field .ems-form-obj input[id$="CEPTELEFON"] {
+        width: 78% !important; }
       .ems-form .ems-form-inner .ems-field.is-active .ems-form-label {
         font-size: 11px;
         top: 6px;
@@ -6635,8 +6649,13 @@ input:disabled, input:read-only {
       margin: 15px 0; }
     .main-header .mod-mini-login .sub.logoff .ems-form {
       display: none; }
-    .main-header .mod-mini-login .sub.login {
-      background: red; }
+    .main-header .mod-mini-login .sub.login .ems-user-info {
+      background: #0bbcf0;
+      color: #fff; }
+    .main-header .mod-mini-login .sub.login .ems-user-pages {
+      display: none; }
+    .main-header .mod-mini-login .sub.login [id$="lbfkutuUyeGiris2"] {
+      display: none; }
   .main-header .mod-mini-login .mod-mini-login-header,
   .main-header .mod-mini-login .mod-mini-login-footer {
     display: none !important; }
@@ -7762,6 +7781,13 @@ input:disabled, input:read-only {
     font-family: "VerveineCorp";
     font-size: 65px;
     color: #6d328a; }
+  .pageMesajGonder input, .pageMesajGonder textarea {
+    background: #e0b400; }
+  .pageMesajGonder .ems-form .ems-form-inner .ems-field .ems-form-label {
+    color: #fff; }
+  .pageMesajGonder .ems-form .ems-form-inner .ems-field .ems-form-obj input:not([type='checkbox']):not([type='radio']), .pageMesajGonder .ems-form .ems-form-inner .ems-field .ems-form-obj textarea {
+    background: #e0b400;
+    color: #fff; }
 
 .contact-wrapper {
   background: #6d328a;
@@ -8596,6 +8622,21 @@ input:disabled, input:read-only {
     font-size: 15px;
     line-height: 25px; } }
 
+.page-member .product-menu-wrapper {
+  margin-bottom: 50px; }
+
+.page-member .page-top-title {
+  font-family: "Museo Sans";
+  font-size: 15px;
+  font-weight: 700;
+  color: #424242;
+  line-height: 1.2;
+  margin-bottom: 30px; }
+
+.page-member .page-top-desc {
+  font-size: 13px;
+  line-height: 1.5; }
+
 .ems-page-member-login {
   position: relative;
   background: url(/images/frontend/bg-login-438667.jpg) no-repeat right top;
@@ -8604,13 +8645,6 @@ input:disabled, input:read-only {
     background: #fff;
     padding: 50px;
     border-left: 3px solid rgba(0, 0, 0, 0.5); }
-  .ems-page-member-login .page-title-2 {
-    font-family: "Museo Sans";
-    font-size: 15px;
-    font-weight: 700;
-    color: #424242;
-    line-height: 1.2;
-    margin-bottom: 30px; }
   .ems-page-member-login .ems-form .ems-form-inner {
     width: 350px; }
   .ems-page-member-login .or {
@@ -8626,6 +8660,15 @@ input:disabled, input:read-only {
     text-align: center; }
     .ems-page-member-login .btn-login-page > a {
       text-decoration: underline; }
+
+.ems-page-member-info .page-top-title {
+  text-align: center; }
+
+.ems-page-member-info .page-top-desc {
+  text-align: center; }
+
+.ems-page-member-info .ems-form .ems-form-inner {
+  width: 350px; }
 
 .urunPaging {
   margin: 30px 0;
@@ -8757,7 +8800,7 @@ input:disabled, input:read-only {
     line-height: 1.2;
     margin: 0;
     padding: 12px 70px 12px 10px; }
-  .blog-post .btn-like {
+  .blog-post .btn-content-like {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -8772,7 +8815,7 @@ input:disabled, input:read-only {
     -o-transition: color 0.2s cubic-bezier(0.42, 0, 1, 0.18);
     transition: color 0.2s cubic-bezier(0.42, 0, 1, 0.18);
     cursor: pointer; }
-    .blog-post .btn-like:hover, .blog-post .btn-like.selected {
+    .blog-post .btn-content-like:hover, .blog-post .btn-content-like.selected {
       color: #de5c7c; }
 
 .blog-post-detail .row-holder-1 {

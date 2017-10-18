@@ -85,7 +85,16 @@ $header-height: 70px;
             }
 
             &.login {
-                background: red;
+                .ems-user-info {
+                    background: $colorBlueLight;
+                    color: $colorWhite;
+                }
+                .ems-user-pages {
+                    display: none;
+                }
+                [id$="lbfkutuUyeGiris2"] {
+                    display: none;
+                }
             }
         }
 

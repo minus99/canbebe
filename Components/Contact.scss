@@ -1,5 +1,23 @@
 .pageMesajGonder{ background-color: $colorOrange; padding-top: 45px; padding-bottom: 80px; background-image: url(/images/frontend/page/contact-bebe.png); background-repeat: no-repeat; background-position: 2% 75%;
     [id$="lbfHDR_BIZEULASIN"]{ display: block; text-align: center; font-family: $fontSite2; font-size: 65px; color: $colorPurple; }
+    input, textarea {
+        background: $colorInputBg2;
+    }
+    .ems-form {
+        .ems-form-inner {
+            .ems-field {
+                .ems-form-label {
+                    color: $colorWhite;
+                }
+                .ems-form-obj {
+                    input:not([type='checkbox']):not([type='radio']), textarea {
+                        background: $colorInputBg2;
+                        color: $colorWhite;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // İletişim Bilgileri

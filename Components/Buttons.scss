@@ -134,6 +134,11 @@ a.btnLogin {
     display: flex;
     justify-content: center;
 }
+a.btnUyeBilgi {
+    display: flex;
+    max-width: 210px;
+    margin: 20px auto 0;
+}
 
 
 @media screen and (max-width: $breakpointSM){
