@@ -56,6 +56,14 @@ b {font-weight: 700;}
 .mb30 {margin-bottom: 30px;}
 .ml30 {margin-left: 30px;}
 
+.desc {
+    font-family: $fontSite;
+    font-size: 18px;
+    color: $colorDefaultDark;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
 .facebook{ color: #3b5998; }
 .instagram i{ background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .youtube{ color: #cd201f; }

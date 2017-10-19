@@ -40,7 +40,7 @@
 
 //icerik kategori
 .icerikKategoriListe {
-    margin: 5px 0 25px;
+    margin: 20px 0 25px;
     > ul {
         display: flex;
         justify-content: center;
@@ -58,6 +58,46 @@
                 font-weight: 700;
                 .icerikCount {
                     display: none !important;
+                }
+            }
+            //kategori gorsel
+            &.cat-img {
+                > a {
+                    padding-left: 40px;
+                    background-repeat: no-repeat;
+                    background-position: left center;
+                }
+                &.cat-tumu {
+                    > a {
+                        background-image: url(/images/frontend/blog/cat-tumu.svg);
+                        background-color: $colorOrangeDark;
+                        color: $colorWhite;
+                        padding-left: 45px;
+                        padding-right: 15px;
+                        background-position: 10px center;
+                        border-radius: 25px;
+                    }
+                    margin-right: 25px;
+                }
+                &.cat-gelisim {
+                    > a {
+                        background-image: url(/images/frontend/blog/cat-gelisim.svg);
+                    }
+                }
+                &.cat-beslenme {
+                    > a {
+                        background-image: url(/images/frontend/blog/cat-beslenme.svg);
+                    }
+                }
+                &.cat-bebek-yemekleri {
+                    > a {
+                        background-image: url(/images/frontend/blog/cat-bebek-yemekleri.svg);
+                    }
+                }
+                &.cat-anneye-ozel {
+                    > a {
+                        background-image: url(/images/frontend/blog/cat-anneye-ozel.svg);
+                    }
                 }
             }
         }
@@ -93,7 +133,8 @@
     }
 }
 
-.blog-logo {
+.blog-title {
+    display: block;
     padding: 85px 10px 25px;
     font-family: $fontSite;
     font-size: 40px;
@@ -157,19 +198,13 @@
         padding: 12px 70px 12px 10px;
     }
     .btn-content-like {
+        font-size: 22px;
         position: absolute;
         right: 10px;
         top: 50%;
         z-index: 2;
         transform: translateY(-50%);
         padding: 10px;
-        font-size: 22px;
-        color: $colorDefault;
-        transition: color .2s cubic-bezier(0.42, 0, 1, 0.18);
-        cursor: pointer;
-        &:hover, &.selected {
-            color: $colorPink;
-        }
     }
 }
 
@@ -231,7 +266,7 @@
 .post-content {
     font-family: $fontSite;
     font-size: 18px;
-    color: #464646;
+    color: $colorDefaultDark;
     font-weight: 500;
     line-height: 1.6;
     max-width: 680px;

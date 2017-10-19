@@ -2855,6 +2855,13 @@ b {
 .ml30 {
   margin-left: 30px; }
 
+.desc {
+  font-family: "Museo Sans";
+  font-size: 18px;
+  color: #424242;
+  font-weight: 500;
+  line-height: 1.6; }
+
 .facebook {
   color: #3b5998; }
 
@@ -6358,6 +6365,16 @@ a.btnUyeBilgi {
   max-width: 210px;
   margin: 20px auto 0; }
 
+.btn-content-like {
+  font-size: inherit;
+  color: #a9a9a9;
+  -webkit-transition: color 0.2s cubic-bezier(0.42, 0, 1, 0.18);
+  -o-transition: color 0.2s cubic-bezier(0.42, 0, 1, 0.18);
+  transition: color 0.2s cubic-bezier(0.42, 0, 1, 0.18);
+  cursor: pointer; }
+  .btn-content-like:hover, .btn-content-like.selected {
+    color: #de5c7c; }
+
 @media screen and (max-width: 960px) {
   .prd-btn-holder .prd-btn {
     width: 121px;
@@ -6651,7 +6668,16 @@ input:disabled, input:read-only {
       display: none; }
     .main-header .mod-mini-login .sub.login .ems-user-info {
       background: #0bbcf0;
-      color: #fff; }
+      font-size: 15px;
+      color: #fff;
+      margin: 15px 0;
+      min-width: 200px; }
+      .main-header .mod-mini-login .sub.login .ems-user-info .btn-profile {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%; }
     .main-header .mod-mini-login .sub.login .ems-user-pages {
       display: none; }
     .main-header .mod-mini-login .sub.login [id$="lbfkutuUyeGiris2"] {
@@ -8701,7 +8727,7 @@ input:disabled, input:read-only {
     display: none !important; }
 
 .icerikKategoriListe {
-  margin: 5px 0 25px; }
+  margin: 20px 0 25px; }
   .icerikKategoriListe > ul {
     display: -webkit-box;
     display: -webkit-flex;
@@ -8724,6 +8750,28 @@ input:disabled, input:read-only {
         font-weight: 700; }
         .icerikKategoriListe > ul > li > a .icerikCount {
           display: none !important; }
+      .icerikKategoriListe > ul > li.cat-img > a {
+        padding-left: 40px;
+        background-repeat: no-repeat;
+        background-position: left center; }
+      .icerikKategoriListe > ul > li.cat-img.cat-tumu {
+        margin-right: 25px; }
+        .icerikKategoriListe > ul > li.cat-img.cat-tumu > a {
+          background-image: url(/images/frontend/blog/cat-tumu.svg);
+          background-color: #e8663c;
+          color: #fff;
+          padding-left: 45px;
+          padding-right: 15px;
+          background-position: 10px center;
+          border-radius: 25px; }
+      .icerikKategoriListe > ul > li.cat-img.cat-gelisim > a {
+        background-image: url(/images/frontend/blog/cat-gelisim.svg); }
+      .icerikKategoriListe > ul > li.cat-img.cat-beslenme > a {
+        background-image: url(/images/frontend/blog/cat-beslenme.svg); }
+      .icerikKategoriListe > ul > li.cat-img.cat-bebek-yemekleri > a {
+        background-image: url(/images/frontend/blog/cat-bebek-yemekleri.svg); }
+      .icerikKategoriListe > ul > li.cat-img.cat-anneye-ozel > a {
+        background-image: url(/images/frontend/blog/cat-anneye-ozel.svg); }
   .icerikKategoriListe .headerIcerikKategoriListe, .icerikKategoriListe .headerIcerikKategoriListeSgtAd {
     display: none !important; }
 
@@ -8745,17 +8793,18 @@ input:disabled, input:read-only {
   .page-blog .icerikTemplateListeContainer .icerikTemplateListeEtiket {
     display: none !important; }
 
-.blog-logo {
+.blog-title {
+  display: block;
   padding: 85px 10px 25px;
   font-family: "Museo Sans";
   font-size: 40px;
   color: #de5c7c;
   font-weight: 700;
   text-align: center; }
-  .blog-logo .o {
+  .blog-title .o {
     position: relative;
     visibility: hidden; }
-    .blog-logo .o:before {
+    .blog-title .o:before {
       content: "";
       background: url(/images/frontend/blog/letter-o.png) no-repeat center bottom;
       position: absolute;
@@ -8801,6 +8850,7 @@ input:disabled, input:read-only {
     margin: 0;
     padding: 12px 70px 12px 10px; }
   .blog-post .btn-content-like {
+    font-size: 22px;
     position: absolute;
     right: 10px;
     top: 50%;
@@ -8808,15 +8858,7 @@ input:disabled, input:read-only {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    padding: 10px;
-    font-size: 22px;
-    color: #a9a9a9;
-    -webkit-transition: color 0.2s cubic-bezier(0.42, 0, 1, 0.18);
-    -o-transition: color 0.2s cubic-bezier(0.42, 0, 1, 0.18);
-    transition: color 0.2s cubic-bezier(0.42, 0, 1, 0.18);
-    cursor: pointer; }
-    .blog-post .btn-content-like:hover, .blog-post .btn-content-like.selected {
-      color: #de5c7c; }
+    padding: 10px; }
 
 .blog-post-detail .row-holder-1 {
   position: relative; }
@@ -8874,7 +8916,7 @@ input:disabled, input:read-only {
 .post-content {
   font-family: "Museo Sans";
   font-size: 18px;
-  color: #464646;
+  color: #424242;
   font-weight: 500;
   line-height: 1.6;
   max-width: 680px;

@@ -139,6 +139,15 @@ a.btnUyeBilgi {
     max-width: 210px;
     margin: 20px auto 0;
 }
+.btn-content-like {
+    font-size: inherit;
+    color: $colorDefault;
+    transition: color .2s cubic-bezier(0.42, 0, 1, 0.18);
+    cursor: pointer;
+    &:hover, &.selected {
+        color: $colorPink;
+    }
+}
 
 
 @media screen and (max-width: $breakpointSM){
