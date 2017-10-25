@@ -100,6 +100,10 @@ a.btn-more{
 		}
 }
 
+textarea {
+	resize: none;
+}
+
 @media screen and (max-width: $breakpointSM){
 		a.button-slide{
 				font-size: 12px;

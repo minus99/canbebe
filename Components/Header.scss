@@ -90,7 +90,30 @@ $header-height: 70px;
                     font-size: 15px;
                     color: $colorWhite;
                     margin: 15px 0;
-                    min-width: 200px;
+                    padding: 11px 15px;
+                    min-width: 183px;
+                    &:after{
+                        @extend [class^="icon-"];
+                        @extend .icon-tri-right:before;
+                        transform: rotate(90deg);
+                        font-size: 10px;
+                        color: $colorOrange;
+                        margin-left: 10px;
+                    }
+                    [id$="lbfUYE_SAYIN"]{
+                        display: flex;
+                        align-items: center;
+                        > span{
+                            display: inline-block;
+                        }
+                        [id$="lblUYE_ADSOYAD"]{
+                            margin-left: 5px;
+                            max-width: 70px;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                    }
                     .btn-profile {
                         position: absolute;
                         left: 0;
@@ -197,6 +220,8 @@ $header-height: 70px;
         }
 
         .sealog{ width: 36px; }
+        
+        .mod-mini-login { display: none; }
     }
 }
 

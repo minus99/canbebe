@@ -29,7 +29,15 @@ $btn-icon-gap: 10px;
 
 .prd-btn-holder{
     .prd-btn{ display: inline-block; background-color: $colorBlueLight; font-family: $fontSite; font-size: 15px; font-weight: 700; color: $colorWhite; text-align: left; padding: 13px 50px 13px 30px; border-radius: 25px; position: relative;
-        &:after{ content: "\e909"; display: inline-block; font-family: 'icomoon' !important; font-size: 13px; color: $colorPurple; position: absolute; top: 50%; transform: translateY(-50%); right: 18px; }
+        &:after {
+            font-size: 13px;
+            color: $colorPurple; 
+            position: absolute; 
+            top: 50%; 
+            transform: translateY(-50%); right: 18px; 
+            @extend [class^="icon-"];
+            @extend .icon-tri-right:before;
+        }
     }
 }
 

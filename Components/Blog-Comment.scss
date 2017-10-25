@@ -1,0 +1,233 @@
+.comment-container{
+    width: 1140px;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.comment-info-holder{
+    margin-top: 50px;
+    span{
+        margin-right: 2px;
+        font-family: $fontSite;
+        font-size: 13px;
+        font-weight: 500;
+        color: #a9a9a9;
+    }
+    .like-count{
+        margin-bottom: 14px;
+        i{
+            margin-right: 10px;
+        }
+        span{
+            margin-right: 2px;
+        }
+    }
+    .comment-info{
+        padding: 15px 0 16px;
+        border-top: 1px solid #e9e9e9;
+        .comment-container{
+            display: flex;
+            justify-content: space-between;
+            .like-comment{
+                > a{
+                    margin-right: 25px;
+                    > i{
+                        margin-right: 7px;
+                    }
+                    &:not(.commentWrite).selected{
+                        i, span{
+                          color: #6d328a !important;
+                        }
+                    }
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    &.commentWrite i{
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .comment-count{
+                > i{
+                    margin-right: 7px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+.icerikDetay_yorumListContainer{
+    position: relative;
+    br{ display: none; }
+    .icerikListeYorumlar{
+        background-color: $colorBg;
+        border-bottom: 1px solid #e9e9e9;
+        .IcerikDetay_yorumlar{
+            .IcerikDetay_title{
+                display: none;
+            }
+            .userCommentHolder{
+                border-top:1px solid #e9e9e9;
+                .userComment{
+                    width: 1140px;
+                    max-width: 680px;
+                    margin: 0 auto;
+                    position: relative;
+                    padding-left: 68px;
+                    .avatar{
+                        position: absolute;
+                        left: 0;
+                        top: 18px;
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        background: url("/images/frontend/icon/oval-orange.svg") no-repeat center top;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .kimden{
+                        display: block;
+                        .adSoyad{
+                            display: block;
+                            padding-top: 19px;
+                            font-family: $fontSite;
+                            font-size: 15px;
+                            font-weight: 500;
+                            line-height: 0.96;
+                            color: $colorBlack;
+                        }
+                        .tarih{
+                            display: block;
+                            margin-top: 5px;
+                            font-family: $fontSite;
+                            font-size: 13px;
+                            font-weight: 500;
+                            line-height: 1.11;
+                            color: rgba(0, 0, 0, 0.38);
+                        }
+                    }
+                    .text{
+                        display: block;
+                        margin-top: 10px;
+                        font-family: $fontSite;
+                        font-size: 15px;
+                        font-weight: 500;
+                        line-height: 1.29;
+                        color: $colorGrey;
+                    }
+                    .subCommentContainer{
+                        display: block;
+                        margin-top: 18px;
+                        margin-bottom: 16px;
+                        [id$="pnlReplies"]{
+                            span{
+                                font-family: $fontSite;
+                                font-size: 13px;
+                                font-weight: 700;
+                                color: $colorDefault;
+                                cursor: pointer;
+                                &:before{
+                                    @extend [class^="icon-"];
+                                    @extend .icon-like:before;
+                                    margin-right: 8px;
+                                }
+                                &.selected{
+                                    color: $colorPurple;
+                                    &:before{
+                                        @extend .icon-liked:before;
+                                    }
+                                }
+                            }
+                        }
+                        .comment{ display: none; }
+                    }
+                }
+            }
+            .icerikDetay_btnIcerikYanitla{
+                display: none;
+            }
+        }
+    }
+
+    .icerikDetay_icerikYorumContainer{
+        width: 1140px;
+        max-width: 680px;
+        margin: 0 auto;
+        .icerikDetay_icerikYorum{
+            display: block;
+            margin: 18px 0 18px;
+            .divICY_ACIKLAMA{
+                display: inline-block;
+                width: 100%;
+                max-width: 550px;
+                margin-right: 23px;
+                [id$="lbfICY_ACIKLAMA_YORUM"]{
+                    display: none;
+                }
+                [id$="txtICY_ACIKLAMA_YORUM"]{
+                    width: 100%;
+                    font-family: $fontSite;
+                    height: 41.7px;
+                    padding: 12.4px 18px;
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #aaaaaa;
+                    outline: 0 !important;
+                    border: 1px solid #e3e4e8;
+                }
+            }
+            .divICY_YORUMEKLE{
+                display: inline-block;
+            }
+        }
+    }
+}
+
+
+//Login değilse yorum yapamaz
+.ems-logoff .icerikDetay_yorumListContainer .icerikDetay_icerikYorumContainer{ display: none; }
+
+//Footer effect
+.page-blog-detail + .main-footer:before{
+    height: 1px;
+    background-image: none;
+    background-color: #e9e9e9;
+    top: -1px;
+ }
+
+
+ @media screen and (max-width: $breakpointSM){
+    .comment-container{
+        width: auto;
+        margin: 0 20px;
+    }
+    .icerikDetay_yorumListContainer{
+        .icerikListeYorumlar{
+            .IcerikDetay_yorumlar{
+                .userCommentHolder{
+                    .userComment{ 
+                        width: auto;
+                        margin: 0 20px;
+                    }
+                }
+            }
+        }
+        .icerikDetay_icerikYorumContainer{
+            width: auto;
+            margin: 0 20px;
+            .icerikDetay_icerikYorum{
+                text-align: center;
+                .divICY_ACIKLAMA{
+                    width: auto;
+                    margin-right: 0;
+                }
+                .divICY_YORUMEKLE{
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+ }

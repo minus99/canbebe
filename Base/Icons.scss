@@ -1,5 +1,4 @@
 //icomoon
-
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon' !important;
   speak: none;
@@ -8,10 +7,29 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-like-2:before {
+  content: "\e911";
+}
+.icon-liked-2:before {
+  content: "\e912";
+}
+.icon-liked:before {
+  content: "\e913";
+}
+.icon-like:before {
+  content: "\e914";
+}
+.icon-comment:before {
+  content: "\e915";
+}
+.icon-more:before {
+  content: "\e916";
+}
 .icon-vimeo:before {
   content: "\e908";
 }

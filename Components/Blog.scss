@@ -1,3 +1,11 @@
+[id$="lblICR_METIN_TEMPLATE"]{
+    > .page-content{
+        > .title{
+            display: none;
+        }
+    }
+}
+
 //sayfalama
 .urunPaging {
     margin: 30px 0;
@@ -45,7 +53,7 @@
         display: flex;
         justify-content: center;
         > li {
-            margin: 0 5px;
+            width: auto !important;
             > b {
                 display: none !important;
             }
@@ -66,6 +74,7 @@
                     padding-left: 40px;
                     background-repeat: no-repeat;
                     background-position: left center;
+                    white-space: nowrap;
                 }
                 &.cat-tumu {
                     > a {
@@ -174,13 +183,22 @@
         position: absolute;
         left: 10px;
         top: 10px;
-        width: 32px;
-        height: 32px;
-        line-height: 32px;
-        border-radius: 100%;
-        text-align: center;
-        background: $colorWhite;
-        color: #000;
+        width: 30px;
+        height: 31px;
+        &.cat-img {
+            &.cat-gelisim {
+                background-image: url(/images/frontend/blog/cat-gelisim.svg);
+            }
+            &.cat-beslenme {
+                background-image: url(/images/frontend/blog/cat-beslenme.svg);
+            }
+            &.cat-bebek-yemekleri {
+                background-image: url(/images/frontend/blog/cat-bebek-yemekleri.svg);
+            }
+            &.cat-anneye-ozel {
+                background-image: url(/images/frontend/blog/cat-anneye-ozel.svg);
+            }
+        }
     }
     .post-img {
         display: block;
@@ -221,7 +239,7 @@
             background: url(/images/frontend/effect/footer-top.png) center center;
             background-size: cover;
             position: absolute;
-            bottom: 0;
+            bottom: -1px;
             left: 0;
             width: 100%;
             height: 20px;
@@ -315,6 +333,7 @@
     }
 }
 
+//paylas
 .post-share {
     position: absolute;
     left: 20px;
@@ -338,7 +357,26 @@
                 color: $colorPink;
             }
         }
-    }    
+    }
+}
+
+//ilgili makaleler
+.related-posts-holder{
+    background: #fafafa;
+    .related-posts {
+        padding-bottom: 30px;
+        .blog-title {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .blog-post {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .swiper-pagination {
+            display: none;
+        }
+    }
 }
 
 @media screen and (max-width: $breakpointSM){
@@ -398,6 +436,14 @@
                 margin-top: 0;
                 margin-right: 30px;
             }
+        }
+    }
+
+    //icerik kategori
+    .icerikKategoriListe {
+        > ul {
+            display: flex;
+            justify-content: flex-start;
         }
     }
 }
