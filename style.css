@@ -8959,7 +8959,7 @@ input:disabled, input:read-only {
     display: none !important; }
 
 .icerikKategoriListe {
-  margin: 20px 0 25px; }
+  margin: 20px 0 30px; }
   .icerikKategoriListe > ul {
     display: -webkit-box;
     display: -webkit-flex;
@@ -8979,9 +8979,13 @@ input:disabled, input:read-only {
         font-family: "Museo Sans";
         font-size: 15px;
         color: #6d328a;
-        font-weight: 700; }
+        font-weight: 700;
+        border-radius: 15px; }
         .icerikKategoriListe > ul > li > a .icerikCount {
           display: none !important; }
+      .icerikKategoriListe > ul > li.active > a {
+        background: #5d277e;
+        color: #fff; }
       .icerikKategoriListe > ul > li.cat-img > a {
         padding-left: 40px;
         background-repeat: no-repeat;
@@ -9007,6 +9011,38 @@ input:disabled, input:read-only {
         background-image: url(/images/frontend/blog/cat-anneye-ozel.svg); }
   .icerikKategoriListe .headerIcerikKategoriListe, .icerikKategoriListe .headerIcerikKategoriListeSgtAd {
     display: none !important; }
+
+.etiketListe {
+  position: relative;
+  margin-top: 30px; }
+  .etiketListe .headerEtiketListe {
+    display: none !important; }
+  .etiketListe .tagCloud ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .etiketListe .tagCloud ul > li > a {
+      display: block;
+      padding: 20px;
+      background: #f3f3f3;
+      font-family: "Museo Sans";
+      font-size: 15px;
+      color: #6d328a;
+      font-weight: 700;
+      border-left: 2px solid #fff; }
+    .etiketListe .tagCloud ul > li:first-child > a {
+      border-radius: 15px 0 0 15px;
+      border-left: none; }
+    .etiketListe .tagCloud ul > li:last-child > a {
+      border-radius: 0 15px 15px 0; }
+    .etiketListe .tagCloud ul > li.selected > a {
+      background: #5d277e;
+      color: #fff; }
 
 .page-blog .icerikTemplateListeContainer {
   display: -webkit-box;
@@ -9253,10 +9289,6 @@ input:disabled, input:read-only {
       margin-top: 0;
       margin-right: 30px; }
   .icerikKategoriListe > ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;

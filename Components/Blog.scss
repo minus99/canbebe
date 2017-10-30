@@ -48,7 +48,7 @@
 
 //icerik kategori
 .icerikKategoriListe {
-    margin: 20px 0 25px;
+    margin: 20px 0 30px;
     > ul {
         display: flex;
         justify-content: center;
@@ -64,8 +64,15 @@
                 font-size: 15px;
                 color: $colorPurple;
                 font-weight: 700;
+                border-radius: 15px;
                 .icerikCount {
                     display: none !important;
+                }
+            }
+            &.active {
+                > a {
+                    background: $colorPurpleDark;
+                    color: $colorWhite;
                 }
             }
             //kategori gorsel
@@ -113,6 +120,50 @@
     }
     .headerIcerikKategoriListe, .headerIcerikKategoriListeSgtAd {
         display: none !important;
+    }
+}
+
+//icerik etiket
+.etiketListe {
+    position: relative;
+    margin-top: 30px;
+    .headerEtiketListe {
+        display: none !important;
+    }
+    .tagCloud {
+        ul {
+            display: flex;
+            justify-content: center;
+            > li {
+                > a {
+                    display: block;
+                    padding: 20px;
+                    background: #f3f3f3;
+                    font-family: $fontSite;
+                    font-size: 15px;
+                    color: $colorPurple;
+                    font-weight: 700;
+                    border-left: 2px solid #fff;
+                }
+                &:first-child {
+                    > a {
+                        border-radius: 15px 0 0 15px;
+                        border-left: none;
+                    }
+                }
+                &:last-child {
+                    > a {
+                        border-radius: 0 15px 15px 0;
+                    }
+                }
+                &.selected {
+                    > a {
+                        background: $colorPurpleDark;
+                        color: $colorWhite;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -442,7 +493,6 @@
     //icerik kategori
     .icerikKategoriListe {
         > ul {
-            display: flex;
             justify-content: flex-start;
         }
     }
