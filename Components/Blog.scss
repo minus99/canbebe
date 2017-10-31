@@ -28,7 +28,8 @@
         text-align: center;
     }
     span.paging {
-        background: url(/images/frontend/icon/oval-orange.svg) no-repeat center center;
+        background: url(/images/frontend/blog/oval-f9c803.svg) no-repeat center center;
+        background-size: contain;
     }
     .paging[id$="lnkPrev"], .paging[id$="lnkNext"] {
         font-size: 12px;
@@ -59,9 +60,10 @@
             }
             > a {
                 display: block;
-                padding: 10px;
+                margin: 0 5px;
+                padding: 12px;
                 font-family: $fontSite;
-                font-size: 15px;
+                font-size: 18px;
                 color: $colorPurple;
                 font-weight: 700;
                 border-radius: 15px;
@@ -71,49 +73,8 @@
             }
             &.active {
                 > a {
-                    background: $colorPurpleDark;
+                    background-color: $colorPurpleDark;
                     color: $colorWhite;
-                }
-            }
-            //kategori gorsel
-            &.cat-img {
-                > a {
-                    padding-left: 40px;
-                    background-repeat: no-repeat;
-                    background-position: left center;
-                    white-space: nowrap;
-                }
-                &.cat-tumu {
-                    > a {
-                        background-image: url(/images/frontend/blog/cat-tumu.svg);
-                        background-color: $colorOrangeDark;
-                        color: $colorWhite;
-                        padding-left: 45px;
-                        padding-right: 15px;
-                        background-position: 10px center;
-                        border-radius: 25px;
-                    }
-                    margin-right: 25px;
-                }
-                &.cat-gelisim {
-                    > a {
-                        background-image: url(/images/frontend/blog/cat-gelisim.svg);
-                    }
-                }
-                &.cat-beslenme {
-                    > a {
-                        background-image: url(/images/frontend/blog/cat-beslenme.svg);
-                    }
-                }
-                &.cat-bebek-yemekleri {
-                    > a {
-                        background-image: url(/images/frontend/blog/cat-bebek-yemekleri.svg);
-                    }
-                }
-                &.cat-anneye-ozel {
-                    > a {
-                        background-image: url(/images/frontend/blog/cat-anneye-ozel.svg);
-                    }
                 }
             }
         }
@@ -130,39 +91,120 @@
     .headerEtiketListe {
         display: none !important;
     }
-    .tagCloud {
-        ul {
-            display: flex;
-            justify-content: center;
-            > li {
+    ul {
+        display: flex;
+        justify-content: center;
+        > li {
+            > a {
+                display: block;
+                padding: 16px;
+                background-color: #f3f3f3;
+                font-family: $fontSite;
+                font-size: 15px;
+                color: $colorPurple;
+                font-weight: 700;
+                border-left: 1px solid #fff;
+            }
+            &:first-child {
                 > a {
-                    display: block;
-                    padding: 20px;
-                    background: #f3f3f3;
-                    font-family: $fontSite;
-                    font-size: 15px;
-                    color: $colorPurple;
-                    font-weight: 700;
-                    border-left: 2px solid #fff;
-                }
-                &:first-child {
-                    > a {
-                        border-radius: 15px 0 0 15px;
-                        border-left: none;
-                    }
-                }
-                &:last-child {
-                    > a {
-                        border-radius: 0 15px 15px 0;
-                    }
-                }
-                &.selected {
-                    > a {
-                        background: $colorPurpleDark;
-                        color: $colorWhite;
-                    }
+                    border-radius: 15px 0 0 15px;
+                    border-left: none;
                 }
             }
+            &:last-child {
+                > a {
+                    border-radius: 0 15px 15px 0;
+                }
+            }
+            &.selected {
+                > a {
+                    background-color: $colorPurple;
+                    color: $colorWhite;
+                }
+            }
+        }
+    }
+}
+
+//kategori & etiket gorsel
+.icerikKategoriListe, .etiketListe {
+    li {
+        &.cat-img {
+            > a {
+                padding-left: 60px;
+                background-repeat: no-repeat;
+                background-position: 17px center;
+                white-space: nowrap;
+            }
+            &.cat-tumu {
+                display: none !important;
+                > a {
+                    background-image: url(/images/frontend/blog/cat-tumu.svg);
+                    background-color: $colorOrangeDark;
+                    color: $colorWhite;
+                    padding-left: 45px;
+                    padding-right: 15px;
+                    background-position: 10px center;
+                    border-radius: 25px;
+                }
+            }
+            &.cat-ailem {
+                > a {
+                    background-image: url(/images/frontend/blog/cat-ailem.svg);
+                }
+            }
+            &.cat-aktivite-oyun {
+                > a {
+                    background-image: url(/images/frontend/blog/cat-aktivite-oyun.svg);
+                }
+            }
+            &.cat-davranis-psikoloji {
+                > a {
+                    background-image: url(/images/frontend/blog/cat-davranis-psikoloji.svg);
+                }
+            }
+            &.cat-gelisim {
+                > a {
+                    background-image: url(/images/frontend/blog/cat-gelisim.svg);
+                }
+            }
+            &.cat-uyku {
+                > a {
+                    background-image: url(/images/frontend/blog/cat-uyku.svg);
+                }
+            }
+            &.cat-bebek {
+                > a {
+                    background-image: url(/images/frontend/blog/tag-bebek.svg);
+                }
+            }
+            &.cat-yeni-dogan {
+                > a {
+                    background-image: url(/images/frontend/blog/tag-yeni-dogan.svg);
+                }
+            }
+            &.cat-yurumeye-baslayan {
+                > a {
+                    background-image: url(/images/frontend/blog/tag-yurumeye-baslayan.svg);
+                }
+            }
+        }
+        &.selected {
+            &.cat-bebek {
+                > a {
+                    background-image: url(/images/frontend/blog/tag-bebek2.svg);
+                }
+            }
+            &.cat-yeni-dogan {
+                > a {
+                    background-image: url(/images/frontend/blog/tag-yeni-dogan2.svg);
+                }
+            }
+            &.cat-yurumeye-baslayan {
+                > a {
+                    background-image: url(/images/frontend/blog/tag-yurumeye-baslayan2.svg);
+                }
+            } 
         }
     }
 }
@@ -213,7 +255,19 @@
             width: 27px;
             height: 96px;
             visibility: visible;
+            animation-duration: .32s;
+            animation-name: balloon;
         }
+    }
+}
+@keyframes balloon {
+    from {
+        bottom: -40px;
+        opacity: 0;
+    }  
+    to {
+        bottom: 8px;
+        opacity: 1;
     }
 }
 
@@ -234,20 +288,52 @@
         position: absolute;
         left: 10px;
         top: 10px;
-        width: 30px;
-        height: 31px;
+        width: 34px;
+        height: 34px;
+        background: url(/images/frontend/blog/oval-eeeeee.svg) no-repeat;
+        background-size: cover;
         &.cat-img {
+            &:before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -10px;
+                margin-top: -10px;
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+            &.cat-ailem {
+                background-image: url(/images/frontend/blog/oval-eeeeee.svg);
+                &:before {
+                    background-image: url(/images/frontend/blog/cat-ailem.svg);
+                }
+            }
+            &.cat-aktivite-oyun {
+                background-image: url(/images/frontend/blog/oval-eeeeee.svg);
+                &:before {
+                    background-image: url(/images/frontend/blog/cat-aktivite-oyun.svg);
+                }
+            }
+            &.cat-davranis-psikoloji {
+                background-image: url(/images/frontend/blog/oval-eeeeee.svg);
+                &:before {
+                    background-image: url(/images/frontend/blog/cat-davranis-psikoloji.svg);
+                }
+            }
             &.cat-gelisim {
-                background-image: url(/images/frontend/blog/cat-gelisim.svg);
+                background-image: url(/images/frontend/blog/oval-eeeeee.svg);
+                &:before {
+                    background-image: url(/images/frontend/blog/cat-gelisim.svg);
+                }
             }
-            &.cat-beslenme {
-                background-image: url(/images/frontend/blog/cat-beslenme.svg);
-            }
-            &.cat-bebek-yemekleri {
-                background-image: url(/images/frontend/blog/cat-bebek-yemekleri.svg);
-            }
-            &.cat-anneye-ozel {
-                background-image: url(/images/frontend/blog/cat-anneye-ozel.svg);
+            &.cat-uyku {
+                background-image: url(/images/frontend/blog/oval-eeeeee.svg);
+                &:before {
+                    background-image: url(/images/frontend/blog/cat-uyku.svg);
+                }
             }
         }
     }
@@ -426,6 +512,15 @@
         }
         .swiper-pagination {
             display: none;
+        }
+    }
+}
+
+//ana sayfa blog postlar
+.page-blog-v2 {
+    .blog-post {
+        .post-title {
+            padding-right: 10px;
         }
     }
 }

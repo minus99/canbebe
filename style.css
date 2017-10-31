@@ -8947,7 +8947,8 @@ input:disabled, input:read-only {
     margin-right: 10px;
     text-align: center; }
   .urunPaging span.paging {
-    background: url(/images/frontend/icon/oval-orange.svg) no-repeat center center; }
+    background: url(/images/frontend/blog/oval-f9c803.svg) no-repeat center center;
+    background-size: contain; }
   .urunPaging .paging[id$="lnkPrev"], .urunPaging .paging[id$="lnkNext"] {
     font-size: 12px;
     color: #f9c803; }
@@ -8975,40 +8976,18 @@ input:disabled, input:read-only {
         display: none !important; }
       .icerikKategoriListe > ul > li > a {
         display: block;
-        padding: 10px;
+        margin: 0 5px;
+        padding: 12px;
         font-family: "Museo Sans";
-        font-size: 15px;
+        font-size: 18px;
         color: #6d328a;
         font-weight: 700;
         border-radius: 15px; }
         .icerikKategoriListe > ul > li > a .icerikCount {
           display: none !important; }
       .icerikKategoriListe > ul > li.active > a {
-        background: #5d277e;
+        background-color: #5d277e;
         color: #fff; }
-      .icerikKategoriListe > ul > li.cat-img > a {
-        padding-left: 40px;
-        background-repeat: no-repeat;
-        background-position: left center;
-        white-space: nowrap; }
-      .icerikKategoriListe > ul > li.cat-img.cat-tumu {
-        margin-right: 25px; }
-        .icerikKategoriListe > ul > li.cat-img.cat-tumu > a {
-          background-image: url(/images/frontend/blog/cat-tumu.svg);
-          background-color: #e8663c;
-          color: #fff;
-          padding-left: 45px;
-          padding-right: 15px;
-          background-position: 10px center;
-          border-radius: 25px; }
-      .icerikKategoriListe > ul > li.cat-img.cat-gelisim > a {
-        background-image: url(/images/frontend/blog/cat-gelisim.svg); }
-      .icerikKategoriListe > ul > li.cat-img.cat-beslenme > a {
-        background-image: url(/images/frontend/blog/cat-beslenme.svg); }
-      .icerikKategoriListe > ul > li.cat-img.cat-bebek-yemekleri > a {
-        background-image: url(/images/frontend/blog/cat-bebek-yemekleri.svg); }
-      .icerikKategoriListe > ul > li.cat-img.cat-anneye-ozel > a {
-        background-image: url(/images/frontend/blog/cat-anneye-ozel.svg); }
   .icerikKategoriListe .headerIcerikKategoriListe, .icerikKategoriListe .headerIcerikKategoriListeSgtAd {
     display: none !important; }
 
@@ -9017,7 +8996,7 @@ input:disabled, input:read-only {
   margin-top: 30px; }
   .etiketListe .headerEtiketListe {
     display: none !important; }
-  .etiketListe .tagCloud ul {
+  .etiketListe ul {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -9026,23 +9005,73 @@ input:disabled, input:read-only {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center; }
-    .etiketListe .tagCloud ul > li > a {
+    .etiketListe ul > li > a {
       display: block;
-      padding: 20px;
-      background: #f3f3f3;
+      padding: 16px;
+      background-color: #f3f3f3;
       font-family: "Museo Sans";
       font-size: 15px;
       color: #6d328a;
       font-weight: 700;
-      border-left: 2px solid #fff; }
-    .etiketListe .tagCloud ul > li:first-child > a {
+      border-left: 1px solid #fff; }
+    .etiketListe ul > li:first-child > a {
       border-radius: 15px 0 0 15px;
       border-left: none; }
-    .etiketListe .tagCloud ul > li:last-child > a {
+    .etiketListe ul > li:last-child > a {
       border-radius: 0 15px 15px 0; }
-    .etiketListe .tagCloud ul > li.selected > a {
-      background: #5d277e;
+    .etiketListe ul > li.selected > a {
+      background-color: #6d328a;
       color: #fff; }
+
+.icerikKategoriListe li.cat-img > a, .etiketListe li.cat-img > a {
+  padding-left: 60px;
+  background-repeat: no-repeat;
+  background-position: 17px center;
+  white-space: nowrap; }
+
+.icerikKategoriListe li.cat-img.cat-tumu, .etiketListe li.cat-img.cat-tumu {
+  display: none !important; }
+  .icerikKategoriListe li.cat-img.cat-tumu > a, .etiketListe li.cat-img.cat-tumu > a {
+    background-image: url(/images/frontend/blog/cat-tumu.svg);
+    background-color: #e8663c;
+    color: #fff;
+    padding-left: 45px;
+    padding-right: 15px;
+    background-position: 10px center;
+    border-radius: 25px; }
+
+.icerikKategoriListe li.cat-img.cat-ailem > a, .etiketListe li.cat-img.cat-ailem > a {
+  background-image: url(/images/frontend/blog/cat-ailem.svg); }
+
+.icerikKategoriListe li.cat-img.cat-aktivite-oyun > a, .etiketListe li.cat-img.cat-aktivite-oyun > a {
+  background-image: url(/images/frontend/blog/cat-aktivite-oyun.svg); }
+
+.icerikKategoriListe li.cat-img.cat-davranis-psikoloji > a, .etiketListe li.cat-img.cat-davranis-psikoloji > a {
+  background-image: url(/images/frontend/blog/cat-davranis-psikoloji.svg); }
+
+.icerikKategoriListe li.cat-img.cat-gelisim > a, .etiketListe li.cat-img.cat-gelisim > a {
+  background-image: url(/images/frontend/blog/cat-gelisim.svg); }
+
+.icerikKategoriListe li.cat-img.cat-uyku > a, .etiketListe li.cat-img.cat-uyku > a {
+  background-image: url(/images/frontend/blog/cat-uyku.svg); }
+
+.icerikKategoriListe li.cat-img.cat-bebek > a, .etiketListe li.cat-img.cat-bebek > a {
+  background-image: url(/images/frontend/blog/tag-bebek.svg); }
+
+.icerikKategoriListe li.cat-img.cat-yeni-dogan > a, .etiketListe li.cat-img.cat-yeni-dogan > a {
+  background-image: url(/images/frontend/blog/tag-yeni-dogan.svg); }
+
+.icerikKategoriListe li.cat-img.cat-yurumeye-baslayan > a, .etiketListe li.cat-img.cat-yurumeye-baslayan > a {
+  background-image: url(/images/frontend/blog/tag-yurumeye-baslayan.svg); }
+
+.icerikKategoriListe li.selected.cat-bebek > a, .etiketListe li.selected.cat-bebek > a {
+  background-image: url(/images/frontend/blog/tag-bebek2.svg); }
+
+.icerikKategoriListe li.selected.cat-yeni-dogan > a, .etiketListe li.selected.cat-yeni-dogan > a {
+  background-image: url(/images/frontend/blog/tag-yeni-dogan2.svg); }
+
+.icerikKategoriListe li.selected.cat-yurumeye-baslayan > a, .etiketListe li.selected.cat-yurumeye-baslayan > a {
+  background-image: url(/images/frontend/blog/tag-yurumeye-baslayan2.svg); }
 
 .page-blog .icerikTemplateListeContainer {
   display: -webkit-box;
@@ -9081,7 +9110,27 @@ input:disabled, input:read-only {
       z-index: 2;
       width: 27px;
       height: 96px;
-      visibility: visible; }
+      visibility: visible;
+      -webkit-animation-duration: .32s;
+      animation-duration: .32s;
+      -webkit-animation-name: balloon;
+      animation-name: balloon; }
+
+@-webkit-keyframes balloon {
+  from {
+    bottom: -40px;
+    opacity: 0; }
+  to {
+    bottom: 8px;
+    opacity: 1; } }
+
+@keyframes balloon {
+  from {
+    bottom: -40px;
+    opacity: 0; }
+  to {
+    bottom: 8px;
+    opacity: 1; } }
 
 .blog-post {
   position: relative;
@@ -9098,16 +9147,41 @@ input:disabled, input:read-only {
     position: absolute;
     left: 10px;
     top: 10px;
-    width: 30px;
-    height: 31px; }
+    width: 34px;
+    height: 34px;
+    background: url(/images/frontend/blog/oval-eeeeee.svg) no-repeat;
+    background-size: cover; }
+    .blog-post .post-cat.cat-img:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -10px;
+      margin-top: -10px;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-size: 100%; }
+    .blog-post .post-cat.cat-img.cat-ailem {
+      background-image: url(/images/frontend/blog/oval-eeeeee.svg); }
+      .blog-post .post-cat.cat-img.cat-ailem:before {
+        background-image: url(/images/frontend/blog/cat-ailem.svg); }
+    .blog-post .post-cat.cat-img.cat-aktivite-oyun {
+      background-image: url(/images/frontend/blog/oval-eeeeee.svg); }
+      .blog-post .post-cat.cat-img.cat-aktivite-oyun:before {
+        background-image: url(/images/frontend/blog/cat-aktivite-oyun.svg); }
+    .blog-post .post-cat.cat-img.cat-davranis-psikoloji {
+      background-image: url(/images/frontend/blog/oval-eeeeee.svg); }
+      .blog-post .post-cat.cat-img.cat-davranis-psikoloji:before {
+        background-image: url(/images/frontend/blog/cat-davranis-psikoloji.svg); }
     .blog-post .post-cat.cat-img.cat-gelisim {
-      background-image: url(/images/frontend/blog/cat-gelisim.svg); }
-    .blog-post .post-cat.cat-img.cat-beslenme {
-      background-image: url(/images/frontend/blog/cat-beslenme.svg); }
-    .blog-post .post-cat.cat-img.cat-bebek-yemekleri {
-      background-image: url(/images/frontend/blog/cat-bebek-yemekleri.svg); }
-    .blog-post .post-cat.cat-img.cat-anneye-ozel {
-      background-image: url(/images/frontend/blog/cat-anneye-ozel.svg); }
+      background-image: url(/images/frontend/blog/oval-eeeeee.svg); }
+      .blog-post .post-cat.cat-img.cat-gelisim:before {
+        background-image: url(/images/frontend/blog/cat-gelisim.svg); }
+    .blog-post .post-cat.cat-img.cat-uyku {
+      background-image: url(/images/frontend/blog/oval-eeeeee.svg); }
+      .blog-post .post-cat.cat-img.cat-uyku:before {
+        background-image: url(/images/frontend/blog/cat-uyku.svg); }
   .blog-post .post-img {
     display: block;
     width: 100%;
@@ -9250,6 +9324,9 @@ input:disabled, input:read-only {
       margin-bottom: 0; }
     .related-posts-holder .related-posts .swiper-pagination {
       display: none; }
+
+.page-blog-v2 .blog-post .post-title {
+  padding-right: 10px; }
 
 @media screen and (max-width: 960px) {
   .urunPaging {
