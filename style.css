@@ -8929,33 +8929,35 @@ input:disabled, input:read-only {
   display: none; }
 
 .urunPaging {
-  margin: 30px 0;
-  background: #5d277e;
-  border-radius: 20px;
+  margin: 70px 0 30px;
   font-family: "Museo Sans";
-  font-size: 20px;
-  color: #fff; }
+  font-size: 16px;
+  font-weight: 700;
+  color: #5d277e; }
   .urunPaging td[align="center"] {
     width: 100% !important; }
   .urunPaging .paging {
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    width: 40px;
-    line-height: 50px;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 30px;
+    line-height: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
     text-align: center; }
   .urunPaging span.paging {
     background: url(/images/frontend/blog/oval-f9c803.svg) no-repeat center center;
     background-size: contain; }
   .urunPaging .paging[id$="lnkPrev"], .urunPaging .paging[id$="lnkNext"] {
-    font-size: 12px;
-    color: #f9c803; }
+    width: 40px;
+    font-size: 10px;
+    color: #de5c7c;
+    background: url(/images/frontend/blog/oval-820096.svg) no-repeat center center;
+    background-size: contain; }
   .urunPaging .paging[id$="lnkPrev"] {
-    margin-right: 75px; }
+    margin-right: 15px; }
   .urunPaging .paging[id$="lnkNext"] {
-    margin-left: 75px; }
+    margin-left: 15px; }
   .urunPaging.icerikListePagingUst, .urunPaging td[align="left"], .urunPaging td[align="right"] {
     display: none !important; }
 
