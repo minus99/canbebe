@@ -12,6 +12,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-unlink:before {
+  content: "\e91e";
+}
+.icon-whatsapp:before {
+  content: "\e922";
+}
+.icon-mail:before {
+  content: "\e91f";
+}
+.icon-bebek-kozmetigi:before {
+  content: "\e917";
+}
+.icon-bebek-bakim-ortusu:before {
+  content: "\e918";
+}
+.icon-islak-havlu:before {
+  content: "\e919";
+}
+.icon-minik-yuzucu:before {
+  content: "\e91a";
+}
+.icon-kilot-bez:before {
+  content: "\e91b";
+}
+.icon-bebek-bezi:before {
+  content: "\e91c";
+}
+.icon-cat-all:before {
+  content: "\e91d";
+}
 .icon-like-2:before {
   content: "\e911";
 }
@@ -30,8 +60,17 @@
 .icon-more:before {
   content: "\e916";
 }
+.icon-facebook:before {
+  content: "\e907";
+}
+.icon-youtube:before {
+  content: "\e904";
+}
 .icon-vimeo:before {
   content: "\e908";
+}
+.icon-instagram:before {
+  content: "\e900";
 }
 .icon-twitter:before {
   content: "\e90f";
@@ -48,9 +87,6 @@
 .icon-close:before {
   content: "\e90c";
 }
-.icon-instagram:before {
-  content: "\e900";
-}
 .icon-oval-dotted:before {
   content: "\e901";
 }
@@ -60,23 +96,23 @@
 .icon-oval-full:before {
   content: "\e903";
 }
-.icon-youtube:before {
-  content: "\e904";
-}
 .icon-heart:before {
   content: "\e905";
 }
 .icon-search:before {
   content: "\e906";
 }
-.icon-facebook:before {
-  content: "\e907";
-}
 .icon-phone:before {
   content: "\e909";
 }
 .icon-tri-right:before {
   content: "\e90e";
+}
+.icon-tri-down:before {
+  content: "\e920";
+}
+.icon-tri-up:before {
+  content: "\e921";
 }
 .icon-tri-left:before {
   content: "\e910";

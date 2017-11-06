@@ -12,7 +12,7 @@
     font-family: $fontSite;
     font-size: 16px;
     font-weight: 700;
-    color: $colorPurpleDark;
+    color: $cl-purpleDark;
     td[align="center"] {
         width: 100% !important;
     }
@@ -33,7 +33,7 @@
     .paging[id$="lnkPrev"], .paging[id$="lnkNext"] {
         width: 40px;
         font-size: 10px;
-        color: $colorPink;
+        color: $cl-pink;
         background: url(/images/frontend/blog/oval-820096.svg) no-repeat center center;
         background-size: contain;
     }
@@ -66,7 +66,7 @@
                 padding: 12px;
                 font-family: $fontSite;
                 font-size: 18px;
-                color: $colorPurple;
+                color: $cl-purple;
                 font-weight: 700;
                 border-radius: 15px;
                 .icerikCount {
@@ -75,8 +75,8 @@
             }
             &.active {
                 > a {
-                    background-color: $colorPurpleDark;
-                    color: $colorWhite;
+                    background-color: $cl-purpleDark;
+                    color: $cl-White;
                 }
             }
         }
@@ -103,9 +103,9 @@
                 background-color: #f3f3f3;
                 font-family: $fontSite;
                 font-size: 15px;
-                color: $colorPurple;
+                color: $cl-purple;
                 font-weight: 700;
-                border-left: 1px solid #fff;
+                border-left: 1px solid $cl-White;
             }
             &:first-child {
                 > a {
@@ -120,8 +120,8 @@
             }
             &.selected {
                 > a {
-                    background-color: $colorPurple;
-                    color: $colorWhite;
+                    background-color: $cl-purple;
+                    color: $cl-White;
                 }
             }
         }
@@ -142,8 +142,8 @@
                 display: none !important;
                 > a {
                     background-image: url(/images/frontend/blog/cat-tumu.svg);
-                    background-color: $colorOrangeDark;
-                    color: $colorWhite;
+                    background-color: $cl-orangeDark;
+                    color: $cl-White;
                     padding-left: 45px;
                     padding-right: 15px;
                     background-position: 10px center;
@@ -242,7 +242,7 @@
     padding: 85px 10px 25px;
     font-family: $fontSite;
     font-size: 40px;
-    color: $colorPink;
+    color: $cl-pink;
     font-weight: 700;
     text-align: center;
     .o {
@@ -251,6 +251,7 @@
         &:before {
             content: "";
             background: url(/images/frontend/blog/letter-o.png) no-repeat center bottom;
+            background-size: cover;
             position: absolute;
             bottom: 8px;
             z-index: 2;
@@ -348,7 +349,7 @@
         position: relative;
         font-family: $fontSite;
         font-size: 20px;
-        color: $colorPurple;
+        color: $cl-purple;
         font-weight: 700;
         line-height: 1.2;
         margin: 0;
@@ -403,27 +404,27 @@
         display: inline-block;
         font-family: $fontSite;
         font-size: 15px;
-        color: $colorPurple;
+        color: $cl-purple;
         font-weight: 700;
         text-align: center;
         padding: 8px 25px;
-        background: $colorOrange;
+        background: $cl-orange;
         border-radius: 20px;
     }
     .post-title {
         font-family: $fontSite;
         font-size: 40px;
-        color: $colorWhite;
+        color: $cl-White;
         font-weight: 700;
         line-height: 1.2;
-        text-shadow: 0px 1px 1px #000;
+        text-shadow: 0px 1px 1px $cl-black;
         margin: 0;
     }
 }
 .post-content {
     font-family: $fontSite;
     font-size: 18px;
-    color: $colorDefaultDark;
+    color: $cl-defaultDark;
     font-weight: 500;
     line-height: 1.6;
     max-width: 680px;
@@ -480,20 +481,37 @@
     .title {
         font-family: $fontSite;
         font-size: 18px;
-        color: $colorPurple;
+        color: $cl-purple;
         font-weight: 700;
     }
     .share-media {
         > a {
-            display: block;
-            margin-top: 30px;
-            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 23px;
             text-align: center;
-            &.icon-facebook {
-                color: $colorBlueLight;
+            border-radius: 5px;
+            color: $cl-White;
+            width: 40px;
+            height: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            &.twitter{
+                background: #de5c7c;
             }
-            &.icon-twitter {
-                color: $colorPink;
+            &.facebook{
+                background: #0bbcf0;
+            }
+            &.mail{
+                background: #820096;
+            }
+            &.whatsapp{
+                background: #a0d975;
+            }
+            &.unlink{
+                background: #e780b7;
             }
         }
     }
@@ -501,7 +519,7 @@
 
 //ilgili makaleler
 .related-posts-holder{
-    background: #fafafa;
+    background: $cl-BG;
     .related-posts {
         padding-bottom: 30px;
         .blog-title {
@@ -561,7 +579,7 @@
         }
         .post-title {
             font-size: 23px;
-            color: $colorPurple;
+            color: $cl-purple;
             text-shadow: none;
         }
     }
@@ -578,11 +596,11 @@
         max-width: 600px;
         margin: 50px auto 20px;
         .share-media {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             > a {
-                display: inline-block;
-                width: 40px;
-                margin-top: 0;
-                margin-right: 30px;
+                margin-left: initial;
             }
         }
     }

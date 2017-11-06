@@ -1,33 +1,106 @@
 //Video Player
-.video-in-holder{ position: relative; overflow: hidden; border-radius: 20px;
-    .video-cover{ width: 100%; height: 100%; font-size: 0; display: block; background-position: center; background-size: cover;
-        img{ visibility: hidden; }
+.video-in-holder{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    .video-cover{
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+        display: block;
+        background-position: center;
+        background-size: cover;
+        img{
+            visibility: hidden;
+            width: 100%;
+        }
     }
-    .video-area{ width: 100%; visibility: hidden; opacity: 0; height: 0; overflow: hidden;
-        video{ width: 100%; height: 100%; background-position: center; background-size: cover; }
+    .video-area{
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        video{
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+        }
     }
-    .btn-video{ color: $colorOrange; position: absolute;  top: 0; right: 0; bottom: 0; left: 0; z-index: 1; transition: all 0.2s cubic-bezier(0.8, 0, 1, 1); display: flex; justify-content: center; align-items: center;
-        i{ font-size: 0;
-            &:before{ font-size: 40px; }
+    .btn-video{
+        color: $cl-orange;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        transition: all 0.2s cubic-bezier(0.8, 0, 1, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i{
+            font-size: 0;
+            &:before{
+                font-size: 40px;
+                content: "";
+                background: url('/images/frontend/icon/play.svg');
+                background-size: cover;
+                display: inline-block;
+                width: 80px;
+                height: 80px;
+            }
         }
     }
     &.show-video{
-        .video-area{ visibility: visible; opacity: 1; height: 100%; position: absolute; left: 0; top: 0; }
-        .btn-video{ opacity: 0; visibility: hidden; }
+        .video-area{
+            visibility: visible;
+            opacity: 1;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .btn-video{
+            opacity: 0;
+            visibility: hidden;
+        }
         &:hover{
-            .btn-video{ opacity: 1; visibility: visible; }
+            .btn-video{
+                opacity: 1;
+                visibility: visible;
+            }
         }
     }
     &.is-play{
-        .btn-video i:before{ content: "\e90d"; }
+        .btn-video i:before{
+            content: "\e90d";
+            background: none;
+            width:auto;
+            height: auto;
+        }
+    }
+    &.is-pause{
+        .btn-video i:before{
+            content: "";
+            background: url('/images/frontend/icon/play.svg');
+            background-size: cover;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+        }
     }
 }
 
 @media screen and (max-width: $breakpointSM){
   .video-in-holder{ border-radius: 10px;
       .btn-video{
-          i{ font-size: 0;
-              &:before{ font-size: 27px; }
+          i{ 
+              font-size: 0;
+              &:before{
+                  font-size: 27px;
+                }
           }
       }
   }

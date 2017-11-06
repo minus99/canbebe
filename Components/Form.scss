@@ -1,18 +1,54 @@
-.ems-form{ display: flex; justify-content: center; margin-top: 37px;
-    .ems-form-inner{ width: 815px; //height: 210px; column-count: 2;
+/*
+.ems-form{
+    display: flex;
+    justify-content: center;
+    margin-top: 37px;
+    .ems-form-inner{
+        width: 815px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         .ems-col{
             width: calc(50% - 7.5px);
-            &.full-width{ width: 100%; }
+            &.full-width{
+                width: 100%;
+            }
         }
-        .ems-field { width: 100%; position: relative; margin-bottom: 15px;
-            .ems-form-label{ font-family: $fontSite; font-size: 15px; font-weight: 700; color: $colorDefaultDark; position: absolute; top: 18px;  left: 23px; z-index: 1; transition: all .2s ease-in-out; pointer-events: none; }
+        .ems-field {
+            width: 100%;
+            position: relative;
+            margin-bottom: 15px;
+            .ems-form-label{
+                font-family: $fontSite;
+                font-size: 15px;
+                font-weight: 700;
+                color: $cl-defaultDark;
+                position: absolute;
+                top: 18px;
+                left: 23px;
+                z-index: 1;
+                transition: all .2s ease-in-out;
+                pointer-events: none;
+            }
             .ems-form-obj input:not([type='checkbox']):not([type='radio']),
             .ems-form-obj textarea,
-            .ems-form-obj select { width: 100% !important; height: 50px; padding-top: 10px; padding-left: 23px; padding-right: 23px; background: $colorInputBg; outline: 0; border: 0; border-radius: 10px; color: $colorDefaultDark; }
-            .ems-form-obj textarea{ height: 115px; padding-top: 23px; resize: none; }
+            .ems-form-obj select {
+                width: 100% !important;
+                height: 50px;
+                padding-top: 10px;
+                padding-left: 23px;
+                padding-right: 23px;
+                background: $cl-InputBg;
+                outline: 0;
+                border: 0;
+                border-radius: 10px;
+                color: $cl-defaultDark;
+            }
+            .ems-form-obj textarea{
+                height: 115px;
+                padding-top: 23px;
+                resize: none;
+            }
             .ems-form-obj input[id$="CEPTELEFONALAN"] {
                 width: 20% !important;
                 margin-right: 2%;
@@ -21,37 +57,66 @@
                 width: 78% !important;
             }
             &.is-active{
-              .ems-form-label{ font-size: 11px;top: 6px; left: 23px; }
+                .ems-form-label{
+                    font-size: 11px;
+                    top: 6px;
+                    left: 23px;
+                }
             }
             &.captcha{
-                br{ display: none; }
+                br{
+                    display: none;
+                }
                 [id$="CaptchaImage1_divCaptcha"]{
                     display: flex;
-                    #imgCaptcha{ order: 2; }
+                    #imgCaptcha{
+                        order: 2;
+                    }
                     [id$="txtUYE_KONTROLKODU"]{
                         width: auto !important;
                         flex: 1;
                         margin-right: 15px;
                     }
                 }
-                [id$="lbfUYE_KONTROLKODU"]{ font-family: $fontSite; font-size: 15px; font-weight: 700; color: $colorWhite; position: absolute; top: 18px;  left: 23px; z-index: 1; transition: all .2s ease-in-out; pointer-events: none; }
+                [id$="lbfUYE_KONTROLKODU"]{
+                    font-family: $fontSite;
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: $cl-White;
+                    position: absolute;
+                    top: 18px;
+                    left: 23px;
+                    z-index: 1;
+                    transition: all .2s ease-in-out;
+                    pointer-events: none;
+                }
                 &.is-active{
-                  [id$="lbfUYE_KONTROLKODU"]{ font-size: 11px;top: 6px; left: 23px; }
+                    [id$="lbfUYE_KONTROLKODU"]{
+                        font-size: 11px;
+                        top: 6px;
+                        left: 23px;
+                    }
                 }
             }
             &.mb0 {
                 margin-bottom: 0;
             }            
         }
-        .btn-field{ width: 100%; text-align: center;}
+        .btn-field{
+            width: 100%;
+            text-align: center;
+        }
     }
 }
 
-input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
     box-shadow: 0 0 0 1000px #bababa inset;
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
     position: relative;
     width: 15px;
     height: 15px;
@@ -65,7 +130,8 @@ input[type="checkbox"], input[type="radio"] {
     vertical-align: middle;
 }
       
-input:disabled, input:read-only {
+input:disabled,
+input:read-only {
     background: #bababa;
 }
 
@@ -83,14 +149,14 @@ input:disabled, input:read-only {
     margin-bottom: 15px;
     border: 1px solid;
     &.ems-message-success{
-        background: #dff0d8;
-        border-color: #d6e9c6;
-        color: #3c763d;
+        background: $cl-successBg;
+        border-color: $cl-successBr;
+        color: $cl-success;
     }
     &.ems-message-error{
-        background-color: #f2dede;
-        border-color: #ebccd1;
-        color: #a94442;
+        background-color: $cl-errorBg;
+        border-color: $cl-errorBr;
+        color: $cl-error;        
     }
     &-loading{
         position: fixed;
@@ -119,7 +185,7 @@ input:disabled, input:read-only {
             display: inline-block;
             position: absolute;
             top: 0;
-            background-color: $colorPurple;
+            background-color: $cl-purple;
             border-radius: 100%;
 
             -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
@@ -149,6 +215,90 @@ input:disabled, input:read-only {
               transform: scale(1.0);
               -webkit-transform: scale(1.0);
             }
+        }
+    }
+}
+
+*/
+.ems-form{
+    .ems-field + .ems-field{
+        margin-top: 15px;
+    }
+    .ems-field{
+        .ems-form-label{
+            display: block;
+            margin-bottom: 5px;
+            font-family: $fontSite;
+            font-size: 13px;
+            font-weight: 500;
+            color: $cl-purpleDark;
+        }
+        .ems-form-obj{
+            input:not([type='checkbox']), select{
+                width: 100% !important;
+                height: 44px;
+                padding: 0 15px;
+                border-radius: 5px;
+                background: $cl-InputBg !important;
+                outline: 0 !important;
+                border: 0 !important;
+            }
+            &[id$="plhUyelikBtnKaydet1"]{
+                text-align: center;
+                padding-top: 25px;
+                .btnYeniUyeKaydet {
+                    width: 256px;
+                }
+            }
+            &[id$="plhBeniHatirla1"],
+            &[id$="plhUyelikBultenChk1"],
+            &[id$="plhUyelikSmsChk1"]{
+                position: relative;
+                display: flex;
+                align-items: center;
+                height: 20px;
+                input[type="checkbox"]{
+                    display: none;
+                }
+                .sStylerMainWrp{
+                    display: inline-block;
+                    .cStyler{
+                        width: 20px;
+                        height: 20px;
+                        display: inline-block;
+                        margin-right: 14px;
+                        border-radius: 3px;
+                        border: solid 2px #ededed;
+                        background: $cl-White;
+                        position: relative;
+                        left: 0;
+                        top: 0;
+                        &:after{
+                            content: "";
+                            width: 12px;
+                            height: 12px;
+                            background: $cl-White;
+                            position: absolute;
+                            left: 2px;
+                            top: 2px;
+                        }
+
+                        &.checked:after{
+                            background: $cl-orange;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.submit > .kutuUyeGirisFacebookConnect *{
+            width: 100% !important;
+        }
+        .forgot-password{
+            margin-top: 0 !important;
+        }
+        &.submit.mwk{
+            margin-top: 30px;
         }
     }
 }

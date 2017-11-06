@@ -1,83 +1,188 @@
-.main-footer{ position: relative; padding-top: 70px;
-    &:before{ content: ""; display: inline-block; height: 20px; width: 100%; background-image: url(/images/frontend/effect/footer-top.png); background-size: cover; position: absolute; top: -19px; z-index: 5; }
-    .footer-content{ margin-bottom: 70px; }
+.main-footer{
+    padding-top: 80px;
+    display: inline-block;
+    width: 100%;
+    @include effect-top('white', -19px );
+    .footer-content{
+        margin-bottom: 70px;
+    }
 
     // Her Bebeğe Canbebe
-    .hbcb{ font-family: $fontSite2; font-size: 70px; line-height: 1; color: $colorPurple; text-align: center; /*margin-top: 60px;*/ margin-bottom: 60px; }
+    .hbcb{
+        font-family: $fontSite2;
+        font-size: 70px;
+        line-height: 1;
+        color: $cl-purple;
+        text-align: center;
+        margin-bottom: 60px;
+    }
 
     // Footer Menü
     .footer-menuNav{
-        ul{ display: flex; justify-content: center;
-            li{ margin: 0 25px; display: none;
-                &.df-item{ display: block;
-                    .subNav{ display: block;
-                        li{ display: block; margin: 0;
-                          a{ color: #adadad; font-size: 14px; font-weight: 500; }
+        ul{
+            display: flex;
+            justify-content: center;
+            li{
+                margin: 0 25px;
+                display: none;
+                &.df-item{
+                    display: block;
+                    .subNav{
+                        display: block;
+                        li{
+                            display: block;
+                            margin: 0;
+                            a{
+                                color: #adadad;
+                                font-size: 14px;
+                                font-weight: 500;
+                            }
                         }
                     }
                 }
-                a{ font-family: $fontSite; font-size: 17px; font-weight: 700; line-height: 1.65; color: $colorPurple; }
+                a{
+                    font-family: $fontSite;
+                    font-size: 17px;
+                    font-weight: 700;
+                    line-height: 1.65;
+                    color: $cl-purple;
+                }
             }
         }
     }
 
     // Copyright Wrapper
-    .copyright-wrapper{ background-color: $colorOrange; padding: 36px 0; margin-top: 20px; position: relative;
-        &:before{ content: ""; display: inline-block; height: 20px; width: 100%; background-image: url(/images/frontend/effect/footer-top-orange.png); background-size: cover; position: absolute; top: -19px; left: 0; }
-        .copyright{ font-family: $fontSite; font-size: 15px; font-weight: 500; line-height: 1.87; color: $colorPurple; text-align: center; }
+    .copyright-wrapper{
+        background-color: $cl-orange;
+        padding: 36px 0;
+        margin-top: 20px;
+        position: relative;
+        &:before{
+            content: "";
+            display: inline-block;
+            height: 20px;
+            width: 100%;
+            background-image: url(/images/frontend/effect/footer-top-orange.png);
+            background-size: cover;
+            position: absolute;
+            top: -19px;
+            left: 0;
+        }
+        .copyright{
+            font-family: $fontSite;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.87;
+            color: $cl-purple;
+            text-align: center;
+        }
     }
 
     // Instagram Feed
-    .instagram-feed-wrapper{ margin-bottom: 90px;
-        .instagram-feed-hashtag{ display: flex; align-items: center; justify-content: center; margin-bottom: 42px;
-            i:before{ font-size: 22px; color: #de5c7c; }
-            .hashtag{ display: inline-block; margin-left: 12px; font-family: $fontSite2; font-size: 25px; color: $colorDefault; }
+    .instagram-feed-wrapper{
+        margin-bottom: 90px;
+        .instagram-feed-hashtag{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 42px;
+            i:before{
+                font-size: 22px;
+                color: $cl-pink;
+            }
+            .hashtag{
+                display: inline-block;
+                margin-left: 12px;
+                font-family: $fontSite2;
+                font-size: 25px;
+                color: $cl-default;
+            }
         }
-        .instagram-feed{ overflow: hidden;
-            .swiper-slide { width: 20% !important; }
+        .instagram-feed{
+            overflow: hidden;
+            .swiper-slide {
+                width: 20% !important;
+            }
         }
     }
 
 }
 
 // Footer Social Media
-.social-media{ margin-bottom: 67px;
-    ul{ display: flex; justify-content: center;
-        li{  margin: 0 40px;
-            a{ display: inline-block;
-                i{ display: inline-block; font-size: 0;
-                    &:before{ font-size: 30px; }
+.social-media{
+    margin-bottom: 67px;
+    ul{
+        display: flex;
+        justify-content: center;
+        li{
+            margin: 0 40px;
+            a{
+                display: inline-block;
+                i{
+                    display: inline-block;
+                    font-size: 0;
+                    &:before{
+                        font-size: 30px;
+                    }
                 }
             }
         }
     }
 }
 
-.header-menu .social-media{  margin-bottom: 20px; margin-top: 40px;
-    ul{ width: 80%; justify-content: space-between;
-        li{ margin: 0;
-            a{ color: $colorWhite;
-                i{ background: none; -webkit-text-fill-color: initial;
-                  &:before{ font-size: 19px; }
+.header-menu .social-media{
+    margin-bottom: 20px;
+    margin-top: 40px;
+    ul{
+        width: 80%;
+        justify-content: space-between;
+        li{
+            margin: 0;
+            a{
+                color: $cl-White;
+                i{
+                    background: none;
+                    -webkit-text-fill-color: initial;
+                    &:before{
+                        font-size: 19px;
+                    }
                 }
             }
         }
     }
 }
 
+.page-home + .main-footer{
+    padding-top: 30px;
+    @include effect-top('white', -19px );
+}
 
 @media screen and (max-width: $breakpointSM){
-    .main-footer { padding-top: 8px;
-        .footer-content{ margin-bottom: 32px; }
+    .main-footer {
+        padding-top: 8px;
+        .footer-content{
+            margin-bottom: 32px;
+        }
 
         // Her Bebeğe Canbebe
-        .hbcb{ font-size: 35px; line-height: 2; margin-top: 35px; margin-bottom: 35px; }
+        .hbcb{
+            font-size: 35px;
+            line-height: 2;
+            margin-top: 35px;
+            margin-bottom: 35px;
+        }
 
         // Footer Social Media
-        .social-media{ margin-bottom: 48px;
-            ul{ display: flex; justify-content: center;
-                li{ margin: 0 28px;
-                    a i:before{ font-size: 21px; }
+        .social-media{
+            margin-bottom: 48px;
+            ul{
+                display: flex;
+                justify-content: center;
+                li{
+                    margin: 0 28px;
+                    a i:before{
+                        font-size: 21px;
+                    }
                 }
             }
         }
@@ -85,25 +190,50 @@
         // Footer Menü
         .footer-menuNav{
             ul{
-                li{ margin: 0px 21px; flex: 1; display: none; align-items: center; justify-content: center;
-                    &.df-item{ display: none; }
-                    &.mf-item{ display: block; }
-                    a{ line-height: 1.13; font-size: 15px; }
+                li{
+                    margin: 0px 21px;
+                    flex: 1;
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    &.df-item{
+                        display: none;
+                    }
+                    &.mf-item{
+                        display: block;
+                    }
+                    a{
+                        line-height: 1.13;
+                        font-size: 15px;
+                    }
                 }
             }
         }
 
         // Copyright Wrapper
-        .copyright-wrapper { padding: 28px 12px 30px; margin-top: 10px;
-            &:before{ height: 10px; top: -9px; }
+        .copyright-wrapper {
+            padding: 28px 12px 30px;
+            margin-top: 10px;
+            &:before{
+                height: 10px;
+                top: -9px;
+            }
         }
 
         // Instagram Feed
-        .instagram-feed-wrapper{ margin-bottom: 40px;
-            .instagram-feed-hashtag{ margin-top: 15px; margin-bottom: 21px; }
-            .instagram-feed .swiper-slide { margin: 0 2.5px; }
+        .instagram-feed-wrapper{
+            margin-bottom: 40px;
+            .instagram-feed-hashtag{
+                margin-top: 15px;
+                margin-bottom: 21px;
+            }
+            .instagram-feed .swiper-slide {
+                margin: 0 2.5px;
+            }
         }
+    }
+    .page-home + .main-footer{
+        padding-top: 0px;
     }
 }
 
-.page-home + .main-footer:before{ height: 35px; top: -34px; background-image: url(/images/frontend/effect/footer-top-mobile.png); background-size: auto; }

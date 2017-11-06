@@ -1,0 +1,166 @@
+section.landscape{ transition: all 3s ease; position: relative; min-height: 600px; background-image: linear-gradient(to left, #6D328A 0%, #395FAE 25%, #0BBCF0 75%, #8DE1FF 100%); background-size: 400%; }
+section.landscape svg{ position: absolute; bottom: 0; }
+section.landscape svg.hill1{ right: 50%; margin-right: -90px; }
+section.landscape svg.hill2{ left:50%; margin-left: -215px; }
+section.landscape svg.trees{ left: 50%; margin-left: -503px; bottom:90px; }
+section.landscape svg.shadows{ left: 50%; margin-left: -503px; opacity: .5; bottom: 82px; }
+section.landscape svg g#Artboard-2{ transition: fill 1.5s ease; }
+
+section.landscape div.lights{ transition: transform 2s cubic-bezier(0.645, 0.045, 0.355, 1.000); width: 800px; height: 84px; position: absolute; bottom:0; left: 70%; margin-left: -400px; transform: rotate(90deg); }
+section.landscape div.sun{ width: 84px; height:84px; background: url(/UPLOAD/daynight/sun.svg); position: relative; float: left; }
+section.landscape div.sun::after{ content: ""; display: block; width: 144px; height:144px; background: url(/UPLOAD/daynight/sunray.svg); position: absolute; left: -30px; top:-30px; transform:rotate(0deg); animation: rotate 4s linear infinite; }
+section.landscape div.moon{ width: 84px; height:84px; background: url(/UPLOAD/daynight/moon.svg); position: relative; float: right; }
+section.landscape div.moon::after{ content: ""; display: block; width: 36px; height:36px; background: url(/UPLOAD/daynight/star.svg) no-repeat; position: absolute; left: 80px; top:60px; transform:rotate(0deg); animation: rotate 4s linear infinite; }
+
+
+section.landscape div.clouds,
+section.landscape div.stars{ position: absolute; width: 80%; left: 10%; height: 100%; background-repeat: no-repeat; background-position: center center; background-size:contain; }
+section.landscape div.clouds{ transition: all .7s cubic-bezier(0.215, 0.610, 0.355, 1.000); transition-delay: 2s; opacity: 1; margin-top:0; background-image: url(/UPLOAD/daynight/clouds.svg); animation: wind 10s linear infinite; }
+section.landscape div.stars{ opacity: 0; margin-top: 20px; background-image: url(/UPLOAD/daynight/stars.svg); transition: all .7s cubic-bezier(0.550, 0.055, 0.675, 0.190); transition-delay: 0s; }
+
+section.landscape.night{ background-position: 100%; }
+section.landscape.night svg.hill1 g{ fill: #294789; }
+section.landscape.night svg.hill2 g{ fill: #7356A8; }
+section.landscape.night svg.trees g,
+section.landscape.night svg.shadows g{ fill: #2E0956; }
+section.landscape.night div.lights{ transform: rotate(270deg); }
+section.landscape.night div.clouds{ opacity: 0; margin-top: 20px; transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190); transition-delay: 0s; }
+section.landscape.night div.stars{ opacity: 1; margin-top: 0; transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); transition-delay: 2s; animation: shine 2s linear infinite; animation-delay: 2s; }
+
+
+@keyframes rotate {
+  0%  { transform: rotate( 0deg ); }
+  100%{ transform: rotate( 360deg ); }
+}
+
+@keyframes wind {
+  0%  { transform: translateX( 0px ) translateY(0px); }
+  20% { transform: translateX( 10px ) translateY(5px); }
+  40% { transform: translateX( 0px ) translateY(5px); }
+  60% { transform: translateX( -10px ) translateY(5px); }
+  80% { transform: translateX( -10px ) translateY(0px); }
+  100%{ transform: translateX( 0px ) translateY(0px); }
+}
+
+@keyframes shine {
+  0%  { opacity: 1; }
+  50% { opacity: .5; }
+  100%{ opacity: 1; }
+}
+
+
+
+
+/* night*/ 
+.dNHolder > span, .dNHolder a { display: inline-block; vertical-align: middle; font-weight: bold; color:#fff}
+.dNHolder > span:first-child {margin-right:15px}
+.dNHolder > span:last-child {margin-left:15px}
+
+
+/* if mobile  */
+@media screen and (min-width: $breakpointSM){
+    .diaper-img {top: 60px; left: 9%; position:absolute}
+}
+@media screen and (max-width: $breakpointSM){
+    .diaper-img {position: absolute; bottom:100px; width:190px; position: absolute;margin-left: auto;margin-right: auto;left: 0;right: 0;}
+}
+
+
+/* if web */
+#dayAndNightChanger:before {width:17px ; height: 17px; content:''; border-radius: 17px; background: #fff; display: inline-block; position: absolute; top:2px; left:3px;
+    transition: all 0.5s ease-out; transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190); transition-delay: 0s; }
+
+.dNHolder { position: absolute; bottom: 40px; left: 0; right: 0; text-align: center; width: 100%;}
+
+#dayAndNightChanger {width: 60px ; height:25px;  border-radius: 15px; display: inline-block; border: solid 2px #fff; position: relative}
+
+.dNHolder.night #dayAndNightChanger:before { left:37px  }
+
+.dNHolder span:last-child { opacity: 0.5 }
+.dNHolder.night span:first-child { opacity: 0.5 }
+.dNHolder.night span:last-child { opacity: 1 }
+
+
+
+
+/////
+.landscape{
+	position: relative;
+	overflow: hidden;
+}
+.gece-gunduz-wrapper{
+	position: absolute;
+	top:0;
+	left: 0;
+	width:100%;
+	height: 100%;
+	display: flex;
+	.landscape-content{
+		display: flex;
+		height: 100%;
+		justify-content: space-between;
+		.lnd-img{
+			width: 544px;
+			display: flex;
+			align-items: center;
+		}
+		.lnd-cont{
+			width: 500px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			align-content: flex-start;
+			padding-top: 265px;
+			.desc{
+				font-family: $fontSite2;
+				font-size: 70px;
+				line-height: 1;
+				color: $cl-White;
+				width: 100%;
+			}
+			.btn-group{
+				&:not(:empty){
+					margin-top: 28px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $breakpointSM){
+	.gece-gunduz-wrapper{
+		.landscape-content{
+			flex-wrap: wrap;
+			padding-bottom: 70px;
+			align-content: flex-end;
+			
+			margin: 0 auto;
+			max-width: 70%;
+			.lnd-img{
+				order: 2;
+				img{
+					max-width: 200px;
+					margin: 0 auto;
+				}
+			}
+			.lnd-cont{
+				width: 100%;
+				order: 1;
+				padding-top: 0;
+				margin-bottom: 10px;
+				.desc{
+					font-size: 30px;
+					line-height: 1.17;
+					text-align: center;
+				}
+				.btn-group{
+					display: none;
+				}
+			}
+		}
+	}
+	.dNHolder {
+		bottom: 35px;
+		transform: translateY(50%);
+	}
+}

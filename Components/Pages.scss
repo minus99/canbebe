@@ -1,23 +1,82 @@
-.page-cover{ height: 385px; background-position: 65% center; background-size: cover; }
+.page-cover{
+    height: 385px;
+    background-position: 65% center;
+    background-size: cover;
+}
 
 
 //Neden Canbebe Sayfası
-.ncb-page-cover{ height: 350px; background-repeat: no-repeat; background-size: cover; font-family: $fontSite2; font-size: 65px; color: $colorPurple; }
-.ncb-content{ position: relative; padding: 35px 10px 100px; background-color: $colorPurple; background-image: url('/images/frontend/page/neden-canbebe-content-bg.svg'); background-repeat: no-repeat; background-size: 98%; background-position: center;
+.ncb-page-cover{
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: $fontSite2;
+    font-size: 65px;
+    color: $cl-purple;
+}
+.ncb-content{
+    position: relative;
+    padding: 35px 10px 100px;
+    background-color: $cl-purple;
+    background-image: url('/images/frontend/page/neden-canbebe-content-bg.svg');
+    background-repeat: no-repeat;
+    background-size: 98%;
+    background-position: center;
     &:last-child{ margin-bottom: 0; }
-    &:before{ content: ""; background: url(/images/frontend/effect/top-purple.png); background-size: cover; position: absolute; top: -19px; left: 0; right: 0; height: 20px; }
-    .ncb-item{ display: flex; justify-content: space-between; align-items: center; background: #fff; border-radius: 20px; padding: 30px; margin-bottom: 40px;
+    &:before{
+        content: "";
+        background: url(/images/frontend/effect/top-purple.png);
+        background-size: cover;
+        position: absolute;
+        top: -19px;
+        left: 0;
+        right: 0;
+        height: 20px;
+    }
+    .ncb-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $cl-White;
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 40px;
         &:nth-child(odd){ direction: rtl; }
-        .media{ width: calc(50% - 30px); display: flex; align-items: center; position: relative;
-            .video-in-holder{ width: 100%; height: 100%; }
+        .media{
+            width: calc(50% - 30px);
+            display: flex;
+            align-items: center;
+            position: relative;
+            .video-in-holder{
+                width: 100%;
+                height: 100%;
+            }
         }
-        .text{  width: calc(50% - 30px); direction: ltr;
-            .title{ font-family: $fontSite2; font-size: 40px; line-height: 54px; color: $colorPurple; }
-            .desc{ font-family: $fontSite; font-size: 18px; font-weight: 500; line-height: 1.5; color: $colorDefault;
-                p{ margin-bottom: 20px; }
+        .text{
+            width: calc(50% - 30px);
+            direction: ltr;
+            .title{
+                font-family: $fontSite2;
+                font-size: 40px;
+                line-height: 54px;
+                color: $cl-purple;
+            }
+            .desc{
+                font-family: $fontSite;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 1.5;
+                color: $cl-default;
+                p{
+                    margin-bottom: 20px;
+                }
                 ul{
-                    li{  margin-bottom: 7px;
-                        &:before{ content: "• "; color: $colorPurple; }
+                    li{
+                        margin-bottom: 7px;
+                        &:before{
+                            content: "• ";
+                            color: $cl-purple;
+                        }
                     }
                 }
             }
@@ -26,53 +85,162 @@
 }
 
 //Anneler ile Geleceğe sayfası
-.anneler-ile-gelecege{ background-color: $colorPink; background-image: url('/images/frontend/page/aig-content-bg.svg'); background-repeat: no-repeat; background-size: cover; background-position: center; padding-top: 60px; padding-bottom: 100px;
+.anneler-ile-gelecege{
+    background-color: $cl-pink;
+    background-image: url('/images/frontend/page/aig-content-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 60px;
+    padding-bottom: 100px;
     .page-content{
-        .title{ font-family: $fontSite2; font-size: 65px; color: $colorWhite; margin-bottom: 33px; }
-    }
-    .aig-content{ width: 85%; margin: 0 auto; }
-    .aig-banner{ text-align: center;
-        .aig-wrp{ text-align: center;
-            .desc{ margin-top: 40px; font-family: $fontSite; font-size: 20px; font-weight: 500; line-height: 1.2; color: $colorWhite; }
+        .title{
+            font-family: $fontSite2;
+            font-size: 65px;
+            color: $cl-White;
+            margin-bottom: 33px;
         }
     }
-    .activites-wrp{ margin-top: 30px;
-        ul{ background: $colorWhite; border-radius: 20px; overflow: auto;
-            li{ display: flex; justify-content: space-between; align-content: flex-start; font-family: $fontSite; font-size: 18px; font-weight: bold; padding: 20px 30px; border-top: 1px solid $colorDefault;
-                .date{ width: 19%; color: #e8663c; }
-                .country{ width: 15%; color: #de5c7c; }
-                .city-hall{  width: 34%; color: #0bbcf0; }
-                .seminar-saloon{ width: 30%; }
-                &:nth-child(2){ border-top: none; }
-                &.thead{ background: $colorPurple; border-top: none;
-                    > div { color: $colorWhite !important; }
+    .aig-content{
+        width: 85%;
+        margin: 0 auto;
+    }
+    .aig-banner{
+        text-align: center;
+        .aig-wrp{
+            text-align: center;
+            .desc{
+                margin-top: 40px;
+                font-family: $fontSite;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 1.2;
+                color: $cl-White;
+            }
+        }
+    }
+    .activites-wrp{
+        margin-top: 30px;
+        ul{
+            background: $cl-White;
+            border-radius: 20px;
+            overflow: auto;
+            li{
+                display: flex;
+                justify-content: space-between;
+                align-content: flex-start;
+                font-family: $fontSite;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 20px 30px;
+                border-top: 1px solid $cl-default;
+                .date{
+                    width: 19%;
+                    color: $cl-orangeDark;
+                }
+                .country{
+                    width: 15%;
+                    color: $cl-pink;
+                }
+                .city-hall{
+                    width: 34%;
+                    color: $cl-blueLight;
+                }
+                .seminar-saloon{
+                    width: 30%;
+                }
+                &:nth-child(2){
+                    border-top: none;
+                }
+                &.thead{
+                    background: $cl-purple;
+                    border-top: none;
+                    > div {
+                        color: $cl-White !important;
+                    }
                 }
             }
         }
-        a.btn-more{ margin: 25px auto 0; background: $colorPurple; width: 163px; padding: 11px 16px; display: none;
-            i{ font-size: 12px;  }
+        a.btn-more{
+            margin: 25px auto 0;
+            background: $cl-purple;
+            width: 163px;
+            padding: 11px 16px;
+            display: none;
+            i{
+                font-size: 12px;
+            }
         }
     }
 }
-.team-wrapper{ position: relative;
-    &:before{ content: ""; background: url(/images/frontend/effect/white-top.png); background-size: cover; position: absolute; top: -19px; left: 0; right: 0; height: 20px; }
-}
-.team-group-wrapper{ padding-bottom: 64px;
-    .team-title{ margin-bottom: 25px; padding-top: 47px; text-align: center;
-        span{ font-family: $fontSite2; font-size: 65px; line-height: 87px; color: $colorPurple; }
+.team-wrapper{
+    position: relative;
+    &:before{
+        content: "";
+        background: url(/images/frontend/effect/white-top.png);
+        background-size: cover;
+        position: absolute;
+        top: -19px;
+        left: 0;
+        right: 0;
+        height: 20px;
     }
-    .team-list{ width: 75%; margin: 0 auto;
-        .team-member{ display: flex; margin-bottom: 40px;
-            &:last-child{ margin-bottom: 0; }
-            .member-img{ width: 20%; margin-right: 50px;
-                .member-info{ display: none; }
+}
+.team-group-wrapper{
+    padding-bottom: 64px;
+    .team-title{
+        margin-bottom: 25px;
+        padding-top: 47px;
+        text-align: center;
+        span{
+            font-family: $fontSite2;
+            font-size: 65px;
+            line-height: 87px;
+            color: $cl-purple;
+        }
+    }
+    .team-list{
+        width: 75%;
+        margin: 0 auto;
+        .team-member{
+            display: flex;
+            margin-bottom: 40px;
+            &:last-child{
+                margin-bottom: 0;
             }
-            .member-info{ font-family: $fontSite; flex: 1; display: flex; flex-wrap: wrap; align-items: center;
-                > div { width: 100%; }
+            .member-img{
+                width: 20%;
+                margin-right: 50px;
+                .member-info{
+                    display: none;
+                }
+            }
+            .member-info{
+                font-family: $fontSite;
+                flex: 1;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                > div {
+                    width: 100%;
+                }
                 .member{
-                    &-degree{ font-size: 20px; font-weight: 500; color: $colorPurple; }
-                    &-name{ font-size: 30px; font-weight: 700; color: $colorPurple; }
-                    &-desc{ font-size: 18px; font-weight: 500; line-height: 1.33;  color: $colorDefault; }
+                    &-degree{
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: $cl-purple;
+                    }
+                    &-name{
+                        font-size: 30px;
+                        font-weight: 700;
+                        color: $cl-purple;
+                    }
+                    &-desc{
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 1.33;
+                        color: $cl-default;
+                    }
                 }
             }
         }
@@ -80,112 +248,283 @@
 }
 
 //404
-.error-404{ width: 100%; height: 100vh; background-color: $colorPurple; background-image: url(/images/404-cloud.svg); background-repeat: no-repeat; background-position: 50% bottom; background-size: 100%; display: block; overflow: hidden;
-    .cont{ display: flex; flex-direction: column; justify-content: space-between; height: 72vh; padding: 20px 0px; }
-    .logo{ max-width: 202px; margin: 0 auto;
-        img{ width: 100%; }
+.error-404{
+    width: 100%;
+    height: 100vh;
+    background-color: $cl-purple;
+    background-image: url(/images/404-cloud.svg);
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+    background-size: 100%;
+    display: block;
+    overflow: hidden;
+    .cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 72vh;
+        padding: 20px 0px;
     }
-    .img-404{ max-width: 336px; margin: 0 auto;
-        img{ width: 100%; }
+    .logo{
+        max-width: 202px;
+        margin: 0 auto;
+        img{
+            width: 100%;
+        }
     }
-    .desc{ text-align: center; font-family: $fontSite; color: $colorWhite;
-        > *{ display:  block; }
-        .text1{ font-size: 30px; font-weight: 900; letter-spacing: 0.3px; margin-bottom: 15px; }
-        .text2{ font-size: 19px; font-weight: 300; margin-bottom: 40px; }
-        .btn-go-home{ max-width: 265px; margin: 0 auto; border-radius: 20px; padding: 12px 20px; background-color: $colorOrange; font-size: 18px; font-weight: bold; text-align: left; color: $colorPurple; position: relative;
-            &:after{ content: "\e909"; display: inline-block; font-family: 'icomoon' !important; font-size: 13px; color: $colorPurple; position: absolute; top: 50%; transform: translateY(-50%); right: 18px; }
+    .img-404{
+        max-width: 336px;
+        margin: 0 auto;
+        img{
+            width: 100%;
+        }
+    }
+    .desc{
+        text-align: center;
+        font-family: $fontSite;
+        color: $cl-White;
+        > *{
+            display:  block;
+        }
+        .text1{
+            font-size: 30px;
+            font-weight: 900;
+            letter-spacing: 0.3px;
+            margin-bottom: 15px;
+        }
+        .text2{
+            font-size: 19px;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+        .btn-go-home{
+            max-width: 265px;
+            margin: 0 auto;
+            border-radius: 20px;
+            padding: 12px 20px;
+            background-color: $cl-orange;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: left;
+            color: $cl-purple;
+            position: relative;
+            &:after{
+                content: "\e909";
+                display: inline-block;
+                font-family: 'icomoon' !important;
+                font-size: 13px;
+                color: $cl-purple;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 18px;
+            }
         }
     }
 }
 
 //POLİTİKALAR
 .page-politikalar{
-    .pol-wrp{ background-color: $colorPink; background-image: url(/images/frontend/page/aig-content-bg.svg); background-repeat: no-repeat; background-size: cover; background-position: center;
-        .plt-cont{ background: $colorWhite; }
+    .pol-wrp{
+        background-color: $cl-pink;
+        background-image: url(/images/frontend/page/aig-content-bg.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        .plt-cont{
+            background: $cl-White;
+        }
     }
     & + .main-footer:before { content: none; }
-    .prm-temp-title{ font-family: $fontSite2; font-size: 65px; line-height: 87px; text-align: center; color: $colorPurpleDark; padding-top: 40px; }
-    .gnr-text-holder{ font-family: $fontSite; font-size: 20px; line-height: 32px; text-align: left; color: $colorDefaultDark; padding: 40px 40px 76px 40px;
-        .gnr-title{ font-weight: 900; }
-        .gnr-desc{ font-weight: 500; margin-bottom: 40px; }
+    .prm-temp-title{
+        font-family: $fontSite2;
+        font-size: 65px;
+        line-height: 87px;
+        text-align: center;
+        color: $cl-purpleDark;
+        padding-top: 40px;
+    }
+    .gnr-text-holder{
+        font-family: $fontSite;
+        font-size: 20px;
+        line-height: 32px;
+        text-align: left;
+        color: $cl-defaultDark;
+        padding: 40px 40px 76px 40px;
+        .gnr-title{
+            font-weight: 900;
+        }
+        .gnr-desc{
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
     }
 }
 
-
-
-
 @media screen and (max-width: $breakpointSM){
-    .page-cover{ height: 200px; background-position: center center; }
+    .page-cover{
+        height: 200px; background-position: center center;
+    }
 
     //Neden Canbebe Sayfası
-    .ncb-page-cover{ height: 200px; background-position: center; font-size: 35px;
-       > div { justify-content: center; align-items: flex-end;
-          span{ margin-bottom: 25px; }
+    .ncb-page-cover{
+        height: 200px;
+        background-position: center;
+        font-size: 35px;
+        > div {
+            justify-content: center;
+            align-items: flex-end;
+            span{
+                margin-bottom: 25px;
+            }
        }
     }
     .ncb-content{
-        &:last-child{  }
-        &:before{  }
-        .ncb-item{ flex-wrap: wrap; padding: 10px;
-            &:nth-child(odd){  }
-            .media{ width: 100%; }
-            .text{ width: 100%; margin-top: 10px;
-                .title{ font-size: 25px; text-align: center; line-height: 1.2; }
-                .desc{ font-size: 15px; line-height: 1.6;
-                    p{ text-align: center; margin-top: 10px; margin-bottom: 10px;
-                        &.text-left{ text-align: left; }
-                    }
-                    ul{
-                        li{ margin-bottom: 0;
-                            &:before{  }
+        .ncb-item{
+            flex-wrap: wrap;
+            padding: 10px;
+            .media{
+                width: 100%;
+            }
+            .text{
+                width: 100%;
+                margin-top: 10px;
+                .title{
+                    font-size: 25px;
+                    text-align: center;
+                    line-height: 1.2;
+                }
+                .desc{
+                    font-size: 15px;
+                    line-height: 1.6;
+                    p{
+                        text-align: center;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        &.text-left{
+                            text-align: left;
                         }
                     }
-                    a.btn-more{ margin: 27px auto 20px; }
+                    ul{
+                        li{
+                            margin-bottom: 0;
+                        }
+                    }
+                    a.btn-more{
+                        margin: 27px auto 20px;
+                    }
                 }
             }
         }
     }
 
     //Annler ile geleceğe sayfası
-    .anneler-ile-gelecege{ padding-top: 23px; padding-bottom: 62px; background-image: none;
+    .anneler-ile-gelecege{
+        padding-top: 23px;
+        padding-bottom: 62px;
+        background-image: none;
         .page-content{
-            .title{ font-size: 30px; margin-bottom: 23px; }
+            .title{
+                font-size: 30px;
+                margin-bottom: 23px;
+            }
         }
-        .aig-content{ width: 100%; }
+        .aig-content{
+            width: 100%;
+        }
         .aig-banner{
             .aig-wrp{
-                .desc{ margin-top: 24px; font-size: 15px; line-height: 1.6; }
+                .desc{
+                    margin-top: 24px;
+                    font-size: 15px;
+                    line-height: 1.6;
+                }
             }
         }
         .activites-wrp{
-            ul{ border-radius: 0; background: none;
-                li{ border-radius: 10px; background: $colorWhite; border-top: 0; margin-bottom: 10px; flex-wrap: wrap; padding: 12px 15px; font-size: 15px; line-height: 1;
-                    .date{ width: 40%; margin-bottom: 10px; }
-                    .country{ width: 50%; }
-                    .city-hall{ width: 100%;}
-                    .seminar-saloon{ width: 100%; margin-top: 10px; }
-                    &.thead{ display: none; }
+            ul{
+                border-radius: 0;
+                background: none;
+                li{
+                    border-radius: 10px;
+                    background: $cl-White;
+                    border-top: 0;
+                    margin-bottom: 10px;
+                    flex-wrap: wrap;
+                    padding: 12px 15px;
+                    font-size: 15px;
+                    line-height: 1;
+                    .date{
+                        width: 40%;
+                        margin-bottom: 10px;
+                    }
+                    .country{
+                        width: 50%;
+                    }
+                    .city-hall{
+                        width: 100%;
+                    }
+                    .seminar-saloon{
+                        width: 100%;
+                        margin-top: 10px;
+                    }
+                    &.thead{
+                        display: none;
+                    }
                 }
             }
-            a.btn-more{ display: none; }
+            a.btn-more{
+                display: none;
+            }
         }
     }
-    .team-group-wrapper{ padding-bottom: 20px;
-        .team-title{ padding-top: 13px; margin-bottom: 20px;
-            span{ font-size: 30px; line-height: 41px; }
+    .team-group-wrapper{
+        padding-bottom: 20px;
+        .team-title{
+            padding-top: 13px;
+            margin-bottom: 20px;
+            span{
+                font-size: 30px;
+                line-height: 41px;
+            }
         }
-        .team-list{ width: 100%;
-            .team-member{ flex-wrap: wrap;
-                .member-img{ width: 100%; margin-bottom: 10px; margin-right: 0; display: flex;
-                    .img{ width: 80px; margin-right: 10px; }
-                    .member-info{ flex: 1; display: flex; flex-direction: column; justify-content: flex-end; font-family: $fontSite; color: $colorPurple;
+        .team-list{
+            width: 100%;
+            .team-member{
+                flex-wrap: wrap;
+                .member-img{
+                    width: 100%;
+                    margin-bottom: 10px;
+                    margin-right: 0;
+                    display: flex;
+                    .img{
+                        width: 80px;
+                        margin-right: 10px;
+                    }
+                    .member-info{
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column; 
+                        justify-content: flex-end;
+                        font-family: $fontSite;
+                        color: $cl-purple;
                         .member{
-                            &-degree{ font-size: 15px; font-weight: 500; line-height: 18px; }
-                            &-name{ font-size: 18px; font-weight: 700; line-height: 22px; }
+                            &-degree{
+                                font-size: 15px;
+                                font-weight: 500;
+                                line-height: 18px;
+                            }
+                            &-name{
+                                font-size: 18px;
+                                font-weight: 700;
+                                line-height: 22px;
+                            }
                         }
                     }
                 }
-                > .member-info{ flex: none; width: 100%;
+                > .member-info{
+                    flex: none;
+                    width: 100%;
                     > div { width: 100%;}
                     .member{
                         &-degree{ display: none; }
@@ -202,15 +541,22 @@
 
     //POLİTİKALAR
     .page-politikalar{
-        .pol-wrp{ background-image: none;
-            .plt-cont{ background: none; }
+        .pol-wrp{ 
+            background-image: none;
+            .plt-cont{
+                background: none;
+            }
         }
         & + .main-footer:before { content: ""; }
-        .prm-temp-title{ font-size: 30px; line-height: 1; padding-top: 32px; }
-        .gnr-text-holder{ color: $colorWhite; padding: 28px 10px 58px 10px; font-size: 15px; line-height: 25px;
-            .gnr-title{  }
-            .gnr-desc{  }
+        .prm-temp-title{
+            font-size: 30px;
+            line-height: 1;
+            padding-top: 32px; }
+        .gnr-text-holder{
+            color: $cl-White;
+            padding: 28px 10px 58px 10px;
+            font-size: 15px;
+            line-height: 25px;
         }
     }
-
 }

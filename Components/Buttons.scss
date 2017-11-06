@@ -1,3 +1,6 @@
+/*************************
+** VARIABLES
+*/
 $hover: #333;
 
 $facebook: #0bbcf0;
@@ -28,13 +31,24 @@ $btn-icon-size: 13px;
 $btn-icon-gap: 10px;
 
 .prd-btn-holder{
-    .prd-btn{ display: inline-block; background-color: $colorBlueLight; font-family: $fontSite; font-size: 15px; font-weight: 700; color: $colorWhite; text-align: left; padding: 13px 50px 13px 30px; border-radius: 25px; position: relative;
+    .prd-btn{ 
+        display: inline-block;
+        background-color: $cl-blueLight;
+        font-family: $fontSite;
+        font-size: 15px;
+        font-weight: 700;
+        color: $cl-White;
+        text-align: left;
+        padding: 13px 50px 13px 30px;
+        border-radius: 25px;
+        position: relative;
         &:after {
             font-size: 13px;
-            color: $colorPurple; 
+            color: $cl-purple; 
             position: absolute; 
             top: 50%; 
-            transform: translateY(-50%); right: 18px; 
+            transform: translateY(-50%);
+            right: 18px; 
             @extend [class^="icon-"];
             @extend .icon-tri-right:before;
         }
@@ -48,11 +62,12 @@ $btn-icon-gap: 10px;
     justify-content: space-between;
     font-family: $fontSite;
     font-size: $btn-font-size;
-    color: $colorPurple;
+    color: $cl-purple;
     font-weight: 700;
     line-height: 1.2;
-    background: $colorOrange;
-    border-radius: 25px;
+    background: $cl-orange;
+    //border-radius: 25px;
+    border-radius: 10px;
     padding: 11px 25px;
     
     @at-root {
@@ -85,14 +100,58 @@ $btn-icon-gap: 10px;
     }
 }
 
+.btn{
+    padding: 12px 20px 10px;
+    font-family: $fontSite;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-white{
+    background: $cl-White;
+    color: $cl-purpleDark;
+    &:after{
+        color: $cl-pink;
+        font-size:  10px;
+        margin-left: 25px;
+    }
+}
+
+.btn-purple{
+    background: $cl-purple;
+    color: $cl-White;
+    &:after{
+        color: $cl-pink;
+        font-size:  10px;
+        margin-left: 25px;
+    }
+}
+
+.btn-blue{
+    background: $cl-blueLight;
+    color: $cl-White;
+    &:after{
+        color: $cl-purple;
+        font-size:  10px;
+        margin-left: 25px;
+    }
+}
+
 //emos default buttons
-a.btnDefault, .lnkDefault:not(.lnkSifremiUnuttum) {
+a.btnDefault,
+.lnkDefault:not(.lnkSifremiUnuttum) {
     @extend .btn;
     @extend [class*="btn-cursor"];
     @extend .btn-cursor-right;
 }
 //table obj., display:inline fixed
-.urunDetay_btnSepeteAt > table, .urunListe_favoriEkle > table, .urunDetay_btnStokHaberci > table, .ems-cart-coupon > table, .pageLogin_btnFacebookLogin > table, .pageLogin_btnGoogleLogin > table, .pageLogin_btnUyeSifreGonder > table {
+.urunDetay_btnSepeteAt > table,
+.urunListe_favoriEkle > table,
+.urunDetay_btnStokHaberci > table,
+.ems-cart-coupon > table,
+.pageLogin_btnFacebookLogin > table,
+.pageLogin_btnGoogleLogin > table,
+.pageLogin_btnUyeSifreGonder > table {
     display: table !important;
 }
 
@@ -109,7 +168,7 @@ a.btnFacebookLogin {
     $btn-font-size: 15px;
     $btn-icon-size: 10px;
     font-size: $btn-font-size;
-    color: $colorWhite;
+    color: $cl-White;
     background: $facebook-dark;
     &:after {
         font-size: $btn-icon-size;
@@ -124,23 +183,24 @@ a.btnMesajGonder {
     $btn-font-size: 15px;
     $btn-icon-size: 10px;
     font-size: $btn-font-size;
-    background: $colorPurple;
-    color: $colorWhite;
+    background: $cl-purple;
+    color: $cl-White;
     &:after {
         font-size: $btn-icon-size;
-        color: $colorOrange;
+        color: $cl-orange;
     }
 }
 #lnkSifremiUnuttum {
     font-family: $fontSite;
     font-size: 13px;
-    color: $colorDefault;
+    color: $cl-default;
     font-weight: bold;
     text-decoration: underline;
+    text-decoration-skip: ink;
 }
 a.btnLogin {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 a.btnUyeBilgi {
     display: flex;
@@ -149,19 +209,24 @@ a.btnUyeBilgi {
 }
 .btn-content-like {
     font-size: inherit;
-    color: $colorDefault;
+    color: $cl-default;
     transition: color .2s cubic-bezier(0.42, 0, 1, 0.18);
     cursor: pointer;
     &:hover, &.selected {
-        color: $colorPink;
+        color: $cl-pink;
     }
 }
 
 
 @media screen and (max-width: $breakpointSM){
     .prd-btn-holder{
-        .prd-btn{ width: 121px; padding: 6px 30px;
-            &:after{ font-size: 8px; right: 12px; } 
+        .prd-btn{
+            width: 121px;
+            padding: 6px 30px;
+            &:after{
+                font-size: 8px;
+                right: 12px;
+            }
         }
     }
 }

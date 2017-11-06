@@ -37,6 +37,7 @@ b {font-weight: 700;}
 .flex-middle{ align-items: center; }
 
 .img-responsive{ width: 100%; }
+.visibility-hidden{ visibility: hidden; }
 .height-full{ height: 100%; }
 
 .mt0 {margin-top: 0;}
@@ -59,7 +60,7 @@ b {font-weight: 700;}
 .desc {
     font-family: $fontSite;
     font-size: 18px;
-    color: $colorDefaultDark;
+    color: $cl-defaultDark;
     font-weight: 500;
     line-height: 1.6;
 }
@@ -68,35 +69,21 @@ b {font-weight: 700;}
 .instagram i{ background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .youtube{ color: #cd201f; }
 
-a.button-slide{
-		display: inline-block;
-		background-color: $colorOrange;
-		padding: 14px 25px;
-		border-radius: 25px;
-		font-family: $fontSite;
-		font-size: 18px;
-		font-weight: bold;
-		color: $colorPurple;
-		i{
-				font-size: 13px;
-				margin-left: 20px;
-		}
-}
 
 a.btn-more{
 		width: 215px;
 		padding: 11px 16px 11px 47px;
 		border-radius: 25px;
-		background: $colorBlueLight;
+		background: $cl-blueLight;
 		font-family: $fontSite;
 		font-size: 15px;
 		font-weight: 700;
-		color: $colorWhite;
+		color: $cl-White;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		i{
-				color: $colorOrange;
+				color: $cl-orange;
 		}
 }
 
@@ -105,26 +92,33 @@ textarea {
 }
 
 @media screen and (max-width: $breakpointSM){
-		a.button-slide{
-				font-size: 12px;
-				color: $colorWhite;
-				background: $colorOrangeDark;
-				padding: 8px 14px;
-				i{
-						font-size: 10px;
-						color: $colorOrange;
-				}
+	.mHidden{ display: none !important; }
+	
+	a.button-slide{
+		font-size: 12px;
+		color: $cl-White;
+		background: $cl-orangeDark;
+		padding: 8px 14px;
+		i{
+			font-size: 10px;
+			color: $cl-orange;
 		}
-		a.btn-more{
-				width: 170px;
-				padding: 8px 14px;
-				border-radius: 20px;
-				font-size: 12px;
-				i{
-						color: $colorPurple;
-						font-size: 9px;
-				}
+	}
+	a.btn-more{
+		width: 170px;
+		padding: 8px 14px;
+		border-radius: 20px;
+		font-size: 12px;
+		i{
+			color: $cl-purple;
+			font-size: 9px;
 		}
+	}
 
-		.ems-container{ margin-left: 10px; margin-right: 10px; width: calc(100% - 20px); }
+	.ems-container{
+		margin-left: 10px;
+		margin-right: 10px;
+		width: calc(100% - 20px);
+	}
 }
+

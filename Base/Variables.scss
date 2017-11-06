@@ -4,27 +4,40 @@
 $baseHref: '';
 
 // Typography
-$fontDefault: "arial";
-$fontSite: "Museo Sans";
-$fontSite2: "VerveineCorp";
-$fontSizeDefault: 12px;
+$fontDefault        : "arial";
+$fontSite           : "Museo Sans";
+$fontSite2          : "VerveineCorp";
+$fontSizeDefault    : 12px;
 
 // Colors
-$colorDefault: #a9a9a9;
-$colorDefaultDark: #424242;
-$colorPurple: #6d328a;
-$colorPurpleDark: #5d277e;
-$colorPink: #de5c7c;
-$colorBlueLight: #0bbcf0;
-$colorOrange: #f9c803;
-$colorOrangeDark: #e8663c;
-$colorWhite: #fff;
-$colorInputBg: #eaeaea;
-$colorInputBg2: #e0b400;
-$colorBlack: #000;
+$cl-default     : #a9a9a9;
+$cl-defaultLight: #e9e9e9;
+$cl-defaultDark : #424242;
+$cl-purple      : #820096;
+$cl-purpleDark  : #6d328a;
+//$cl-purpleDark  : #5d277e;
+$cl-pink        : #de5c7c;
+$cl-pinkLight   : #ffd0dc;
+$cl-blueLight   : #0bbcf0;
+$cl-orange      : #f9c803;
+$cl-orangeDark  : #e8663c;
+$cl-White       : #ffffff;
+$cl-black       : #000000;
+$cl-grey        : #727272;
 
-$colorGrey:  #727272;
-$colorBg: #fafafa;
+$cl-InputBg     : #eaeaea;
+$cl-InputBg2    : #e0b400;
+
+$cl-BG          : #fafafa;
+
+$cl-success     : #3c763d;
+$cl-successBg   : #dff0d8;
+$cl-successBr   : #d6e9c6;
+
+$cl-error       : #a94442;
+$cl-errorBg     : #f2dede;
+$cl-errorBr     : #ebccd1;
+
 
 // Layout
 $siteContainerWidth: 1200px;
@@ -42,28 +55,57 @@ $mobile-l:  425px + 1;
 $mobile-m:  375px + 1;
 $mobile-s:  320px + 1;
 
-//mixins
-@mixin user-select($value) {
--webkit-user-select: $value;
--moz-user-select: $value;
--ms-user-select: $value;
-user-select: $value;
+
+@mixin effect-top($image, $psz ) {
+    position: relative;
+    &:before{
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 20px;
+        background-image: url('/images/frontend/effect/top-'+ $image +'.png');
+        background-size: cover;
+        position: absolute;
+        top: $psz;
+        left: 0;
+        z-index: 5;
+    }
 }
-//outer
-@mixin outer-block {
-    display: block;
-    width: auto;
+
+@mixin effect-top-pointed($image, $psz ) {
+    position: relative;
+    &:before{
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 30px;
+        background-image: url('/images/frontend/effect/top-'+ $image +'-pointed.png');
+        background-size: cover;
+        position: absolute;
+        top: $psz;
+        left: 0;
+        z-index: 5;
+    }
 }
-@mixin outer {
-    margin-left: $singleOuter;
-    margin-right: $singleOuter;
+
+@mixin effect-bottom($image, $psz ) {
+    position: relative;
+    &:after{
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 20px;
+        background-image: url('/images/frontend/effect/top-'+ $image +'.png');
+        background-size: cover;
+        position: absolute;
+        bottom: $psz;
+        left: 0;
+        z-index: 5;
+        transform: rotate(180deg);
+    }
 }
-@mixin outer-mobile {
-    margin-left: $singleOuterMobile;
-    margin-right: $singleOuterMobile;
-}
-//clear-table-cell
-@mixin clear-table-cell {
-    display: inline-block;
-    width: 100% !important;
+
+
+.kutuDefault.kutuArama{
+    display: none !important;
 }

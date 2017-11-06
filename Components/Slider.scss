@@ -1,59 +1,191 @@
 .swiper-container {
-    .swiper-inner { position: relative; width: 100%; overflow: hidden; }
-    .swiper-button-prev, .swiper-button-next{ background-size: contain; width: 40px; height: 40px; margin-top: -20px; }
-    .swiper-button-prev{ background-image: url(/images/frontend/icon/ico-arrow-left.svg); left: 8%; }
-    .swiper-button-next{ background-image: url(/images/frontend/icon/ico-arrow-right.svg); right:  8%; }
-    .swiper-pagination-bullet{ width: 12px; height: 12px; opacity: 1; background: $colorWhite;
-        &-active{ background: $colorPurple; box-shadow: 0px 0px 0px 2px $colorWhite; }
+    .swiper-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    .swiper-button-prev,
+    .swiper-button-next{
+        background-size: contain;
+        width: 40px;
+        height: 40px;
+        margin-top: -20px;
+    }
+    .swiper-button-prev{
+        background-image: url(/images/frontend/icon/ico-arrow-left.svg);
+        left: 8%;
+    }
+    .swiper-button-next{
+        background-image: url(/images/frontend/icon/ico-arrow-right.svg);
+        right:  8%;
+    }
+    .swiper-pagination-bullet{
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        background: $cl-orange;
+        &-active{
+            background: $cl-purple;
+        }
     }
 }
 
 //Anasayfa Slider
+/*
 .main-slider{
-    &:before{
-        content: "";
-        display: inline-block;
-        width: 100%;
-        height: 20px;
-        position: absolute;
-        top: 0;
-        z-index: 2;
-        background-image: url(/images/frontend/effect/slide-bitmap.png);
-        background-repeat-y: no-repeat;
-        background-size: cover;
-    }
-    .swiper-slide{ position: relative; width: 100% !important;
-        .content-wrapper{ position: absolute; width: 100%; height: 100%;
-            .swp-content{ display: flex; align-items: flex-end; height: 100%; padding: 110px 150px; overflow: hidden; }
+    .swiper-slide{
+        position: relative; width: 100% !important;
+        .content-wrapper{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            .swp-content{
+                display: flex;
+                align-items: flex-end;
+                height: 100%;
+                padding: 110px 150px;
+                overflow: hidden;
+            }
         }
-        .cover{ background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%;
-            img{ width: 100%; }
+        .cover{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            img{
+                width: 100%;
+            }
         }
     }
-    .swiper-pagination-bullets{ bottom: 70px; }
+    .swiper-pagination-bullets{
+        bottom: 35px;
+    }
+}
+*/
+.main-slider{
+    .swiper-slide{
+        .slide-wrapper{
+            position: relative;
+            .slide-cover{
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                width: 100%;
+            }
+            .slide-product-image{
+                display: inline-block;
+                position: absolute;
+                left: 50%;
+                bottom: 80px;
+                transform: translateX(-50%);
+                font-size: 0;
+            }
+            .slide-content{
+                width: 460px;
+                position: absolute;
+                top: 50%;
+                left: 14%;
+                transform: translateY(-50%);
+                .slide-title{
+                    font-family: $fontSite;
+                    font-size: 40px;
+                    font-weight: bold;
+                    color: $cl-orange;
+                    line-height: 1.1;
+                    b{
+                        color: $cl-White;
+                    }
+                }
+                .slide-desc{
+                    font-family: $fontSite;
+                    font-size: 22px;
+                    font-weight: 300;
+                    color: $cl-White;
+                    margin-top: 10px;
+                }
+                a.slide-button{
+                    display: inline-block;
+                    background-color: $cl-White;
+                    padding: 12px 17.7px 10px 20px;
+                    margin-top: 45px;
+                    border-radius: 10px;
+                    font-family: $fontSite;
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: $cl-purple;
+                    i{
+                        font-size: 12px;
+                        margin-left: 20px;
+                        color: $cl-pink;
+                    }
+                }
+            }
+        }
+    }
+    .swiper-pagination-bullets{
+        bottom: 35px;
+    }
 }
 
 
 @media screen and (max-width: $breakpointSM){
     //Anasayfa Slider
     .main-slider{
-        &:before{
-            height: 14px;
-            top: -13px;
-            background-image: url(/images/frontend/effect/main-slider-top-mobile.png);
-        }
         .swiper-slide{
-            .swiper-slide-wrapper{ display: flex; flex-wrap: wrap; }
-            .content-wrapper{ position: initial; order: 2; display: inline-block;
-                .swp-content{ height: 102px; padding: 11px; justify-content: center; align-items: flex-start; }
+            .slide-wrapper{
+                .slide-cover{
+                    min-height: 250px;
+                    /*background-size: initial;
+                    background-position: right top;*/
+                    background-size: 220%;
+                    background-position: 85% 0;
+                }
+                .slide-product-image{
+                    display: none;
+                }
+                .slide-content{
+                    width: auto;
+                    position: initial;
+                    transform: translateY(0);
+                    padding: 10px 20px;
+                    text-align: center;
+                    margin-bottom: 20px;
+                    .slide-title{
+                        font-size: 20px;
+                        color: $cl-pink;
+                        text-align: left;
+                        height: 44px;
+                        overflow: hidden;
+                        b{
+                            color: $cl-purple;
+                            display: block;
+                        }
+                    }
+                    .slide-desc{
+                        display: none;
+                    }
+                    a.slide-button{
+                        background-color: $cl-purple;
+                        margin-top: 20px;
+                        color: $cl-White;
+                    }
+                }
             }
-            .cover{ order: 1; }
+        }
+        .swiper-pagination-bullet{
+            width: 9px;
+            height: 9px;
+            background: $cl-default;
+            &-active{
+                background: $cl-orange;
+            }
         }
         .swiper-button-prev,
-        .swiper-button-next{ display: none; }
-        .swiper-pagination-bullets{ bottom: 33px !important; }
-        .swiper-pagination-bullet{ width: 9px; height: 9px; margin: 0px 3px !important; background: $colorDefault;
-            &-active{ background: $colorPurple; box-shadow: none; }
+        .swiper-button-next{
+            display: none
+        }
+        .swiper-pagination-bullets{
+            bottom: -2px;
         }
     }
 }

@@ -15,7 +15,7 @@
         font-family: $fontSite;
         font-size: 15px;
         font-weight: 700;
-        color: $colorDefaultDark;
+        color: $cl-defaultDark;
         line-height: 1.2;
         margin-bottom: 30px;
     }
@@ -23,26 +23,37 @@
         font-size: 13px;
         line-height: 1.5;
     }
+    + footer:before{
+        content: none;
+    }
 }
 
-//login page
-.ems-page-member-login, .ems-page-member-forgot-password {
+/** LOGİN PAGE */
+.page-member{
     position: relative;
-    background: url(/images/frontend/bg-login-438667.jpg) no-repeat right top;
-    background-size: cover;
-    /*.ems-login, .ems-signup {
-        background: #fff;
-        padding: 50px;
-        //border-left: 3px solid rgba(0,0,0,.5);
-        box-shadow: -4px 0 0 0 rgba(179, 179, 179, 0.5);
+    .landscape{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        .dNHolder{
+            display: none;
+        }
     }
-    */
+}
+.ems-page-member-login, .ems-page-member-forgot-password{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    z-index: 1;
     .row-holder-1{
-        background: #fff;
+        border-radius: 10px;
+        background: $cl-White;
         padding: 50px;
-        box-shadow: -4px 0 0 0 rgba(179, 179, 179, 0.5);
         max-width: 456px;
         flex-wrap: wrap;
+        margin: 97px auto 129px;
     }
     .ems-login, .ems-signup {
         width: 100%;
@@ -52,8 +63,19 @@
             width: 350px;
         }
     }
+    .page-top-title{
+        text-align: center;
+        font-family: $fontSite2;
+        font-size: 40px;
+        color: $cl-pink;
+    }
     .or {
         text-align: center;
+        margin: 16.8px 0 14px;
+        font-family: $fontSite;
+        font-size: 15px;
+        font-weight: 500;
+        color: #bebebe; 
     }
     .mwk {
         max-width: 270px;
@@ -63,10 +85,14 @@
     .btn-login-page {
         font-family: $fontSite;
         font-size: 15px;
-        color: $colorDefaultDark;
+        font-weight: 500;
+        color: $cl-grey;
         text-align: center;
+        margin: 23px 0 0;
         > a {
             text-decoration: underline;
+            text-decoration-skip: ink;
+            color: $cl-black;
         }
     }
     [id$="txtUYE_CEPTELEFONALAN"]{
@@ -85,23 +111,31 @@
     }
 }
 
+
 //uyelik bilgilerim
+.page-member-content{
+    padding-top: 100px;
+}
 .ems-page-member-info {
     .page-top-title {
         text-align: center;
+        display: none;
     }
     .page-top-desc {
         text-align: center;
+        display: none;
     }
     .ems-form {
         .ems-form-inner {
             width: 350px;
+            margin: 0 auto;
             [id$="txtUYE_CEPTELEFONALAN"]{
                 display: none;
             }
         }
     }
 }
+
 
 //şifremi unuttum
 .ems-page-member-forgot-password{
@@ -125,58 +159,169 @@
             tr:nth-child(1){
                 position: relative;
                 [id$="lbfUYE_EMAIL"]{
-                    position: absolute;
-                    left: 15px;
-                    top: 20px;
+                    display: block;
+                    margin-bottom: 5px;
+                    font-family: $fontSite;
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: $cl-purpleDark;
                 }
                 [id$="txtUYE_EMAIL"]{
                     width: 100%;
                     height: 50px;
-                    padding-top: 10px;
-                    padding-left: 23px;
-                    padding-right: 23px;
-                    background: #eaeaea;
-                    outline: 0;
-                    border: 0;
-                    border-radius: 10px;
-                    color: #424242;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    background: $cl-InputBg;
+                    outline: 0 !important;
+                    border: 0 !important;
+                    border-radius: 5px;
+                    color: $cl-defaultDark;
                 }
             }
             tr:nth-child(2){
                 th{ display: none; }
             }
             [id$="CaptchaImage1_divCaptcha"]{
-                display: flex;
-                align-items: center;
                 width: 100%;
-                position: relative;
+                text-align: center;
                 #imgCaptcha{
-                    margin-right: 15px;
-                    width: 45%;
                 }
                 [id$="lbfUYE_KONTROLKODU"]{
-                    position: absolute;
-                    left: calc(45% + 30px);
-                    top: 20px;
+                    display: block;
+                    margin-top: 15px;
+                    margin-bottom: 5px;
+                    font-family: $fontSite;
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: $cl-purpleDark;
+                    text-align: left;
                 }
                 [id$="txtUYE_KONTROLKODU"]{
-                    width: 55%;
+                    width: 100%;
                     height: 50px;
-                    padding-top: 10px;
-                    padding-left: 23px;
-                    padding-right: 23px;
-                    background: #eaeaea;
-                    outline: 0;
-                    border: 0;
-                    border-radius: 10px;
-                    color: #424242;
-                    
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    background: $cl-InputBg;
+                    outline: 0 !important;
+                    border: 0 !important;
+                    border-radius: 5px;
+                    color: $cl-defaultDark;
+                }
+                br{
+                    display: none;
                 }
             }
             .pageLogin_btnUyeSifreGonder{
                 display: flex;
                 justify-content: center;
                 margin-top: 20px;
+                .btnUyeSifreGonder{
+                    width: 253px;
+                }
+            }
+        }
+    }
+}
+
+// Şifremi değiştirmek istiyorum
+.page-member{
+    .ems-page-member-password {
+        .page-top-title,
+        .page-top-desc{
+            display: none;
+        }
+        .ems-form {
+            max-width: 350px;
+            margin: 0 auto;
+            .ems-form-obj + .ems-form-label{
+                margin:  5px 0 0px 0;
+            }
+            .ems-field.button{
+                text-align: center;
+                margin-top: 48px;
+                .btnSifreGuncelle{
+                    min-width: 265px;
+                }
+            }
+        }
+    }
+}
+
+.product-menu-wrapper{
+    .prd-menu{
+        li{
+            border-radius: 19px;
+            a{
+                background: none;
+                &:after{
+                    content: none;
+                }
+                i.mb{
+                    color: #e1e1e1;
+                }
+                &:hover{
+                    i.mb{
+                        color: $cl-pink;
+                    }
+                }
+            }
+            &.active{
+                background: $cl-purpleDark;
+                
+                i.mb{
+                    color: $cl-pink;
+                }
+            }
+        }
+    }
+}
+
+
+// Beğendilerim
+.member-menu-holder{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    .product-menu-wrapper{
+        min-height: auto;
+        position: initial;
+    }
+}
+.page-member-liked{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 70px;
+    > .ems-container{
+        display: flex;
+    }
+    .etiketListe{
+        display: none;
+    }
+    .icerikTemplateListeContainer{
+        margin: 10px !important;
+        .icerikTemplateListeItem{
+            width: 100% !important;
+            box-shadow: 1px 2px 5px 0 rgba(93, 64, 108, 0.4);
+            margin-bottom: 15px;
+            border-radius: 5px;
+            overflow: hidden;
+            .blog-post{
+                display: flex;
+                align-items: center;
+                margin: 0;
+                > img{
+                    width: 180px;
+                    margin-right: 17px;
+                }
+                .post-title{
+                    font-family: $fontSite;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: $cl-purpleDark;
+                    a{
+                        display: none !important;
+                    }
+                }
             }
         }
     }
@@ -184,52 +329,78 @@
 
 
 @media screen and (max-width: $breakpointSM){
-    .ems-page-member-login, .ems-page-member-forgot-password{
-        padding-top: 250px;
-        background-size: 100% 250px;
-        &:before{
-            content: "";
-            display: inline-block;
-            height: 20px;
-            width: 100%;
-            background-image: url(/images/frontend/effect/footer-top.png);
-            background-size: cover;
-            position: absolute;
-            top: 230px;
-            z-index: 5;
-        }
-        .ems-container{
-            margin: 0;
-            width: 100%;
-            .row-holder-1{
-                width: 100%;
-                padding: 20px;
-            }
-        }
-        .ems-login{
-            .ems-form{
-                margin-top: 0;
-            }
-        }
-        .ems-signup{
-            .ems-form{
-                margin-top: 0;
-            }
-        }
-        .page-top-title{
-            position: absolute;
-            top: 190px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #ffffff;
-            font-size: 23px;
-            margin-bottom: 0;
+    /** LOGİN PAGE */
+    .page-member{
+        .landscape{
+            display: none;
         }
     }
-    .ems-page-member-forgot-password{
-        .page-top-title{
-            display: inline-table;
+    .ems-page-member-login, .ems-page-member-forgot-password{
+        .row-holder-1{
+            border-radius: 0px;
+            margin: 25px auto 0;
+            padding: 0 10px;
         }
+        .ems-login, .ems-signup {
+        }
+        .ems-form {
+            .ems-form-inner {
+                width: 100%;
+            }
+        }
+        .page-top-title{
+            text-align: center;
+            font-family: $fontSite2;
+            font-size: 40px;
+            color: $cl-pink;
+        }
+        .or {
+            text-align: center;
+            margin: 16.8px 0 14px;
+            font-family: $fontSite;
+            font-size: 15px;
+            font-weight: 500;
+            color: #bebebe; 
+        }
+        .mwk {
+            max-width: 270px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-login-page {
+            font-family: $fontSite;
+            font-size: 15px;
+            font-weight: 500;
+            color: $cl-grey;
+            text-align: center;
+            margin: 23px 0 0;
+            > a {
+                text-decoration: underline;
+                text-decoration-skip: ink;
+                color: $cl-black;
+            }
+        }
+        [id$="txtUYE_CEPTELEFONALAN"]{
+            display: none;
+        }
+        .ems-message-wrapper{
+            display: none;
+        }
+        .ems-error-clone{
+            display: inline-block;
+            width: 100%;
+            .ems-message-wrapper{
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
+
+    .ems-page-member-forgot-password{
+    }
+    
+    .page-member-content{
+        padding-top: 80px;
     }
     .ems-page-member-info{
         .page-top-title{ display: none; }
@@ -237,8 +408,7 @@
         .ems-form{
             margin-top: 0;
             .ems-form-inner{
-                width: 100%;
-                margin: 0 20px;                
+                width: 100%;           
             }
         }
     }

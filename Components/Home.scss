@@ -1,15 +1,57 @@
 // Main Banner
 .page-home{
-    .banner-wrapper{ display: block; font-size: 0; position: relative;
-        img{ width: 100%;
-            &.mobile{ display: none; }
+
+    // Anneler ile geleceğe banner
+    .bnr-holder {
+        background-size: cover;
+        position: relative;
+        .posImg{
+            position: absolute;
+            left: 120px;
+            top: 50%;
+            transform: translateY(-50%);
+            max-height: 80%;
         }
-        a.button-slide{ position: absolute; bottom: 45px; left: 50%; transform: translateX(-50%); }
+        .bnr-content {
+            position: absolute;
+            right: 5%;
+            top: 14%;
+            min-width: 500px;
+        }
+        > div{
+            span{
+                display: block;
+            }
+        }
+        .txt-1, .txt-2, .txt-3{
+            font-family: $fontSite;
+            font-size: 40px;
+            font-weight: 700;
+            text-align: left;
+            color: $cl-purple;
+            line-height: 1.1;
+        }
+        .txt-2, .bnr-content .btn:after{
+            color: $cl-pink;
+        }
+        .txt-3{
+            font-weight: 100;
+        }
+        .bnr-content .btn{
+            margin-top: 14px;
+        }
     }
 }
 
 //Neden canbebe
-.why-canbebe-wrp{ position: relative; display: flex; flex-wrap: wrap; flex-direction: column; align-items: center; background: $colorPurple; padding: 50px 0 60px;
+.why-canbebe-wrp{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background: $cl-purple;
+    padding: 50px 0 60px;
     &:before{
         content: "";
         display: inline-block;
@@ -22,27 +64,235 @@
         left: 0;
         z-index: 1;
     }
-    .title{ display: block; font-family: $fontSite2; font-size: 65px; color: $colorWhite; margin-bottom: 22px; }
-    .video-in-holder{ margin-bottom: 34px;}
+    .title{
+        display: block;
+        font-family: $fontSite2;
+        font-size: 65px;
+        color: $cl-White;
+        margin-bottom: 22px;
+    }
+    .video-in-holder{
+        margin-bottom: 34px;
+    }
+}
+
+//BLOG
+.page-home .page-blog {
+    display: inline-block;
+    width: 100%;
+    @include effect-top('white', -19px );
+    .blog-title{
+        padding: 35px 10px 25px;
+        z-index: 100;
+        position: relative;
+    }
+    .btn-holder{
+        margin-top: 20px;
+        margin-bottom: 122px;
+        text-align: center;
+    }
+}
+
+//instagram feed
+.instagram-feed-wrapper{
+    display: inline-block;
+    width: 100%;
+    &.hashtag{
+        background: $cl-orange;
+        background-image: url(/images/frontend/instagram-feed-bg.svg);
+        background-size: 85%;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include effect-top-pointed('orange', -29px );
+        padding-top: 35px;
+        padding-bottom: 63px;
+        
+        .text-holder{
+            font-family: $fontSite;
+            text-align: center;
+            margin-bottom: 58px;
+            .hashtag{
+                font-size: 40px;
+                font-weight: bold;
+                color: $cl-White;
+            }
+            .desc{
+                font-size: 22px;
+                font-weight: 300;
+                color: $cl-purple;
+            }
+        }
+        .swiper-container-horizontal > .swiper-pagination-bullets{
+            position: initial;
+            margin-top: 52px;
+        }
+        
+    }
+    &.profile{
+        @include effect-top-pointed('white', -29px );
+        padding-top: 77px;
+        padding-bottom: 109px;
+
+        .text-holder{
+            text-align: center;
+            margin-bottom: 42px;
+            .icon-heart{
+                font-size: 22px;
+                color: $cl-pink;
+            }
+            .profile{
+                font-family: $fontSite2;
+                font-size: 25px;
+                color: $cl-default;
+            }
+        }
+
+        .swiper-container-horizontal > .swiper-pagination-bullets{
+            display: none;
+        }
+    }
+    
+    .swiper-slide{
+        padding: 5px;
+        > a{
+            display: inline-block;
+            border-radius: 5px;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+        }
+    }
 }
 
 
 @media screen and (max-width: $breakpointSM){
-    // Main Banner
     .page-home{
-        .banner-wrapper{
-            img{ display: none;
-                &.mobile{ display: block; }
+        // Anneler ile geleceğe banner
+        .bnr-holder {
+            background-size: auto 280px;
+            background-repeat: no-repeat;
+            padding-top: 280px;
+            img:not(.posImg){
+                display: none;
             }
-            a.button-slide{ bottom: 25px; }
+            .posImg{
+                max-height: 247px;
+                top: 17px;
+                left: 0; 
+                transform: translate(0);
+            }
+            .bnr-content {
+                position: initial;
+                width: 100%;
+                min-width: 100%;
+                padding: 10px 10px 30px;
+                text-align: center;
+            }
+            div{
+                text-align: left;
+                span{
+                    display: inline-block;
+                }
+                > span + span{
+                    margin-left: 4px;
+                }
+            }
+            .txt-1, .txt-2, .txt-3{
+                font-size: 20px;
+            } 
+            .bnr-content .btn{
+                font-size: 15px;
+                margin-top: 20px;
+                background: $cl-purple;
+                color: $cl-White;
+                border-radius: 10px;
+                &:after{
+                    font-size: 10px;
+                    margin-left: 20px;
+                }
+            }
+        }
+        //Canbebe Urunleri Banner
+        .canbebe-urunleri{
+            display: flex;
         }
     }
-
     //Neden canbebe
     .why-canbebe-wrp{
         padding: 15px 0 65px;
-        .title{ font-size: 30px; margin-bottom: 26px; }
-        .video-in-holder{ margin-bottom: 25px; margin-left: 20px; margin-right: 20px; }
+        .title{
+            font-size: 30px;
+            margin-bottom: 26px;
+        }
+        .video-in-holder{
+            margin-bottom: 25px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+
+    //BLOG
+    .page-home .page-blog {
+        &:before{ content: none; }
+        .blog-title{
+            padding: 65px 10px 25px;
+        }
+        .btn-holder{
+            margin-bottom: 46px;
+            .btn{
+                background: $cl-orange;
+                color: $cl-purple;
+            }
+        }
+    }
+
+    //instagram feed
+    .instagram-feed-wrapper{
+        &.hashtag{
+            padding-top: 10px;
+            padding-bottom: 46px;
+            background-image: none;
+            .text-holder{
+                margin-bottom: 20px;
+                .hashtag{
+                    display: block;
+                    text-align: center;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+                .desc{
+                    font-size: 15px;
+                }
+            }
+            .swiper-container-horizontal > .swiper-pagination-bullets{
+                margin-top: 26px;
+            }
+            
+        }
+        &.profile{
+            @include effect-top-pointed('white', -29px );
+            padding-top: 50px;
+            padding-bottom: 0px;
+            margin-bottom: 20px;
+            .text-holder{
+                margin-bottom: 13px;
+            }
+        }
+        .instagram-feed{
+            margin-left: -20px;
+            margin-right: -20px;
+            overflow: hidden;
+            .swiper-inner{
+                transform: translateX(-20%);
+                overflow: initial;
+            }
+        }
+        .swiper-slide{
+            width: 33.3%!important;
+        }
+        .swiper-pagination-bullet{ background: $cl-White; }
+        .swiper-pagination-bullet-active{ background: $cl-purple; }
     }
 
 }

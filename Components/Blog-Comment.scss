@@ -11,7 +11,7 @@
         font-family: $fontSite;
         font-size: 13px;
         font-weight: 500;
-        color: #a9a9a9;
+        color: $cl-default;
     }
     .like-count{
         margin-bottom: 14px;
@@ -24,7 +24,7 @@
     }
     .comment-info{
         padding: 15px 0 16px;
-        border-top: 1px solid #e9e9e9;
+        border-top: 1px solid $cl-defaultLight;
         .comment-container{
             display: flex;
             justify-content: space-between;
@@ -36,7 +36,7 @@
                     }
                     &:not(.commentWrite).selected{
                         i, span{
-                          color: #6d328a !important;
+                          color: $cl-purple !important;
                         }
                     }
                     &:last-child{
@@ -61,14 +61,14 @@
     position: relative;
     br{ display: none; }
     .icerikListeYorumlar{
-        background-color: $colorBg;
-        border-bottom: 1px solid #e9e9e9;
+        background-color: $cl-BG;
+        border-bottom: 1px solid $cl-defaultLight;
         .IcerikDetay_yorumlar{
             .IcerikDetay_title{
                 display: none;
             }
             .userCommentHolder{
-                border-top:1px solid #e9e9e9;
+                border-top:1px solid $cl-defaultLight;
                 .userComment{
                     width: 1140px;
                     max-width: 680px;
@@ -96,7 +96,7 @@
                             font-size: 15px;
                             font-weight: 500;
                             line-height: 0.96;
-                            color: $colorBlack;
+                            color: $cl-black;
                         }
                         .tarih{
                             display: block;
@@ -115,7 +115,7 @@
                         font-size: 15px;
                         font-weight: 500;
                         line-height: 1.29;
-                        color: $colorGrey;
+                        color: $cl-grey;
                     }
                     .subCommentContainer{
                         display: block;
@@ -126,7 +126,7 @@
                                 font-family: $fontSite;
                                 font-size: 13px;
                                 font-weight: 700;
-                                color: $colorDefault;
+                                color: $cl-default;
                                 cursor: pointer;
                                 &:before{
                                     @extend [class^="icon-"];
@@ -134,7 +134,7 @@
                                     margin-right: 8px;
                                 }
                                 &.selected{
-                                    color: $colorPurple;
+                                    color: $cl-purple;
                                     &:before{
                                         @extend .icon-liked:before;
                                     }
@@ -193,7 +193,7 @@
 .page-blog-detail + .main-footer:before{
     height: 1px;
     background-image: none;
-    background-color: #e9e9e9;
+    background-color: $cl-defaultLight;
     top: -1px;
  }
 

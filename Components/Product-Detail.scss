@@ -1,76 +1,212 @@
-.product-detail-info{ margin-top: 70px; margin-bottom: 110px; display: flex; justify-content: space-between; flex-wrap: wrap;
-    > div{ width: calc(50% - 25px); }
-    .prd-image{ padding-top: 20px; display: flex; justify-content: center; align-items: flex-end; }
+.page-product-detail{
+    position: relative;
+}
+.product-detail-wrapper{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    .img-cover{
+        //width: 100%;
+    }
+    .prd-cover{
+        display: inline-block;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-height: 100%;
+        //background-size: auto 100%;
+        background-position: 65% 0;
+        background-repeat: no-repeat;
+    }
+    .prd-content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .prd-detail{
+        margin-top: 220px;
+    }
     .prd-info{
-        .prd-title{ font-family: $fontSite2; font-size: 65px; color: $colorPurple; line-height: 85px; margin-bottom: 10px; }
-        .prd-desc{ font-family: $fontSite; font-size: 15px; font-weight: 500; line-height: 1.67; color: $colorDefault; }
-        .prd-btn-holder{ margin-top: 30px;
-            .prd-btn{ width: 175px; }
+        margin-bottom: 123px;
+        .prd-title{
+            font-family: $fontSite2;
+            font-size: 65px;
+            color: $cl-purple;
+            margin-bottom: 10px;
+        }
+        .prd-desc{
+            max-width: 300px;
+            font-family: $fontSite;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.56;
+            color: $cl-purple;
+            max-height: 138px;
+            overflow: hidden;
+        }
+        .prd-btn-holder{
+            &:not(:empty){
+                margin-top:68px;
+            }
+            .btn{
+                min-width: 240px;
+            }
+
         }
     }
-    .prd-video-holder{ width: 100%; display: flex; justify-content: center; margin-top: 50px;
-        .video-holder{
-            .video-text{ font-family: $fontSite; font-size: 18px; font-weight: 700; color: $colorPurple; margin-bottom: 10px; }
-            .video-wrp{ position: relative;
-                .btn-video{ position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 1; font-size: 40px; color: #f9c803; }
-            }
-        }
+    .prd-img{
+        margin-bottom: 70px;
     }
 }
 
-.product-set{ padding-top: 35px; padding-bottom: 75px; background: $colorPink; position: relative;
-    &:before{ content: ""; background: url(/images/frontend/effect/top-pink.png); background-size: cover; position: absolute; top: -19px; left: 0; right: 0; height: 20px; }
-    .title{ display: block; text-align: center; font-family: $fontSite2; font-size: 65px; line-height: 85px; color: $colorWhite; }
-    .prd-sets{ display: flex; flex-wrap: wrap; justify-content: flex-start;
-        li{ margin-top: 25px; margin-bottom: 25px;
-            .img{ display: block; text-align: center;
-                img{ width: 130px; }
+.product-video-holder{
+    margin-top: 40px;
+    margin-bottom: 90px;
+    .prd-video-holder{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+.product-set{
+    padding-top: 35px;
+    padding-bottom: 75px;
+    background: $cl-pinkLight;
+    
+    @include effect-top('pink-light', -19px );
+
+    .title{
+        display: block;
+        text-align: center;
+        font-family: $fontSite2;
+        font-size: 65px;
+        line-height: 85px;
+        color: $cl-purple;
+    }
+    .prd-sets{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        li{
+            margin-top: 25px;
+            margin-bottom: 25px;
+            .img{
+                display: block;
+                text-align: center;
+                img{
+                    width: 130px;
+                }
             }
-            .desc{ width: 230px; font-family: $fontSite; font-size: 14px; font-weight: 500; line-height: 1.43; color: $colorWhite; text-align: center; margin: 17px auto 0; }
+            .desc{
+                width: 230px;
+                font-family: $fontSite;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 1.43;
+                color: $cl-purpleDark;
+                text-align: center;
+                margin: 17px auto 0;
+            }
         }
         &.grid-tree li { width: 33.3%; }
         &.grid-four li { width: 25%; }
     }
 
     //THEME
-    &.bedenler{ background: $colorOrange;
-        &:before{ background: url(/images/frontend/effect/top-orange-pointed.png); }
-        .prd-sets{ justify-content: center; flex-wrap: nowrap;
-            li{ padding: 0 20px; }
+    &.bedenler{
+        background: $cl-purpleDark;
+        @include effect-top-pointed('purple-dark', -29px );
+
+        .title{
+            color: $cl-White; 
+        }
+        .prd-sets{
+            justify-content: center;
+            flex-wrap: nowrap;
+            li{
+                padding: 0 20px;
+            }
         }
     }
 }
 
 
 @media screen and (max-width: $breakpointSM){
+    .page-product-detail{
+        padding-top: 50px;
+    }
 
-    .product-detail-info{ margin-top: 30px; margin-bottom: 60px;
-        > div{ width: 100%; }
-        .prd-image{ padding: 0 30px; }
+    .product-detail-wrapper{
+        > .img-cover{
+            display: none;
+        }
+        .prd-cover{
+            position: initial;
+            background-size: auto 100%;
+        }
+        .prd-content{
+            position: initial;
+        }
+        .prd-detail{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: -30px;
+            padding: 0 15px;
+        }
         .prd-info{
-            .prd-title{ font-size: 30px; text-align: center; line-height: 40px; margin-top: 15px; }
-            .prd-desc{ text-align: center; }
-            .prd-btn-holder{ text-align: center;
-                .prd-btn{ padding: 11px 30px; }
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0px;
+            order: 2;
+            .prd-title{
+                font-size: 35px;
+                margin-bottom: 15px;
+            }
+            .prd-desc{
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 1.53;
+            }
+            .prd-btn-holder{
+                &:not(:empty){
+                    margin-top:31px;
+                }
+                .btn{
+                    min-width: 240px;
+                }
+    
             }
         }
-        .prd-video-holder{
-            .video-holder{
-                .video-text{ font-size: 15px; }
-                .video-wrp{
-                    .btn-video{  }
-                }
-            }
+        .prd-img{
+            margin-bottom: 30px;
+            order: 1;
         }
     }
 
+    .product-video-holder{
+        margin-top: 30px;
+        margin-bottom: 44px;
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+
+
     .product-set{
-        &:before{  }
-        .title{ font-size: 30px;  line-height: 40px; }
+        .title{
+            font-size: 30px;
+            line-height: 40px;
+        }
         .prd-sets{
-            li{ width: 100%; margin-top: 15px; margin-bottom: 15px;
-                .img{  }
-                .desc{ font-size: 14px;}
+            li{
+                width: 100%;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                .desc{
+                    font-size: 14px;
+                }
             }
             &.grid-tree li { width: 100%; }
             &.grid-four li { width: 100%; }
@@ -78,14 +214,20 @@
 
         //THEME
         &.bedenler{
-            &:before{  }
-            .title{ margin-bottom: 22.5px; }
-            .prd-sets{ flex-wrap: wrap;
-                li{ width: calc(25% - 15px); padding: 0; margin: 7.5px;
-                  .img{ display: block; }
+            .title{
+                margin-bottom: 22.5px;
+            }
+            .prd-sets{
+                flex-wrap: wrap;
+                li{
+                    width: calc(25% - 15px);
+                    padding: 0;
+                    margin: 7.5px;
+                    .img{
+                        display: block;
+                    }
                 }
             }
         }
     }
-
 }

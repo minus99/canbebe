@@ -1,17 +1,5 @@
-//PRODUCT MENU
-.product-menu-wrapper{ background: $colorPurple; position: relative; z-index: 1;
-    select{ display: none; }
-    .prd-menu{ height: 60px; display: flex; justify-content: center; align-items: center;
-        li{ margin: 0 15px;
-            &:first-child{ margin-left: 0; }
-            &:last-child{ margin-right: 0; }
-            a{ font-family: $fontSite; font-size: 15px; font-weight: 500; line-height: 2.13; color: $colorWhite; }
-            &.active a{ color: $colorOrange; }
-        }
-    }
-}
-
 .page-product-list{
+    position: relative;
     //Sayfalama
     .urunPaging{
         &.icerikListePagingUst,
@@ -19,109 +7,153 @@
             display: none;
         }
     }
+    + .main-footer{
+        padding-top: 30px;
+        &:before{
+            content: none;
+        }
+    }
+}
+
+.page-product-list{
+    .icerikTemplateListeContainer{
+        margin-top: -350px;
+        .icerikTemplateListeItem{
+            &:nth-child(even){
+                direction: rtl;
+                .product-list-item{
+                    .pli-wrapper{
+                        .prd-info{
+                            direction: ltr;
+                        }
+                    }
+                } 
+            }
+        }
+        .icerikTemplateListeEtiket{
+            display: none;
+        }
+    }
 }
 
 .product-list-item{
     padding: 50px 0 70px;
-    background-color: #fff;
+    //background-color: $cl-White;
     position: relative;
-    &:before{  content: ""; background: url(/images/frontend/effect/white-top.png); background-size: cover; position: absolute; top: -19px; left: 0; right: 0; height: 20px; }
+    &:before{
+        content: "";
+        //background: url(/images/frontend/effect/white-top.png);
+        background-size: cover;
+        position: absolute;
+        top: -19px;
+        left: 0;
+        right: 0;
+        height: 20px;
+    }
 
-    .pli-wrapper{ display: flex; justify-content: space-around;
-        .prd-img{ text-align: center; width: calc(50% - 50px);
-            .prd-title{ display: none; font-family: VerveineCorp; font-size: 30px; color: #820096; margin-top: 8px; margin-bottom: 28px; }
-            .product-set{ background: none; padding: 40px 0 0;
-                &:before{ content: none; }
-                .prd-sets{ justify-content: center;
-                    li{ margin: 0 25px; max-width: 80px; }
+    .pli-wrapper{
+        display: flex;
+        justify-content: space-around;
+        .prd-img{
+            text-align: center;
+            width: calc(50% - 50px);
+            .prd-title{
+                display: none;
+                font-family: $fontSite2;
+                font-size: 30px;
+                color: $cl-purple;
+                margin-top: 8px;
+                margin-bottom: 28px;
+            }
+            .product-set{
+                background: none;
+                padding: 40px 0 0;
+                &:before{
+                    content: none;
+                }
+                .prd-sets{
+                    justify-content: center;
+                    li{
+                        margin: 0 25px;
+                        max-width: 80px;
+                    }
                 }
             }
         }
-        .prd-info{ width: 50%; display: flex; flex-wrap: wrap; align-content: center;
+        .prd-info{
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
             .prd{
-                &-title{ font-family: VerveineCorp; font-size: 65px; color: #820096; }
-                &-desc{ font-family: Museo Sans; font-size: 15px; font-weight: 500; line-height: 1.67; color: #a9a9a9; margin-top: 15px; }
-                &-btn-holder{ margin-top: 30px;
-                    .prd-btn{ display: inline-block; width: 175px; position: relative; background-color: #0bbcf0; padding: 11px 30px 10px; font-family: Museo Sans; font-size: 15px; font-weight: 700; color: #ffffff; border-radius: 25px;
-                        &:after { content: "\e909"; display: inline-block; font-family: 'icomoon' !important; font-size: 11px; color: #6d328a; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); right: 18px; }
-                    }
+                &-title{
+                    font-family: $fontSite2;
+                    font-size: 65px;
+                    color: $cl-purple;
+                }
+                &-desc{
+                    font-family: $fontSite;
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 1.67;
+                    color: $cl-default;
+                    margin-top: 15px;
+                }
+                &-btn-holder{
+                    margin-top: 30px;
                 }
             }
         }
     }
     // THEME
     &.theme{
-        &-1{ background-color: #ffedf1;
+        &-1{ background-color: #efe6fb;
             &:before{ background: url(/images/frontend/effect/theme-1.png); }
         }
-        &-2{ background-color: #faf5ff;
+        &-2{ background-color: #faf1d4;
             &:before{ background: url(/images/frontend/effect/theme-2.png); }
         }
-        &-3{ background-color: #fff9e4;
+        &-3{ background-color: #eef8df;
             &:before{ background: url(/images/frontend/effect/theme-3.png); }
         }
-        &-4{ background-color: #f9fff0;
+        &-4{ background-color: #ffd0dc;
             &:before{ background: url(/images/frontend/effect/theme-4.png); }
         }
-        &-5{ background-color: #de5c7c;
+        &-5{ background-color: #fae2e8;
             &:before{ background: url(/images/frontend/effect/theme-5.png); }
-            .prd-info{
-                .prd{
-                    &-title{ color: $colorWhite; }
-                    &-desc{ color: $colorWhite; }
-                }
-            }
         }
     }
 }
 
+/*
+açik mor    #efe6fb
+açik sari   #faf1d4
+açik yeşik  #eef8df
+pempe       #ffd0dc
+açik pempe  #fae2e8
+*/
+
 
 
 @media screen and (max-width: $breakpointSM){
-    //PRODUCT MENU
-    .product-menu-wrapper{
-        .ems-container{
-            margin: 0;
-            width: 100%;
+    .page-product-list{
+        padding-top: 50px;
+        .icerikTemplateListeContainer{
+            margin-top: 0;
         }
-        .prd-menu{
-            display: none;
-        }
-        select{
-            display: block;
-            width: 100%;
-            height: 50px;
-            padding: 0 20px;
-            background-color: #6d328a;
-            background-image: url(/images/frontend/icon/tri-bottom.svg);
-            background-position: 92%;
-            background-size: 10px;
-            background-repeat: no-repeat;
-            font-family: $fontSite;
-            font-size: 15px;
-            font-weight: 500;
-            line-height: 2.13;
-            color: #fff;
-            border: 0 !important;
-            outline: 0 !important;
-
-            appearance:none;
-            -moz-appearance:none; /* Firefox */
-            -webkit-appearance:none; /* Safari and Chrome */
-            option{
-                outline: 0 !important;
-                border: 0 !important;
+        + .main-footer{
+            padding-top: 0;
+            .hbcb{
+                margin-top: 0;
             }
         }
     }
 
     .product-list-item{
         padding: 10px 10px 50px;
-        &:before{  }
-
         .pli-wrapper{ flex-wrap: wrap;
             .prd-img{ text-align: center; width: 100%;
-                .prd-title{ display: block; text-align: center; }
+                .prd-title{ display: block; text-align: center; margin-bottom: 10px; }
                 .product-set{
                     .prd-sets{ flex-wrap: nowrap; justify-content: space-around;
                         li{ margin: 0px;
@@ -133,12 +165,7 @@
             .prd-info{ width: 100%; justify-content: center; text-align: center;
                 .prd{
                     &-title{ display: none; }
-                    &-desc{  }
-                    &-btn-holder{
-                        .prd-btn{
-                            &:after {  }
-                        }
-                    }
+                    &-desc{ margin-top: 0; }
                 }
             }
         }
