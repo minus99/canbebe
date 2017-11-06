@@ -98,6 +98,8 @@
     display: inline-block;
     width: 100%;
     &.hashtag{
+        display: none !important;
+        
         background: $cl-orange;
         background-image: url(/images/frontend/instagram-feed-bg.svg);
         background-size: 85%;

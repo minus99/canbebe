@@ -41,7 +41,7 @@
         border-radius: 20px;
         padding: 30px;
         margin-bottom: 40px;
-        &:nth-child(odd){ direction: rtl; }
+        &:nth-child(even){ direction: rtl; }
         .media{
             width: calc(50% - 30px);
             display: flex;
@@ -55,6 +55,16 @@
         .text{
             width: calc(50% - 30px);
             direction: ltr;
+            &.scroll-controller{
+                max-height: 350px;
+                overflow: auto;
+                .type-1{ 
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 2.06;
+                    color: $cl-default;
+                 }
+            }
             .title{
                 font-family: $fontSite2;
                 font-size: 40px;
@@ -412,6 +422,19 @@
                     }
                     a.btn-more{
                         margin: 27px auto 20px;
+                    }
+                }
+                &.scroll-controller{
+                    max-height: initial;
+                    
+                    .type-1{ 
+                        font-size: 15px;
+                        line-height: 1.6;
+                    }
+                    .desc{
+                        p{
+                            text-align: left;
+                        }
                     }
                 }
             }

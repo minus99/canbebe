@@ -69,8 +69,13 @@
                 color: $cl-purple;
                 font-weight: 700;
                 border-radius: 15px;
+                background-color: $cl-White;
+                transition: all .4s cubic-bezier(.8, 0, .5, 1);
                 .icerikCount {
                     display: none !important;
+                }
+                &:hover{
+                    background-color: #efe5f0;
                 }
             }
             &.active {
@@ -106,6 +111,10 @@
                 color: $cl-purple;
                 font-weight: 700;
                 border-left: 1px solid $cl-White;
+                transition: all .4s cubic-bezier(.8, 0, .5, 1);
+                &:hover{
+                    background-color: #efe5f0;
+                }
             }
             &:first-child {
                 > a {
@@ -642,5 +651,33 @@
     .post-share {
         margin-left: 20px;
         margin-right: 20px;
+    }
+
+
+    .etiketListe {
+        ul{
+            li{
+                > a{
+                    font-size: 13px;
+                    
+                }
+                &.cat-img{
+                    a{
+                        padding-left: 31px;
+                        background-position: 6px center;
+                        background-size: 18px;
+                    }
+                    &.cat-yurumeye-baslayan{
+                        a{
+                            font-size: 0;
+                            &:before{
+                                content:"Çocuk";
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
