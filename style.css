@@ -7873,6 +7873,20 @@ input:read-only {
     margin-top: 20px;
     margin-bottom: 122px;
     text-align: center; }
+  .page-home .page-blog .icerikTemplateListeContainer {
+    display: none; }
+    .page-home .page-blog .icerikTemplateListeContainer.clone {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .page-home .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem {
+      width: calc(100% / 4) !important; }
+    @media screen and (min-width: 960px) {
+      .page-home .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem:nth-child(1), .page-home .page-blog .icerikTemplateListeContainer .icerikTemplateListeItem:nth-child(2) {
+        width: calc(100% / 2) !important; } }
+    .page-home .page-blog .icerikTemplateListeContainer .icerikTemplateListeEtiket {
+      display: none !important; }
 
 .instagram-feed-wrapper {
   display: inline-block;

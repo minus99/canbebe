@@ -77,21 +77,46 @@
 }
 
 //BLOG
-.page-home .page-blog {
-    display: inline-block;
-    width: 100%;
-    @include effect-top('white', -19px );
-    .blog-title{
-        padding: 35px 10px 25px;
-        z-index: 100;
-        position: relative;
+.page-home {
+    .page-blog {
+        display: inline-block;
+        width: 100%;
+        @include effect-top('white', -19px );
+        .blog-title{
+            padding: 35px 10px 25px;
+            z-index: 100;
+            position: relative;
+        }
+        .btn-holder{
+            margin-top: 20px;
+            margin-bottom: 122px;
+            text-align: center;
+        }
+        
+        .icerikTemplateListeContainer {
+            display: none;
+            &.clone{
+                display: flex;
+            }
+            .icerikTemplateListeItem {
+                width: calc(100% / 4) !important;
+            }
+            @media screen and (min-width: $breakpointSM){//+960
+                .icerikTemplateListeItem {
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        width: calc(100% / 2) !important;
+                    }
+                }
+            }
+            .icerikTemplateListeEtiket {
+                display: none !important;
+            }
+        }
     }
-    .btn-holder{
-        margin-top: 20px;
-        margin-bottom: 122px;
-        text-align: center;
-    }
+
 }
+
 
 //instagram feed
 .instagram-feed-wrapper{
