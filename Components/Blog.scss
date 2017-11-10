@@ -610,6 +610,7 @@
             justify-content: space-between;
             > a {
                 margin-left: initial;
+                display: flex !important;
             }
         }
     }

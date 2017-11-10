@@ -59,6 +59,9 @@
     }
     .prd-img{
         margin-bottom: 70px;
+        img{
+            max-height: 270px;
+        }
     }
 }
 
@@ -140,6 +143,7 @@
     }
 
     .product-detail-wrapper{
+        margin-bottom: 40px;
         > .img-cover{
             display: none;
         }

@@ -8276,7 +8276,7 @@ input:read-only {
       content: none; }
 
 .page-product-list .icerikTemplateListeContainer {
-  margin-top: -350px; }
+  margin-top: -240px; }
   .page-product-list .icerikTemplateListeContainer .icerikTemplateListeItem:nth-child(even) {
     direction: rtl; }
     .page-product-list .icerikTemplateListeContainer .icerikTemplateListeItem:nth-child(even) .product-list-item .pli-wrapper .prd-info {
@@ -8471,6 +8471,8 @@ açik pempe  #fae2e8
       min-width: 240px; }
   .product-detail-wrapper .prd-img {
     margin-bottom: 70px; }
+    .product-detail-wrapper .prd-img img {
+      max-height: 270px; }
 
 .product-video-holder {
   margin-top: 40px;
@@ -8565,49 +8567,51 @@ açik pempe  #fae2e8
 @media screen and (max-width: 960px) {
   .page-product-detail {
     padding-top: 50px; }
-  .product-detail-wrapper > .img-cover {
-    display: none; }
-  .product-detail-wrapper .prd-cover {
-    position: initial;
-    background-size: auto 100%; }
-  .product-detail-wrapper .prd-content {
-    position: initial; }
-  .product-detail-wrapper .prd-detail {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-top: -30px;
-    padding: 0 15px; }
-  .product-detail-wrapper .prd-info {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 0px;
-    -webkit-box-ordinal-group: 3;
-    -webkit-order: 2;
-    -ms-flex-order: 2;
-    order: 2; }
-    .product-detail-wrapper .prd-info .prd-title {
-      font-size: 35px;
-      margin-bottom: 15px; }
-    .product-detail-wrapper .prd-info .prd-desc {
-      font-size: 15px;
-      font-weight: 500;
-      line-height: 1.53; }
-    .product-detail-wrapper .prd-info .prd-btn-holder:not(:empty) {
-      margin-top: 31px; }
-    .product-detail-wrapper .prd-info .prd-btn-holder .btn, .product-detail-wrapper .prd-info .prd-btn-holder a.btnDefault, .product-detail-wrapper .prd-info .prd-btn-holder
-    .lnkDefault:not(.lnkSifremiUnuttum) {
-      min-width: 240px; }
-  .product-detail-wrapper .prd-img {
-    margin-bottom: 30px;
-    -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
-    -ms-flex-order: 1;
-    order: 1; }
+  .product-detail-wrapper {
+    margin-bottom: 40px; }
+    .product-detail-wrapper > .img-cover {
+      display: none; }
+    .product-detail-wrapper .prd-cover {
+      position: initial;
+      background-size: auto 100%; }
+    .product-detail-wrapper .prd-content {
+      position: initial; }
+    .product-detail-wrapper .prd-detail {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-top: -30px;
+      padding: 0 15px; }
+    .product-detail-wrapper .prd-info {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 0px;
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+      -ms-flex-order: 2;
+      order: 2; }
+      .product-detail-wrapper .prd-info .prd-title {
+        font-size: 35px;
+        margin-bottom: 15px; }
+      .product-detail-wrapper .prd-info .prd-desc {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.53; }
+      .product-detail-wrapper .prd-info .prd-btn-holder:not(:empty) {
+        margin-top: 31px; }
+      .product-detail-wrapper .prd-info .prd-btn-holder .btn, .product-detail-wrapper .prd-info .prd-btn-holder a.btnDefault, .product-detail-wrapper .prd-info .prd-btn-holder
+      .lnkDefault:not(.lnkSifremiUnuttum) {
+        min-width: 240px; }
+    .product-detail-wrapper .prd-img {
+      margin-bottom: 30px;
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+      -ms-flex-order: 1;
+      order: 1; }
   .product-video-holder {
     margin-top: 30px;
     margin-bottom: 44px;
@@ -10216,7 +10220,11 @@ açik pempe  #fae2e8
       -ms-flex-pack: justify;
       justify-content: space-between; }
       .post-share .share-media > a {
-        margin-left: initial; }
+        margin-left: initial;
+        display: -webkit-box !important;
+        display: -webkit-flex !important;
+        display: -ms-flexbox !important;
+        display: flex !important; }
   .icerikKategoriListe > ul {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
