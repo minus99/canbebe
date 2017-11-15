@@ -5,6 +5,10 @@
     display: inline-block;
     width: 100%;
     position: relative;
+    @media screen  and (min-width: 960px) and (max-width: 1181px){
+        padding-bottom: 90px;
+    }
+
     .img-cover{
         //width: 100%;
     }
@@ -19,6 +23,9 @@
         //background-size: auto 100%;
         background-position: 65% 0;
         background-repeat: no-repeat;
+        @media screen  and (min-width: 960px) and (max-width: 1181px){
+            padding-bottom: 100px;
+        }
     }
     .prd-content{
         position: absolute;
@@ -27,10 +34,15 @@
         width: 100%;
     }
     .prd-detail{
-        margin-top: 220px;
+        /*margin-top: 220px;*/
+        margin-top: 15%;
+        @media screen  and (min-width: 960px) and (max-width: 1181px){
+            margin-top: 8%;
+        }
     }
     .prd-info{
-        margin-bottom: 123px;
+        /*margin-bottom: 123px;*/
+        margin-bottom: 70px;
         .prd-title{
             font-family: $fontSite2;
             font-size: 65px;
@@ -49,7 +61,8 @@
         }
         .prd-btn-holder{
             &:not(:empty){
-                margin-top:68px;
+                /*margin-top:68px;*/
+                margin-top: 20px;
             }
             .btn{
                 min-width: 240px;
@@ -187,6 +200,8 @@
         .prd-img{
             margin-bottom: 30px;
             order: 1;
+            width: 100%;
+            text-align: center;
         }
     }
 

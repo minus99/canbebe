@@ -15,7 +15,6 @@ $cl-defaultLight: #e9e9e9;
 $cl-defaultDark : #424242;
 $cl-purple      : #820096;
 $cl-purpleDark  : #6d328a;
-//$cl-purpleDark  : #5d277e;
 $cl-pink        : #de5c7c;
 $cl-pinkLight   : #ffd0dc;
 $cl-blueLight   : #0bbcf0;
@@ -107,5 +106,7 @@ $mobile-s:  320px + 1;
 
 
 .kutuDefault.kutuArama{
-    display: none !important;
+    .kutuArama_aramaTipi{
+        display: inline-block !important;
+    }
 }

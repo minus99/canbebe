@@ -6,6 +6,10 @@
     }
 }
 
+.blogTitleKategoriAd{
+    display: none;
+}
+
 //sayfalama
 .urunPaging {
     margin: 70px 0 30px;
@@ -127,7 +131,7 @@
                     border-radius: 0 15px 15px 0;
                 }
             }
-            &.selected {
+            &.active {
                 > a {
                     background-color: $cl-purple;
                     color: $cl-White;
@@ -200,7 +204,7 @@
                 }
             }
         }
-        &.selected {
+        &.active {
             &.cat-bebek {
                 > a {
                     background-image: url(/images/frontend/blog/tag-bebek2.svg);
@@ -223,25 +227,28 @@
 //blog
 .page-blog {
     .icerikTemplateListeContainer {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -10px;
-        margin-right: -10px;
-        .icerikTemplateListeItem {
-            width: calc(100% / 4);
-        }
-        @media screen and (min-width: $breakpointSM){//+960
+        display: none;
+        &.clone{
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -10px;
+            margin-right: -10px;
             .icerikTemplateListeItem {
-                &:nth-child(1),
-                &:nth-child(3),
-                &:nth-child(13),
-                &:nth-child(15) {
-                    width: calc(100% / 2);
+                width: calc(100% / 4);
+            }
+            @media screen and (min-width: $breakpointSM){//+960
+                .icerikTemplateListeItem {
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(7),
+                    &:nth-child(8) {
+                        width: calc(100% / 2);
+                    }
                 }
             }
-        }
-        .icerikTemplateListeEtiket {
-            display: none !important;
+            .icerikTemplateListeEtiket {
+                display: none !important;
+            }
         }
     }
 }
@@ -508,10 +515,12 @@
             margin-left: auto;
             margin-right: auto;
             &.twitter{
-                background: #de5c7c;
+                /*background: #de5c7c;*/
+                background: #50abf1;
             }
             &.facebook{
-                background: #0bbcf0;
+                /*background: #0bbcf0;*/
+                background: #3b5998;
             }
             &.mail{
                 background: #820096;
@@ -568,8 +577,10 @@
     }
     .page-blog {
         .icerikTemplateListeContainer {
-            .icerikTemplateListeItem {
-                width: calc(100% / 2);
+            &.clone{
+                .icerikTemplateListeItem {
+                    width: calc(100%) !important;
+                }
             }
         }
     }

@@ -37,8 +37,17 @@
                     vertical-align: middle;
                     margin-right: 9px;
                 }
+                span{
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
                 &:hover{
                     color: $cl-pink;
+                }
+                @media screen  and (min-width: 960px) and (max-width: 1181px){
+                    font-size: 1.2vw;
+                    padding: 12px 10px 10px;
                 }
             }
             &.active a{
@@ -75,6 +84,9 @@
         justify-content: space-between;
         flex-wrap: wrap;
         margin-top: 27.5px;
+        &.clone{
+            display: none;
+        }
         
         
         .icerikTemplateListeItem{

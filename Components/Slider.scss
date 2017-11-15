@@ -71,6 +71,9 @@
                 background-size: cover;
                 background-position: center;
                 width: 100%;
+                .mobile-slide{
+                    display: none;
+                }
             }
             .slide-product-image{
                 display: inline-block;
@@ -134,11 +137,19 @@
         .swiper-slide{
             .slide-wrapper{
                 .slide-cover{
+                    /*
                     min-height: 250px;
-                    /*background-size: initial;
-                    background-position: right top;*/
                     background-size: 220%;
                     background-position: 85% 0;
+                    */
+                    background: none !important;
+                    .mobile-slide{
+                        display: inline-block;
+                        width: 100%;
+                    }
+                    .visibility-hidden.img-responsive{
+                        display: none;
+                    }
                 }
                 .slide-product-image{
                     display: none;

@@ -97,6 +97,10 @@ textarea {
 .block{ display: block; }
 
 .dHidden{ display: none !important; }
+
+.ems-container{
+	padding: 0 20px;
+}
 @media screen and (max-width: $breakpointSM){
 	.mHidden{ display: none !important; }
 	
@@ -125,6 +129,7 @@ textarea {
 		margin-left: 10px;
 		margin-right: 10px;
 		width: calc(100% - 20px);
+		padding: 0;
 	}
 }
 
